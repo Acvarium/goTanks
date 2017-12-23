@@ -160,28 +160,28 @@ script/script = ExtResource( 4 )
 
 enabled = true
 cast_to = Vector2( 0, 50 )
-layer_mask = 2
+layer_mask = 1
 type_mask = 15
 
 [node name="rayUp" type="RayCast2D" parent="grid/tank/rays"]
 
 enabled = true
 cast_to = Vector2( 0, -50 )
-layer_mask = 3
+layer_mask = 1
 type_mask = 15
 
 [node name="rayRight" type="RayCast2D" parent="grid/tank/rays"]
 
 enabled = true
 cast_to = Vector2( 50, 0 )
-layer_mask = 3
+layer_mask = 1
 type_mask = 15
 
 [node name="rayLeft" type="RayCast2D" parent="grid/tank/rays"]
 
 enabled = true
 cast_to = Vector2( -50, 0 )
-layer_mask = 3
+layer_mask = 1
 type_mask = 15
 
 [node name="track" type="Particles2D" parent="grid/tank"]
