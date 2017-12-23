@@ -409,16 +409,4 @@ config/polyphony = 1
 config/samples = SubResource( 9 )
 config/pitch_random = 0.0
 
-[node name="p0" type="Sprite" parent="."]
-
-transform/pos = Vector2( 36, 36 )
-transform/scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 6 )
-
-[node name="p1" type="Sprite" parent="."]
-
-transform/pos = Vector2( 36, 36 )
-transform/scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 6 )
-
 

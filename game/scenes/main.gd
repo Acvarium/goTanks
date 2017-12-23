@@ -10,9 +10,7 @@ func bullet_hit(pos, direction):
 		shift = Vector2(0,0.5)
 	var cells_pos = [grid.world_to_map(pos + 9 * (direction + shift)), grid.world_to_map(pos + 9 * (direction - shift))]
 	var cells_id = [grid.get_cell(cells_pos[0].x,cells_pos[0].y), grid.get_cell(cells_pos[1].x,cells_pos[1].y)]
-	get_node("p0").set_pos(pos + 9 * (direction + shift))
-	get_node("p1").set_pos(pos + 9 * (direction - shift))
-	
+
 	for i in range(2):
 		if cells_id[i] == 0:
 			grid.set_cell(cells_pos[i].x,cells_pos[i].y,3)
