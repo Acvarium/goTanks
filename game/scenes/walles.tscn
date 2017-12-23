@@ -12,7 +12,6 @@ extents = Vector2( 18, 18 )
 
 [node name="bricks" type="Sprite" parent="."]
 
-editor/display_folded = true
 texture = ExtResource( 1 )
 vframes = 2
 hframes = 4
@@ -23,8 +22,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 3
+collision/mask = 3
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -38,7 +37,6 @@ _update_shape_index = 0
 
 [node name="stone" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 372, 0 )
 texture = ExtResource( 1 )
 vframes = 2
@@ -51,8 +49,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 3
+collision/mask = 3
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
