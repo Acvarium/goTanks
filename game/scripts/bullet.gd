@@ -35,6 +35,7 @@ func _on_Timer_timeout():
 	free_bullet()
 
 func _on_bullet_body_enter( body ):
+	print(body.get_name())
 	if ownerType == 1:
 		if body.get_name() != 'tank':
 			free_bullet()
@@ -44,5 +45,6 @@ func _on_bullet_body_enter( body ):
 func free_bullet():
 	if owner:
 		owner.free_bullet()
-	main_node.bullet_hit(get_pos())
+	
+	main_node.bullet_hit(get_pos(), direction)
 	queue_free()

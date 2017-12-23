@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=1]
 
 [ext_resource path="res://scenes/main.gd" type="Script" id=1]
-[ext_resource path="res://textures/bg_.png" type="Texture" id=2]
+[ext_resource path="res://textures/bg.jpg" type="Texture" id=2]
 [ext_resource path="res://tiles/walls.tres" type="TileSet" id=3]
 [ext_resource path="res://scripts/tank_on_grid.gd" type="Script" id=4]
 [ext_resource path="res://textures/greenTank.tex" type="Texture" id=5]
@@ -112,7 +112,7 @@ script/script = ExtResource( 1 )
 
 [node name="TextureFrame" type="TextureFrame" parent="."]
 
-visibility/opacity = 0.2
+visibility/opacity = 0.5
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -124,11 +124,8 @@ margin/bottom = 936.0
 texture = ExtResource( 2 )
 stretch_mode = 0
 
-[node name="bullets" type="Node2D" parent="."]
-
 [node name="grid" type="TileMap" parent="."]
 
-editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 3 )
 cell/size = Vector2( 36, 36 )
@@ -159,10 +156,17 @@ script/script = ExtResource( 4 )
 
 [node name="rays" type="Node2D" parent="grid/tank"]
 
-editor/display_folded = true
-
 [node name="rayDown" type="RayCast2D" parent="grid/tank/rays"]
 
+transform/pos = Vector2( -5, 0 )
+enabled = true
+cast_to = Vector2( 0, 50 )
+layer_mask = 1
+type_mask = 15
+
+[node name="rayDown1" type="RayCast2D" parent="grid/tank/rays"]
+
+transform/pos = Vector2( 5, 0 )
 enabled = true
 cast_to = Vector2( 0, 50 )
 layer_mask = 1
@@ -170,6 +174,15 @@ type_mask = 15
 
 [node name="rayUp" type="RayCast2D" parent="grid/tank/rays"]
 
+transform/pos = Vector2( -5, 0 )
+enabled = true
+cast_to = Vector2( 0, -50 )
+layer_mask = 1
+type_mask = 15
+
+[node name="rayUp1" type="RayCast2D" parent="grid/tank/rays"]
+
+transform/pos = Vector2( 5, 0 )
 enabled = true
 cast_to = Vector2( 0, -50 )
 layer_mask = 1
@@ -177,6 +190,15 @@ type_mask = 15
 
 [node name="rayRight" type="RayCast2D" parent="grid/tank/rays"]
 
+transform/pos = Vector2( 0, -5 )
+enabled = true
+cast_to = Vector2( 50, 0 )
+layer_mask = 1
+type_mask = 15
+
+[node name="rayRight1" type="RayCast2D" parent="grid/tank/rays"]
+
+transform/pos = Vector2( 0, 5 )
 enabled = true
 cast_to = Vector2( 50, 0 )
 layer_mask = 1
@@ -184,6 +206,15 @@ type_mask = 15
 
 [node name="rayLeft" type="RayCast2D" parent="grid/tank/rays"]
 
+transform/pos = Vector2( 0, 5 )
+enabled = true
+cast_to = Vector2( -50, 0 )
+layer_mask = 1
+type_mask = 15
+
+[node name="rayLeft1" type="RayCast2D" parent="grid/tank/rays"]
+
+transform/pos = Vector2( 0, -5 )
 enabled = true
 cast_to = Vector2( -50, 0 )
 layer_mask = 1
@@ -290,6 +321,8 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
+[node name="bullets" type="Node2D" parent="."]
+
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
 transform/pos = Vector2( 102, 0 )
@@ -375,5 +408,17 @@ params/attenuation/distance_exp = 1.0
 config/polyphony = 1
 config/samples = SubResource( 9 )
 config/pitch_random = 0.0
+
+[node name="p0" type="Sprite" parent="."]
+
+transform/pos = Vector2( 36, 36 )
+transform/scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 6 )
+
+[node name="p1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 36, 36 )
+transform/scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 6 )
 
 

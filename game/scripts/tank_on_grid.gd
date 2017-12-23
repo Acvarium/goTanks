@@ -10,6 +10,8 @@ var bulletObj = load("res://objects/bullet.tscn")
 var main_node
 var bullets_in_air = 0
 var max_bullets = 2
+enum ENTITY_TYPES {UP, DOWN, LEFT, RIGHT}
+
 
 var speed = 0
 var max_speed = 150
@@ -21,6 +23,10 @@ func _ready():
 	get_node("rays/rayDown").add_exception(self)
 	get_node("rays/rayLeft").add_exception(self)
 	get_node("rays/rayRight").add_exception(self)
+	get_node("rays/rayUp1").add_exception(self)
+	get_node("rays/rayDown1").add_exception(self)
+	get_node("rays/rayLeft1").add_exception(self)
+	get_node("rays/rayRight1").add_exception(self)
 	grid = get_parent()
 	set_fixed_process(true)
 	set_process_input(true)
@@ -36,27 +42,31 @@ func _input(event):
 			bullet.set_direction(currentDir)
 			bullet.set_owner(self)
 			main_node.get_node("bullets").add_child(bullet)
-	
+
 func _fixed_process(delta):
 	direction = Vector2()
 	
 	if Input.is_action_pressed("ui_up"):
-		if !get_node("rays/rayUp").is_colliding():
+		currentDir = Vector2(0,-1)
+		if !obstacle(UP):
 			direction.y = -1
 		if !is_moving:
 			get_node("Sprite").set_rot(0)
 	elif Input.is_action_pressed("ui_down"):
-		if !get_node("rays/rayDown").is_colliding():
+		currentDir = Vector2(0,1)
+		if !obstacle(DOWN):
 			direction.y = 1
 		if !is_moving:
 			get_node("Sprite").set_rot(PI)
 	elif Input.is_action_pressed("ui_left"):
-		if !get_node("rays/rayLeft").is_colliding():
+		currentDir = Vector2(-1,0)
+		if !obstacle(LEFT):
 			direction.x = -1
 		if !is_moving:
 			get_node("Sprite").set_rot(PI/2)
 	elif Input.is_action_pressed("ui_right"):
-		if !get_node("rays/rayRight").is_colliding():
+		currentDir = Vector2(1,0)
+		if !obstacle(RIGHT):
 			direction.x = 1
 		if !is_moving:
 			get_node("Sprite").set_rot(PI*1.5)
@@ -97,3 +107,13 @@ func update_pos():
 	var new_grid_pos = grid_pos + direction
 	var target_pos = grid.map_to_world(new_grid_pos)
 	return target_pos
+
+func obstacle(dir):
+	if dir == UP:
+		return get_node("rays/rayUp").is_colliding() or get_node("rays/rayUp1").is_colliding()
+	elif dir == DOWN:
+		return get_node("rays/rayDown").is_colliding() or get_node("rays/rayDown1").is_colliding()
+	elif dir == LEFT:
+		return get_node("rays/rayLeft").is_colliding() or get_node("rays/rayLeft1").is_colliding()
+	elif dir == RIGHT:
+		return get_node("rays/rayRight").is_colliding() or get_node("rays/rayRight1").is_colliding()

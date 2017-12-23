@@ -19,6 +19,8 @@ hframes = 4
 
 [node name="StaticBody2D" type="StaticBody2D" parent="bricks"]
 
+visibility/visible = false
+transform/pos = Vector2( 0, 0.32354 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -31,6 +33,96 @@ friction = 1.0
 bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bricks/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="bricks1" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 57, 0 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 4
+frame = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bricks1"]
+
+visibility/visible = false
+transform/pos = Vector2( 0, 0.32354 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 3
+collision/mask = 3
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bricks1/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="bricks2" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 114, 0 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 4
+frame = 4
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bricks2"]
+
+visibility/visible = false
+transform/pos = Vector2( 0, 0.32354 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 3
+collision/mask = 3
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bricks2/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="bricks3" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 170.197, 0 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 4
+frame = 5
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bricks3"]
+
+visibility/visible = false
+transform/pos = Vector2( 0, 0.32354 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 3
+collision/mask = 3
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bricks3/StaticBody2D"]
 
 shape = SubResource( 1 )
 trigger = false
