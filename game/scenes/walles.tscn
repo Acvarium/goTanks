@@ -12,6 +12,7 @@ extents = Vector2( 18, 18 )
 
 [node name="bricks" type="Sprite" parent="."]
 
+editor/display_folded = true
 texture = ExtResource( 1 )
 vframes = 2
 hframes = 4

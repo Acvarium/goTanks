@@ -41,4 +41,6 @@ wait_time = 15.0
 one_shot = false
 autostart = false
 
+[connection signal="body_enter" from="." to="." method="_on_bullet_body_enter"]
+
 
