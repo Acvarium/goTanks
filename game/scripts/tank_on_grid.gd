@@ -59,7 +59,7 @@ func fire():
 
 func _fixed_process(delta):
 	direction = Vector2()
-
+#	if isinco
 	if Input.is_action_pressed("ui_up") and type == 1 or randDir == 0 and type == 0:
 		currentDir = Vector2(0,-1)
 		if !obstacle(UP):
@@ -119,9 +119,9 @@ func free_bullet():
 		bullets_in_air = 0
 
 func update_pos():
-	var grid_pos = grid.world_to_map(get_pos())
+	var grid_pos = main_node.world_to_map(get_pos())
 	var new_grid_pos = grid_pos + direction
-	var target_pos = grid.map_to_world(new_grid_pos)
+	var target_pos = main_node.map_to_world(new_grid_pos)
 	return target_pos
 
 func obstacle(dir):

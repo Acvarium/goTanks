@@ -94,14 +94,16 @@ input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 5
+collision/mask = 5
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 type = 0
 lavel = 0
 
 [node name="rays" type="Node2D" parent="."]
+
+editor/display_folded = true
 
 [node name="rayDown" type="RayCast2D" parent="rays"]
 
@@ -169,6 +171,7 @@ type_mask = 15
 
 [node name="Sprite" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 hframes = 2
@@ -220,7 +223,7 @@ autoplay = ""
 
 config/polyphony = 1
 config/samples = SubResource( 3 )
-default/volume_db = 0.0
+default/volume_db = -80.0
 default/pitch_scale = 1.0
 default/pan = 0.0
 default/depth = 0.0
@@ -237,7 +240,7 @@ default/chorus_send = 0.0
 
 config/polyphony = 4
 config/samples = SubResource( 4 )
-default/volume_db = 0.0
+default/volume_db = -20.0
 default/pitch_scale = 0.8
 default/pan = 0.0
 default/depth = 0.0
@@ -263,7 +266,6 @@ autoplay = ""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-visibility/visible = false
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0

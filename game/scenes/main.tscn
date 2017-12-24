@@ -41,7 +41,6 @@ stretch_mode = 0
 
 [node name="grid" type="TileMap" parent="."]
 
-editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 3 )
 cell/size = Vector2( 36, 36 )
@@ -70,6 +69,10 @@ transform/pos = Vector2( 324, 72 )
 [node name="tank6" parent="grid" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 36, 72 )
+
+[node name="tank7" parent="grid" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 36, 180 )
 
 [node name="tank2" parent="grid" instance=ExtResource( 4 )]
 
