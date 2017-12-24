@@ -60,7 +60,6 @@ func fire():
 func _fixed_process(delta):
 	direction = Vector2()
 
-
 	if Input.is_action_pressed("ui_up") and type == 1 or randDir == 0 and type == 0:
 		currentDir = Vector2(0,-1)
 		if !obstacle(UP):

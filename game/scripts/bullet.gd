@@ -22,8 +22,8 @@ func set_direction(dir):
 		
 func set_owner(own):
 	owner = own
-	if owner.get_name() == 'tank':
-		ownerType = 1
+	ownerType = owner.type
+
 	
 func _fixed_process(delta):
 	var pos = get_pos()
@@ -37,11 +37,13 @@ func _on_Timer_timeout():
 func _on_bullet_body_enter( body ):
 #	print(body.get_name())
 	if body != owner:
-		if ownerType == 1:
-			if body.get_name() != 'tank':
-				free_bullet()
+		if ownerType == 0:
+			if body.get_name()[0] == 't':
+				if body.type == 0:
+					return
+			free_bullet()
 		else:
-				free_bullet()
+			free_bullet()
 
 func free_bullet():
 	if owner:

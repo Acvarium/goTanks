@@ -1,5 +1,6 @@
 extends Node2D
 var grid
+var explosionObj = load("res://objects/explosion.tscn")
 
 func _ready():
 	grid = get_node("grid")
@@ -18,3 +19,7 @@ func bullet_hit(pos, direction):
 			grid.set_cell(cells_pos[i].x,cells_pos[i].y,-1)
 #	
 	get_node("hit_sound").play("hit")
+	var explosion = explosionObj.instance()
+	explosion.set_pos(pos)
+	add_child(explosion)
+#	explosion.set_owner(self)
