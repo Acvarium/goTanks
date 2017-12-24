@@ -12,7 +12,6 @@ extents = Vector2( 18, 18 )
 
 [node name="bricks" type="Sprite" parent="."]
 
-editor/display_folded = true
 texture = ExtResource( 1 )
 vframes = 2
 hframes = 4
@@ -105,7 +104,7 @@ transform/pos = Vector2( 170.197, 0 )
 texture = ExtResource( 1 )
 vframes = 2
 hframes = 4
-frame = 5
+frame = 6
 
 [node name="StaticBody2D" type="StaticBody2D" parent="bricks3"]
 

@@ -11,6 +11,7 @@ var main_node
 var bullets_in_air = 0
 var max_bullets = 2
 enum ENTITY_TYPES {UP, DOWN, LEFT, RIGHT}
+var loaded = true
 
 
 var speed = 0
@@ -33,7 +34,7 @@ func _ready():
 	
 func _input(event):
 	if Input.is_action_pressed("fire"):
-		if bullets_in_air < max_bullets:
+		if bullets_in_air < max_bullets and loaded:
 			bullets_in_air += 1
 			get_node("fireAnim").play("fire")
 			get_node("fire").play("fire")
@@ -42,6 +43,8 @@ func _input(event):
 			bullet.set_direction(currentDir)
 			bullet.set_owner(self)
 			main_node.get_node("bullets").add_child(bullet)
+			loaded = false
+			get_node("fireTimer").start()
 
 func _fixed_process(delta):
 	direction = Vector2()
@@ -117,3 +120,8 @@ func obstacle(dir):
 		return get_node("rays/rayLeft").is_colliding() or get_node("rays/rayLeft1").is_colliding()
 	elif dir == RIGHT:
 		return get_node("rays/rayRight").is_colliding() or get_node("rays/rayRight1").is_colliding()
+
+
+func _on_fireTimer_timeout():
+	loaded = true
+	
