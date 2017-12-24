@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+export var type = 0
+export var lavel = 0
 var direction = Vector2()
 var currentDir = Vector2(0,-1)
 var grid 
@@ -9,16 +11,17 @@ var target_direction = Vector2()
 var bulletObj = load("res://objects/bullet.tscn")
 var main_node
 var bullets_in_air = 0
-var max_bullets = 2
+var max_bullets = 1
 enum ENTITY_TYPES {UP, DOWN, LEFT, RIGHT}
 var loaded = true
-
+var randDir = -1
 
 var speed = 0
 var max_speed = 150
 var velocity = Vector2()
 
 func _ready():
+	randomize()
 	main_node = get_node("/root/main")
 	get_node("rays/rayUp").add_exception(self)
 	get_node("rays/rayDown").add_exception(self)
@@ -30,44 +33,53 @@ func _ready():
 	get_node("rays/rayRight1").add_exception(self)
 	grid = get_parent()
 	set_fixed_process(true)
-	set_process_input(true)
+#	set_process_input(true)
+	if type == 1:
+		set_process_input(true)
+	else:
+		get_node("step").start()
+		get_node("fireTimer").start()
 	
 func _input(event):
 	if Input.is_action_pressed("fire"):
-		if bullets_in_air < max_bullets and loaded:
-			bullets_in_air += 1
-			get_node("fireAnim").play("fire")
-			get_node("fire").play("fire")
-			var bullet = bulletObj.instance()
-			bullet.set_pos(get_node("Sprite/muzzle").get_global_pos())
-			bullet.set_direction(currentDir)
-			bullet.set_owner(self)
-			main_node.get_node("bullets").add_child(bullet)
-			loaded = false
-			get_node("fireTimer").start()
+		fire()
+
+func fire():
+	if bullets_in_air < max_bullets and loaded:
+		bullets_in_air += 1
+		get_node("fireAnim").play("fire")
+		get_node("fire").play("fire")
+		var bullet = bulletObj.instance()
+		bullet.set_pos(get_node("Sprite/muzzle").get_global_pos())
+		bullet.set_direction(currentDir)
+		bullet.set_owner(self)
+		main_node.get_node("bullets").add_child(bullet)
+		loaded = false
+		get_node("cooldown").start()
 
 func _fixed_process(delta):
 	direction = Vector2()
-	
-	if Input.is_action_pressed("ui_up"):
+
+
+	if Input.is_action_pressed("ui_up") and type == 1 or randDir == 0 and type == 0:
 		currentDir = Vector2(0,-1)
 		if !obstacle(UP):
 			direction.y = -1
 		if !is_moving:
 			get_node("Sprite").set_rot(0)
-	elif Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("ui_down") and type == 1 or randDir == 1 and type == 0:
 		currentDir = Vector2(0,1)
 		if !obstacle(DOWN):
 			direction.y = 1
 		if !is_moving:
 			get_node("Sprite").set_rot(PI)
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("ui_left") and type == 1 or randDir == 2 and type == 0:
 		currentDir = Vector2(-1,0)
 		if !obstacle(LEFT):
 			direction.x = -1
 		if !is_moving:
 			get_node("Sprite").set_rot(PI/2)
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_right") and type == 1 or randDir == 3 and type == 0:
 		currentDir = Vector2(1,0)
 		if !obstacle(RIGHT):
 			direction.x = 1
@@ -104,6 +116,8 @@ func _fixed_process(delta):
 			
 func free_bullet():
 	bullets_in_air -= 1
+	if bullets_in_air < 0:
+		bullets_in_air = 0
 
 func update_pos():
 	var grid_pos = grid.world_to_map(get_pos())
@@ -122,6 +136,13 @@ func obstacle(dir):
 		return get_node("rays/rayRight").is_colliding() or get_node("rays/rayRight1").is_colliding()
 
 
-func _on_fireTimer_timeout():
+func _on_cooldown_timeout():
 	loaded = true
 	
+func _on_step_timeout():
+	randDir = randi()%5
+	get_node("step").set_wait_time(randf()*3+0.2)
+
+func _on_fireTimer_timeout():
+	get_node("fireTimer").set_wait_time(randf()+0.1)
+	fire()
