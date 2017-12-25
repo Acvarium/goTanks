@@ -1,12 +1,15 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://scenes/main.gd" type="Script" id=1]
-[ext_resource path="res://objects/tank.tscn" type="PackedScene" id=2]
-[ext_resource path="res://textures/bg.jpg" type="Texture" id=3]
+[ext_resource path="res://textures/bg.jpg" type="Texture" id=2]
+[ext_resource path="res://objects/tank.tscn" type="PackedScene" id=3]
 [ext_resource path="res://tiles/walls.tres" type="TileSet" id=4]
-[ext_resource path="res://sounds/hit.smp" type="Sample" id=5]
-[ext_resource path="res://objects/explosion.tscn" type="PackedScene" id=6]
-[ext_resource path="res://textures/bird.tex" type="Texture" id=7]
+[ext_resource path="res://sounds/explosion01.smp" type="Sample" id=5]
+[ext_resource path="res://sounds/explosion02.smp" type="Sample" id=6]
+[ext_resource path="res://sounds/hit.smp" type="Sample" id=7]
+[ext_resource path="res://sounds/hit02.smp" type="Sample" id=8]
+[ext_resource path="res://objects/explosion.tscn" type="PackedScene" id=9]
+[ext_resource path="res://textures/bird.tex" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -15,42 +18,34 @@ extents = Vector2( 36, 576 )
 
 [sub_resource type="SampleLibrary" id=2]
 
-samples/hit = {
-"db": 0.0,
+samples/explosion01 = {
+"db": 10.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 5 )
+}
+samples/explosion02 = {
+"db": 15.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 6 )
+}
+samples/hit = {
+"db": -15.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 7 )
+}
+samples/hit02 = {
+"db": -8.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 8 )
 }
 
 [node name="main" type="Node2D"]
 
 script/script = ExtResource( 1 )
-
-[node name="tanks" type="Node" parent="."]
-
-[node name="tank" parent="tanks" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 324, 900 )
-type = 1
-
-[node name="tank8" parent="tanks" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 468, 36 )
-life = 5
-
-[node name="tank6" parent="tanks" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 36, 36 )
-
-[node name="tank2" parent="tanks" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 756, 36 )
-
-[node name="tank3" parent="tanks" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 900, 36 )
-
-[node name="bullets" type="Node2D" parent="."]
 
 [node name="TextureFrame" type="TextureFrame" parent="."]
 
@@ -63,8 +58,49 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 936.0
 margin/bottom = 936.0
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 stretch_mode = 0
+
+[node name="tanks" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="tank" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 324, 900 )
+type = 1
+
+[node name="tank8" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 468, 36 )
+life = 5
+
+[node name="tank6" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 36, 36 )
+
+[node name="tank7" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 324, 612 )
+life = 3
+
+[node name="tank9" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 324, 468 )
+
+[node name="tank10" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 324, 360 )
+
+[node name="tank2" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 756, 36 )
+
+[node name="tank3" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 900, 36 )
+
+[node name="bullets" type="Node2D" parent="."]
 
 [node name="grid" type="TileMap" parent="."]
 
@@ -83,6 +119,9 @@ collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
 tile_data = IntArray( 131074, 0, 131075, 0, 131078, 0, 131079, 0, 131082, 0, 131083, 0, 131086, 0, 131087, 0, 131090, 0, 131091, 0, 131094, 0, 131095, 0, 196610, 0, 196611, 0, 196614, 0, 196615, 0, 196618, 0, 196619, 0, 196622, 0, 196623, 0, 196626, 0, 196627, 0, 196630, 0, 196631, 0, 262146, 0, 262147, 0, 262150, 0, 262151, 0, 262154, 0, 262155, 0, 262158, 0, 262159, 0, 262162, 0, 262163, 0, 262166, 0, 262167, 0, 327682, 0, 327683, 0, 327686, 0, 327687, 0, 327690, 0, 327691, 0, 327694, 0, 327695, 0, 327698, 0, 327699, 0, 327702, 0, 327703, 0, 393218, 0, 393219, 0, 393222, 0, 393223, 0, 393226, 0, 393227, 0, 393228, 2, 393229, 2, 393230, 0, 393231, 0, 393234, 0, 393235, 0, 393238, 0, 393239, 0, 458754, 0, 458755, 0, 458758, 0, 458759, 0, 458762, 0, 458763, 0, 458764, 2, 458765, 2, 458766, 0, 458767, 0, 458770, 0, 458771, 0, 458774, 0, 458775, 0, 524290, 0, 524291, 0, 524294, 0, 524295, 0, 524298, 0, 524299, 0, 524302, 0, 524303, 0, 524306, 0, 524307, 0, 524310, 0, 524311, 0, 589826, 0, 589827, 0, 589830, 0, 589831, 0, 589842, 0, 589843, 0, 589846, 0, 589847, 0, 655362, 0, 655363, 0, 655366, 0, 655367, 0, 655378, 0, 655379, 0, 655382, 0, 655383, 0, 720906, 0, 720907, 0, 720910, 0, 720911, 0, 786442, 0, 786443, 0, 786446, 0, 786447, 0, 851968, 0, 851969, 0, 851972, 0, 851973, 0, 851974, 0, 851975, 0, 851986, 0, 851987, 0, 851988, 0, 851989, 0, 851992, 0, 851993, 0, 917504, 2, 917505, 2, 917508, 0, 917509, 0, 917510, 0, 917511, 0, 917522, 0, 917523, 0, 917524, 0, 917525, 0, 917528, 2, 917529, 2, 983050, 0, 983051, 0, 983054, 0, 983055, 0, 1048586, 0, 1048587, 0, 1048588, 0, 1048589, 0, 1048590, 0, 1048591, 0, 1114114, 0, 1114115, 0, 1114118, 0, 1114119, 0, 1114122, 0, 1114123, 0, 1114124, 0, 1114125, 0, 1114126, 0, 1114127, 0, 1114130, 0, 1114131, 0, 1114134, 0, 1114135, 0, 1179650, 0, 1179651, 0, 1179654, 0, 1179655, 0, 1179658, 0, 1179659, 0, 1179662, 0, 1179663, 0, 1179666, 0, 1179667, 0, 1179670, 0, 1179671, 0, 1245186, 0, 1245187, 0, 1245190, 0, 1245191, 0, 1245194, 0, 1245195, 0, 1245198, 0, 1245199, 0, 1245202, 0, 1245203, 0, 1245206, 0, 1245207, 0, 1310722, 0, 1310723, 0, 1310726, 0, 1310727, 0, 1310730, 0, 1310731, 0, 1310734, 0, 1310735, 0, 1310738, 0, 1310739, 0, 1310742, 0, 1310743, 0, 1376258, 0, 1376259, 0, 1376262, 0, 1376263, 0, 1376274, 0, 1376275, 0, 1376278, 0, 1376279, 0, 1441794, 0, 1441795, 0, 1441798, 0, 1441799, 0, 1441810, 0, 1441811, 0, 1441814, 0, 1441815, 0, 1507330, 0, 1507331, 0, 1507334, 0, 1507335, 0, 1507339, 0, 1507340, 0, 1507341, 0, 1507342, 0, 1507346, 0, 1507347, 0, 1507350, 0, 1507351, 0, 1572875, 0, 1572878, 0, 1638411, 0, 1638414, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
@@ -166,11 +205,11 @@ params/pitch_scale = 1.0
 params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
 params/attenuation/distance_exp = 1.0
-config/polyphony = 1
+config/polyphony = 8
 config/samples = SubResource( 2 )
 config/pitch_random = 0.0
 
-[node name="hit_exp" parent="." instance=ExtResource( 6 )]
+[node name="hit_exp" parent="." instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 119, 1 )
 
@@ -194,6 +233,6 @@ max_lines_visible = -1
 [node name="bird" type="Sprite" parent="."]
 
 transform/pos = Vector2( 468, 900 )
-texture = ExtResource( 7 )
+texture = ExtResource( 10 )
 
 

@@ -16,6 +16,7 @@ enum ENTITY_TYPES {UP, DOWN, LEFT, RIGHT}
 var loaded = true
 var randDir = -1
 export var life = 1
+var dead = false
 
 var speed = 0
 var max_speed = 150
@@ -61,10 +62,15 @@ func fire():
 func hit():
 	life -= 1
 	if life <= 0:
-		main_node.remove_tank(self)
-		queue_free()
+		dead = true
+		main_node.kill_tank(self)
+
+	else:
+		get_node("fire").play("hit03")
 
 func _fixed_process(delta):
+	if dead:
+		return
 	direction = Vector2()
 	if Input.is_action_pressed("ui_up") and type == 1 or randDir == 0 and type == 0:
 		currentDir = Vector2(0,-1)
@@ -126,12 +132,6 @@ func free_bullet():
 	if bullets_in_air < 0:
 		bullets_in_air = 0
 
-func update_pos():
-	var grid_pos = main_node.world_to_map(get_pos())
-	var new_grid_pos = grid_pos + direction
-	var target_pos = main_node.map_to_world(new_grid_pos)
-	return target_pos
-
 func obstacle(dir):
 	if dir == UP:
 		return get_node("rays/rayUp").is_colliding() or get_node("rays/rayUp1").is_colliding()
@@ -152,3 +152,7 @@ func _on_step_timeout():
 func _on_fireTimer_timeout():
 	get_node("fireTimer").set_wait_time(randf()+0.1)
 	fire()
+
+
+func _on_killer_timeout():
+	queue_free()

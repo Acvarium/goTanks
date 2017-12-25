@@ -26,11 +26,17 @@ func is_cell_vacant(tank):
 					return false
 	return true
 
+func kill_tank(tank):
+	remove_tank(tank)
+	get_node("hit_sound").play("explosion02")
+	tank.queue_free()
+
 func remove_tank(tank):
 	var grid_pos = world_to_map(tank.get_pos())
-	for x in range(2):
-		for y in range(2):
-			world[grid_pos.x + x - 1][grid_pos.y + y - 1] = null
+	for x in range(world_size):
+		for y in range(world_size):
+			if world[x][y] == tank:
+				world[x][y] = null
 
 func update_tank_pos(tank):
 	remove_tank(tank)
@@ -41,15 +47,15 @@ func update_tank_pos(tank):
 			world[new_grid_pos.x + x - 1][new_grid_pos.y + y - 1] = tank
 	
 	var target_pos = map_to_world(new_grid_pos) 
-#	var t = ''
-#	for x in range(world_size):
-#		for y in range(world_size):
-#			if world[y][x] != null:
-#				t += "[" + world[y][x].get_name()[-1] + "]"
-#			else:
-#				t += "[  ]"
-#		t += '\n'
-#	get_node("Label").set_text(t)
+	var t = ''
+	for x in range(world_size):
+		for y in range(world_size):
+			if world[y][x] != null:
+				t += "[" + world[y][x].get_name()[-1] + "]"
+			else:
+				t += "[  ]"
+		t += '\n'
+	get_node("Label").set_text(t)
 	return target_pos
 
 
