@@ -9,6 +9,7 @@ var level
 var mapObj
 var global 
 var bots = []
+var bots_count = 0
 
 var max_bots_on_screen = 5
 
@@ -109,13 +110,15 @@ func spawn(t):
 	if t == 1:
 		spawn_pos = get_node("spawn_points/point00").get_pos()
 	elif t == 0:
-		var bots_count = get_node("tanks").get_child_count()
+		var tanks_on_screen = get_node("tanks").get_child_count()
 		var spawn_point = randi()%3 + 2
-		if !is_spawn_point_vacant(spawn_point) or bots_count >= max_bots_on_screen:
+		if !is_spawn_point_vacant(spawn_point) or tanks_on_screen >= max_bots_on_screen or bots_count >= bots.size():
 			get_node("spawn_timer").start()
 			return
 		get_node("spawn_timer").start()
 		spawn_pos = get_node("spawn_points/point" + "%02d" % spawn_point).get_pos()
+		bots_count += 1
+		print(bots_count)
 	var tank = tankObj.instance()
 	tank.set_pos(spawn_pos)
 	tank.set_type(type)
