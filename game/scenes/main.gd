@@ -4,14 +4,29 @@ var cell_size = 36
 var explosionObj = load("res://objects/explosion.tscn")
 const world_size = 26
 var world = []
+var level = 0
+var mapObj
 
 func _ready():
 	grid = get_node("grid")
+	change_level(0)
 
 	for x in range(world_size):
 		world.append([])
 		for y in range(world_size):
 			world[x].append(null)
+
+func change_level(l):
+	level = l
+	if has_node("grid"):
+		get_node("grid").queue_free()
+		var name = "level" + "%02d" % level + ".tscn"
+		
+		mapObj = load("res://levels/" + name)
+		var map = mapObj.instance()
+		map.set_name("grid")
+		add_child(map)
+		grid = map
 
 func is_cell_vacant(tank):
 	var direction = tank.direction

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://textures/walls.tex" type="Texture" id=1]
+[ext_resource path="res://textures/trees.tex" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -96,5 +97,12 @@ bounce = 0.0
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="trees" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 66.3349 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 2
 
 
