@@ -64,33 +64,57 @@ stretch_mode = 0
 
 [node name="tanks" type="Node2D" parent="."]
 
-editor/display_folded = true
-
-[node name="tank" parent="tanks" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 324, 900 )
-type = 1
-
 [node name="tank7" parent="tanks" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 324, 612 )
+invincible = false
+
+[node name="tank15" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 324, 756 )
+invincible = false
+
+[node name="tank12" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 324, 504 )
+invincible = false
+
+[node name="tank13" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 324, 432 )
+invincible = false
+
+[node name="tank14" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 324, 684 )
+invincible = false
 
 [node name="tank8" parent="tanks" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 324, 360 )
 life = 5
+invincible = false
 
 [node name="tank9" parent="tanks" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 468, 36 )
+invincible = false
 
 [node name="tank10" parent="tanks" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 36, 36 )
+invincible = false
 
 [node name="tank11" parent="tanks" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 900, 36 )
+invincible = false
+
+[node name="tank" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 324, 900 )
+type = 1
+invincible = false
 
 [node name="bullets" type="Node2D" parent="."]
 
@@ -222,5 +246,63 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 468, 900 )
 texture = ExtResource( 9 )
+
+[node name="spawn_points" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="point00" type="Position2D" parent="spawn_points"]
+
+transform/pos = Vector2( 324, 900 )
+
+[node name="point01" type="Position2D" parent="spawn_points"]
+
+transform/pos = Vector2( 612, 900 )
+
+[node name="point02" type="Position2D" parent="spawn_points"]
+
+transform/pos = Vector2( 36, 36 )
+
+[node name="point03" type="Position2D" parent="spawn_points"]
+
+transform/pos = Vector2( 468, 36 )
+
+[node name="point04" type="Position2D" parent="spawn_points"]
+
+transform/pos = Vector2( 900, 36 )
+
+[node name="player1_lifes" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 756.0
+margin/top = 900.0
+margin/right = 796.0
+margin/bottom = 914.0
+custom_colors/font_color = Color( 0, 1, 0.015625, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="player1_lifes1" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 720.0
+margin/top = 576.0
+margin/right = 760.0
+margin/bottom = 590.0
+custom_colors/font_color = Color( 0, 1, 0.015625, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 

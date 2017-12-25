@@ -2,15 +2,17 @@ extends Node2D
 var grid
 var cell_size = 36
 var explosionObj = load("res://objects/explosion.tscn")
+var tankObj = load("res://objects/tank.tscn")
 const world_size = 26
 var world = []
-var level = 0
+var level
 var mapObj
 var global 
 
 func _ready():
 	global = get_node("/root/global")
 	level = global.level
+	get_node("player1_lifes").set_text(str(global.player1_lifes))
 	grid = get_node("grid")
 	change_level(level)
 	for x in range(world_size):
@@ -44,6 +46,11 @@ func is_cell_vacant(tank):
 	return true
 
 func kill_tank(tank):
+	var is_player1 = false
+	if tank.type == 1:
+		is_player1 = true
+		global.player1_lifes -= 1
+		get_node("player1_lifes").set_text(str(global.player1_lifes))
 	remove_tank(tank)
 	get_node("hit_sound").play("explosion02")
 	var explosion = explosionObj.instance()
@@ -55,8 +62,20 @@ func kill_tank(tank):
 	dirt.set_pos(tank.get_pos())
 	dirt.set_explosion(2)
 	get_node("floor").add_child(dirt)
-	
 	tank.queue_free()
+	if is_player1:
+		spawn_player(0)
+		
+func spawn_player(player_num):
+	var spawn_pos = Vector2()
+	var type = 1
+	if player_num == 0:
+		spawn_pos = get_node("spawn_points/point01").get_pos()
+	var player = tankObj.instance()
+	player.set_pos(spawn_pos)
+	player.set_type(type)
+	player.set_name("tank")
+	get_node("tanks").add_child(player)
 
 func remove_tank(tank):
 	var grid_pos = world_to_map(tank.get_pos())
@@ -83,6 +102,10 @@ func update_tank_pos(tank):
 				t += "[  ]"
 		t += '\n'
 	get_node("Label").set_text(t)
+	var ta = ""
+	for taa in get_node("tanks").get_children():
+		ta += taa.get_name() + "\n"
+	get_node("player1_lifes1").set_text(ta)
 	return target_pos
 
 

@@ -18,6 +18,7 @@ var randDir = -1
 export var life = 1
 var dead = false
 var engine_sound
+export var invincible = false
 
 var speed = 0
 var max_speed = 150
@@ -50,6 +51,9 @@ func _input(event):
 	if Input.is_action_pressed("fire"):
 		fire()
 
+func set_type(t):
+	type = t
+
 func fire():
 	if bullets_in_air < max_bullets and loaded:
 		bullets_in_air += 1
@@ -64,11 +68,13 @@ func fire():
 		get_node("cooldown").start()
 
 func hit():
+	if invincible:
+		get_node("fire").play("hit03")
+		return
 	life -= 1
 	if life <= 0:
 		dead = true
 		main_node.kill_tank(self)
-
 	else:
 		get_node("fire").play("hit03")
 

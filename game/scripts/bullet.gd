@@ -37,15 +37,22 @@ func _on_Timer_timeout():
 	free_bullet()
 
 func _on_bullet_body_enter( body ):
+#Do not count owner of a bullet
 	if body == owner:
 		return
+#If owner is a BOT
 	if owner_type == 0:
-		if body.get_name()[0] == 't':
+		
+		if body.get_parent() == main_node.get_node("tanks"):
 			if body.type == 0:
 				return
+			else:
+				body.hit()
 		free_bullet()
+		
+#If owner is player
 	elif owner_type == 1:
-		if body.get_name()[0] == 't':
+		if body.get_parent() == main_node.get_node("tanks"):
 			if body.type == 1:
 				return
 			elif body.type == 0:
