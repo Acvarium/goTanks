@@ -107,6 +107,7 @@ func kill_tank(tank):
 func spawn(t):
 	var spawn_pos = Vector2()
 	var type = t
+	var level = 0
 	if t == 1:
 		spawn_pos = get_node("spawn_points/point00").get_pos()
 	elif t == 0:
@@ -117,14 +118,18 @@ func spawn(t):
 			return
 		get_node("spawn_timer").start()
 		spawn_pos = get_node("spawn_points/point" + "%02d" % spawn_point).get_pos()
+		level = bots[bots_count]
 		bots_count += 1
-		print(bots_count)
+
 	var tank = tankObj.instance()
+	tank.set_level(level)
 	tank.set_pos(spawn_pos)
 	tank.set_type(type)
 	tank.set_name("tank")
+	
 	get_node("tanks").add_child(tank)
 	update_tank_pos(tank)
+
 
 func remove_tank(tank):
 	var grid_pos = world_to_map(tank.get_pos())

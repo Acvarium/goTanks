@@ -1,10 +1,13 @@
 extends Area2D
-var speed = 300
+var speed = 350
 var main_node
 var direction = Vector2(0,-1)
 var owner_type = 0
 var owner
 var owner_name
+
+func set_speed(s):
+	speed = s
 
 func _ready():
 	main_node = get_node("/root/main")

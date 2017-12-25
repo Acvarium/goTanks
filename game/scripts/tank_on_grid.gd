@@ -19,6 +19,10 @@ export var life = 1
 var dead = false
 var engine_sound
 export var invincible = false
+var level = 0
+var max_fire_timeout = 1
+var max_step_timeout = 3
+var bullet_speed = 350
 
 var speed = 0
 var max_speed = 150
@@ -47,6 +51,29 @@ func _ready():
 		get_node("step").start()
 		get_node("fireTimer").start()
 	
+	
+func set_level(l):
+	level = l
+	if type == 0:
+		if level == 0:
+			max_speed = 150
+		elif level == 1:
+			max_speed = 250
+		elif level == 2:
+			max_speed = 400
+			max_fire_timeout = 0.5
+			max_step_timeout = 1.5
+			bullet_speed = 400
+		elif level == 3:
+			life = 5
+			max_speed = 100
+		elif level == 4:
+			life = 5
+			max_speed = 80
+			max_bullets = 2
+		get_node("Label").set_text(str(level))
+			
+	
 func _input(event):
 	if Input.is_action_pressed("fire"):
 		fire()
@@ -61,6 +88,7 @@ func fire():
 		get_node("fire").play("fire")
 		var bullet = bulletObj.instance()
 		bullet.set_pos(get_node("Sprite/muzzle").get_global_pos())
+		bullet.set_speed(bullet_speed)
 		bullet.set_direction(currentDir)
 		bullet.set_owner(self)
 		main_node.get_node("bullets").add_child(bullet)
@@ -165,10 +193,10 @@ func _on_cooldown_timeout():
 
 func _on_step_timeout():
 	randDir = randi()%5
-	get_node("step").set_wait_time(randf()*3+0.2)
+	get_node("step").set_wait_time(randf() * max_step_timeout + 0.2)
 
 func _on_fireTimer_timeout():
-	get_node("fireTimer").set_wait_time(randf()+0.1)
+	get_node("fireTimer").set_wait_time(randf() * max_fire_timeout +0.1)
 	fire()
 
 

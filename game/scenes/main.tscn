@@ -68,7 +68,7 @@ stretch_mode = 0
 
 transform/pos = Vector2( 324, 900 )
 type = 1
-invincible = true
+invincible = false
 
 [node name="bullets" type="Node2D" parent="."]
 

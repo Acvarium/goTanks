@@ -3,7 +3,7 @@ var current_scene = null
 var level = 0
 var player1_lifes = 5
 var levels_data = [
-[15,3,0,1,1]
+[10,3,2,3,2]
 ]
 
 func _ready():

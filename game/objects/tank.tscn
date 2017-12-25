@@ -122,6 +122,7 @@ script/script = ExtResource( 1 )
 type = 0
 lavel = 0
 life = 1
+invincible = false
 
 [node name="rays" type="Node2D" parent="."]
 
@@ -320,6 +321,25 @@ process_mode = 1
 wait_time = 0.1
 one_shot = false
 autostart = false
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -36.0
+margin/top = 36.0
+margin/right = 4.0
+margin/bottom = 50.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
 
