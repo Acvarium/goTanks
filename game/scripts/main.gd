@@ -8,10 +8,21 @@ var world = []
 var level
 var mapObj
 var global 
+var bots = []
+
+var max_bots_on_screen = 5
 
 func _ready():
 	global = get_node("/root/global")
 	level = global.level
+	for i in range(5):
+		for j in range(global.levels_data[level][i]):
+			bots.append(i)
+	bots = shuffleList(bots)
+	var ta = ""
+	for b in bots:
+		ta += str(b) + "\n"
+	get_node("player1_lifes1").set_text(ta)
 	get_node("player1_lifes").set_text(str(global.player1_lifes))
 	grid = get_node("grid")
 	change_level(level)
@@ -19,6 +30,18 @@ func _ready():
 		world.append([])
 		for y in range(world_size):
 			world[x].append(null)
+		
+	for t in get_node("tanks").get_children():
+		update_tank_pos(t)
+
+func shuffleList(list):
+    var shuffledList = [] 
+    var indexList = range(list.size())
+    for i in range(list.size()):
+        var x = randi()%indexList.size()
+        shuffledList.append(list[indexList[x]])
+        indexList.remove(x)
+    return shuffledList
 
 func change_level(l):
 	level = l
@@ -32,11 +55,22 @@ func change_level(l):
 		add_child(map)
 		grid = map
 
+func is_spawn_point_vacant(point):
+	var point_name = "spawn_points/point" + "%02d" % point 
+	
+	var grid_pos = world_to_map(get_node(point_name).get_pos())
+	for x in range(2):
+		for y in range(2):
+			var cell = world[grid_pos.x + x - 1][grid_pos.y + y - 1]
+			if cell != null:
+				return false
+	return true
+	
+
 func is_cell_vacant(tank):
 	var direction = tank.direction
 	var pos = tank.get_pos()
 	var grid_pos = world_to_map(pos) + direction
-#	if world[grid_pos.x][grid_pos.y] == null:
 	for x in range(2):
 		for y in range(2):
 			var cell = world[grid_pos.x + x - 1][grid_pos.y + y - 1]
@@ -51,12 +85,15 @@ func kill_tank(tank):
 		is_player1 = true
 		global.player1_lifes -= 1
 		get_node("player1_lifes").set_text(str(global.player1_lifes))
+
+				
 	remove_tank(tank)
 	get_node("hit_sound").play("explosion02")
 	var explosion = explosionObj.instance()
 	explosion.set_pos(tank.get_pos())
 	explosion.set_explosion(1)
 	get_node("bullets").add_child(explosion)
+
 	
 	var dirt = explosionObj.instance()
 	dirt.set_pos(tank.get_pos())
@@ -64,18 +101,27 @@ func kill_tank(tank):
 	get_node("floor").add_child(dirt)
 	tank.queue_free()
 	if is_player1:
-		spawn_player(0)
+		spawn(1)
 		
-func spawn_player(player_num):
+func spawn(t):
 	var spawn_pos = Vector2()
-	var type = 1
-	if player_num == 0:
-		spawn_pos = get_node("spawn_points/point01").get_pos()
-	var player = tankObj.instance()
-	player.set_pos(spawn_pos)
-	player.set_type(type)
-	player.set_name("tank")
-	get_node("tanks").add_child(player)
+	var type = t
+	if t == 1:
+		spawn_pos = get_node("spawn_points/point00").get_pos()
+	elif t == 0:
+		var bots_count = get_node("tanks").get_child_count()
+		var spawn_point = randi()%3 + 2
+		if !is_spawn_point_vacant(spawn_point) or bots_count >= max_bots_on_screen:
+			get_node("spawn_timer").start()
+			return
+		get_node("spawn_timer").start()
+		spawn_pos = get_node("spawn_points/point" + "%02d" % spawn_point).get_pos()
+	var tank = tankObj.instance()
+	tank.set_pos(spawn_pos)
+	tank.set_type(type)
+	tank.set_name("tank")
+	get_node("tanks").add_child(tank)
+	update_tank_pos(tank)
 
 func remove_tank(tank):
 	var grid_pos = world_to_map(tank.get_pos())
@@ -102,10 +148,6 @@ func update_tank_pos(tank):
 				t += "[  ]"
 		t += '\n'
 	get_node("Label").set_text(t)
-	var ta = ""
-	for taa in get_node("tanks").get_children():
-		ta += taa.get_name() + "\n"
-	get_node("player1_lifes1").set_text(ta)
 	return target_pos
 
 
@@ -118,7 +160,6 @@ func map_to_world(cell):
 	var pos = Vector2(cell.x * cell_size, cell.y * cell_size)
 	return pos
 	
-
 func bullet_hit(pos, direction):
 	var shift = Vector2(0.5,0)
 	if !abs(direction.y):
@@ -136,7 +177,6 @@ func bullet_hit(pos, direction):
 	var explosion = explosionObj.instance()
 	explosion.set_pos(pos)
 	get_node("bullets").add_child(explosion)
-	
 
-	
-	
+func _on_spawn_timer_timeout():
+	spawn(0)
