@@ -6,11 +6,13 @@ const world_size = 26
 var world = []
 var level = 0
 var mapObj
+var global 
 
 func _ready():
+	global = get_node("/root/global")
+	level = global.level
 	grid = get_node("grid")
-	change_level(0)
-
+	change_level(level)
 	for x in range(world_size):
 		world.append([])
 		for y in range(world_size):
