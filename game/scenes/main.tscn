@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://scenes/main.gd" type="Script" id=1]
 [ext_resource path="res://textures/bg.jpg" type="Texture" id=2]
@@ -8,8 +8,7 @@
 [ext_resource path="res://sounds/explosion02.smp" type="Sample" id=6]
 [ext_resource path="res://sounds/hit.smp" type="Sample" id=7]
 [ext_resource path="res://sounds/hit02.smp" type="Sample" id=8]
-[ext_resource path="res://objects/explosion.tscn" type="PackedScene" id=9]
-[ext_resource path="res://textures/bird.tex" type="Texture" id=10]
+[ext_resource path="res://textures/bird.tex" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -25,7 +24,7 @@ samples/explosion01 = {
 "sample": ExtResource( 5 )
 }
 samples/explosion02 = {
-"db": 15.0,
+"db": 8.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 6 )
@@ -72,33 +71,24 @@ editor/display_folded = true
 transform/pos = Vector2( 324, 900 )
 type = 1
 
-[node name="tank8" parent="tanks" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 468, 36 )
-life = 5
-
-[node name="tank6" parent="tanks" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 36, 36 )
-
 [node name="tank7" parent="tanks" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 324, 612 )
 
+[node name="tank8" parent="tanks" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 324, 360 )
+life = 5
+
 [node name="tank9" parent="tanks" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 324, 468 )
-life = 3
+transform/pos = Vector2( 468, 36 )
 
 [node name="tank10" parent="tanks" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 324, 360 )
+transform/pos = Vector2( 36, 36 )
 
-[node name="tank2" parent="tanks" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 756, 36 )
-
-[node name="tank3" parent="tanks" instance=ExtResource( 3 )]
+[node name="tank11" parent="tanks" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 900, 36 )
 
@@ -207,13 +197,9 @@ params/pitch_scale = 1.0
 params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
 params/attenuation/distance_exp = 1.0
-config/polyphony = 8
+config/polyphony = 50
 config/samples = SubResource( 2 )
 config/pitch_random = 0.0
-
-[node name="hit_exp" parent="." instance=ExtResource( 9 )]
-
-transform/pos = Vector2( 119, 1 )
 
 [node name="Label" type="Label" parent="."]
 
@@ -235,6 +221,6 @@ max_lines_visible = -1
 [node name="bird" type="Sprite" parent="."]
 
 transform/pos = Vector2( 468, 900 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 

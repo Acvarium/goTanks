@@ -17,6 +17,7 @@ var loaded = true
 var randDir = -1
 export var life = 1
 var dead = false
+var engine_sound
 
 var speed = 0
 var max_speed = 150
@@ -24,6 +25,9 @@ var velocity = Vector2()
 
 func _ready():
 	randomize()
+	if type == 1:
+		get_node("engine").get_sample_library().get_sample("engine").set_loop_format(1)
+		engine_sound = get_node("engine").play("engine")
 	main_node = get_node("/root/main")
 	get_node("Sprite").set_frame(type * 2)
 	get_node("rays/rayUp").add_exception(self)
@@ -105,6 +109,9 @@ func _fixed_process(delta):
 			is_moving = true
 	elif is_moving:
 #------ Play animation
+		if type == 1:
+			get_node("engine").set_pitch_scale(engine_sound, 1)
+			get_node("engine").set_volume_db(engine_sound, 3)
 		if !get_node("tracksAnim").is_playing():
 			get_node("tracksAnim").play("tracks" + str(type))
 			
@@ -122,11 +129,16 @@ func _fixed_process(delta):
 		move(velocity)
 	else:
 #------ Stop animation
+		if type == 1:
+			get_node("engine").set_pitch_scale(engine_sound, 0.8)
+			get_node("engine").set_volume_db(engine_sound, -5)
+			
+		
 		if get_node("tracksAnim").is_playing():
 			get_node("tracksAnim").stop(true)
 	if direction != Vector2():
 		currentDir = direction
-			
+	
 func free_bullet():
 	bullets_in_air -= 1
 	if bullets_in_air < 0:

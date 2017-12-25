@@ -245,7 +245,7 @@ autoplay = ""
 
 [node name="fire" type="SamplePlayer" parent="."]
 
-config/polyphony = 4
+config/polyphony = 50
 config/samples = SubResource( 4 )
 default/volume_db = -15.0
 default/pitch_scale = 1.0
@@ -264,7 +264,7 @@ default/chorus_send = 0.0
 
 config/polyphony = 4
 config/samples = SubResource( 5 )
-default/volume_db = -20.0
+default/volume_db = -2.0
 default/pitch_scale = 0.8
 default/pan = 0.0
 default/depth = 0.0
