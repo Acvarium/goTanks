@@ -7,6 +7,7 @@ var world = []
 
 func _ready():
 	grid = get_node("grid")
+
 	for x in range(world_size):
 		world.append([])
 		for y in range(world_size):
@@ -25,26 +26,30 @@ func is_cell_vacant(tank):
 					return false
 	return true
 
-func update_tank_pos(tank):
+func remove_tank(tank):
 	var grid_pos = world_to_map(tank.get_pos())
-	var new_grid_pos = grid_pos + tank.direction
 	for x in range(2):
 		for y in range(2):
 			world[grid_pos.x + x - 1][grid_pos.y + y - 1] = null
+
+func update_tank_pos(tank):
+	remove_tank(tank)
+	var grid_pos = world_to_map(tank.get_pos())
+	var new_grid_pos = grid_pos + tank.direction
 	for x in range(2):
 		for y in range(2):
 			world[new_grid_pos.x + x - 1][new_grid_pos.y + y - 1] = tank
 	
 	var target_pos = map_to_world(new_grid_pos) 
-	var t = ''
-	for x in range(world_size):
-		for y in range(world_size):
-			if world[y][x] != null:
-				t += "[" + world[y][x].get_name()[-1] + "]"
-			else:
-				t += "[  ]"
-		t += '\n'
-	get_node("Label").set_text(t)
+#	var t = ''
+#	for x in range(world_size):
+#		for y in range(world_size):
+#			if world[y][x] != null:
+#				t += "[" + world[y][x].get_name()[-1] + "]"
+#			else:
+#				t += "[  ]"
+#		t += '\n'
+#	get_node("Label").set_text(t)
 	return target_pos
 
 
@@ -67,8 +72,8 @@ func bullet_hit(pos, direction):
 
 	for i in range(2):
 		if cells_id[i] == 0:
-			grid.set_cell(cells_pos[i].x,cells_pos[i].y,3)
-		elif cells_id[i] == 3:
+			grid.set_cell(cells_pos[i].x,cells_pos[i].y,1)
+		elif cells_id[i] == 1:
 			grid.set_cell(cells_pos[i].x,cells_pos[i].y,-1)
 #	
 	get_node("hit_sound").play("hit")

@@ -2,8 +2,9 @@ extends Area2D
 var speed = 300
 var main_node
 var direction = Vector2(0,-1)
-var ownerType = 0
+var owner_type = 0
 var owner
+var owner_name
 
 func _ready():
 	main_node = get_node("/root/main")
@@ -22,7 +23,8 @@ func set_direction(dir):
 		
 func set_owner(own):
 	owner = own
-	ownerType = owner.type
+	owner_type = owner.type
+	owner_name = owner.get_name()
 
 	
 func _fixed_process(delta):
@@ -35,19 +37,29 @@ func _on_Timer_timeout():
 	free_bullet()
 
 func _on_bullet_body_enter( body ):
-#	print(body.get_name())
-	if body != owner:
-		if ownerType == 0:
-			if body.get_name()[0] == 't':
-				if body.type == 0:
-					return
-			free_bullet()
+	if body == owner:
+		return
+	if owner_type == 0:
+		if body.get_name()[0] == 't':
+			if body.type == 0:
+				return
+		free_bullet()
+	elif owner_type == 1:
+		if body.get_name()[0] == 't':
+			if body.type == 1:
+				return
+			elif body.type == 0:
+				body.hit()
+				free_bullet()
 		else:
 			free_bullet()
+	else:
+		free_bullet()
 
 func free_bullet():
 	if owner:
-		owner.free_bullet()
+		if main_node.has_node("tanks/" + owner_name):
+			owner.free_bullet()
 	main_node.bullet_hit(get_pos(), direction)
 	queue_free()
 

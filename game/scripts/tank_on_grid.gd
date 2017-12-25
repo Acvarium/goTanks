@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var type = 0
+export var type = 0 
 export var lavel = 0
 var direction = Vector2()
 var currentDir = Vector2(0,-1)
@@ -15,6 +15,7 @@ var max_bullets = 1
 enum ENTITY_TYPES {UP, DOWN, LEFT, RIGHT}
 var loaded = true
 var randDir = -1
+export var life = 1
 
 var speed = 0
 var max_speed = 150
@@ -23,6 +24,7 @@ var velocity = Vector2()
 func _ready():
 	randomize()
 	main_node = get_node("/root/main")
+	get_node("Sprite").set_frame(type * 2)
 	get_node("rays/rayUp").add_exception(self)
 	get_node("rays/rayDown").add_exception(self)
 	get_node("rays/rayLeft").add_exception(self)
@@ -33,7 +35,6 @@ func _ready():
 	get_node("rays/rayRight1").add_exception(self)
 	grid = get_parent()
 	set_fixed_process(true)
-#	set_process_input(true)
 	if type == 1:
 		set_process_input(true)
 	else:
@@ -57,9 +58,14 @@ func fire():
 		loaded = false
 		get_node("cooldown").start()
 
+func hit():
+	life -= 1
+	if life <= 0:
+		main_node.remove_tank(self)
+		queue_free()
+
 func _fixed_process(delta):
 	direction = Vector2()
-#	if isinco
 	if Input.is_action_pressed("ui_up") and type == 1 or randDir == 0 and type == 0:
 		currentDir = Vector2(0,-1)
 		if !obstacle(UP):
@@ -94,7 +100,7 @@ func _fixed_process(delta):
 	elif is_moving:
 #------ Play animation
 		if !get_node("tracksAnim").is_playing():
-			get_node("tracksAnim").play("tracks")
+			get_node("tracksAnim").play("tracks" + str(type))
 			
 		speed = max_speed
 		velocity = speed * target_direction * delta
@@ -136,10 +142,9 @@ func obstacle(dir):
 	elif dir == RIGHT:
 		return get_node("rays/rayRight").is_colliding() or get_node("rays/rayRight1").is_colliding()
 
-
 func _on_cooldown_timeout():
 	loaded = true
-	
+
 func _on_step_timeout():
 	randDir = randi()%5
 	get_node("step").set_wait_time(randf()*3+0.2)
