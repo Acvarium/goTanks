@@ -15,4 +15,6 @@ Thumbs.db
 *.blend1
 *.blend2
 
+export/
+
 *.xcf

@@ -61,6 +61,8 @@ margin/bottom = 936.0
 texture = ExtResource( 2 )
 stretch_mode = 0
 
+[node name="floor" type="Node2D" parent="."]
+
 [node name="tanks" type="Node2D" parent="."]
 
 editor/display_folded = true
@@ -82,11 +84,11 @@ transform/pos = Vector2( 36, 36 )
 [node name="tank7" parent="tanks" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 324, 612 )
-life = 3
 
 [node name="tank9" parent="tanks" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 324, 468 )
+life = 3
 
 [node name="tank10" parent="tanks" instance=ExtResource( 3 )]
 

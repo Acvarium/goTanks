@@ -29,6 +29,16 @@ func is_cell_vacant(tank):
 func kill_tank(tank):
 	remove_tank(tank)
 	get_node("hit_sound").play("explosion02")
+	var explosion = explosionObj.instance()
+	explosion.set_pos(tank.get_pos())
+	explosion.set_explosion(1)
+	get_node("bullets").add_child(explosion)
+	
+	var dirt = explosionObj.instance()
+	dirt.set_pos(tank.get_pos())
+	dirt.set_explosion(2)
+	get_node("floor").add_child(dirt)
+	
 	tank.queue_free()
 
 func remove_tank(tank):
@@ -85,5 +95,8 @@ func bullet_hit(pos, direction):
 	get_node("hit_sound").play("hit")
 	var explosion = explosionObj.instance()
 	explosion.set_pos(pos)
-	add_child(explosion)
-#	explosion.set_owner(self)
+	get_node("bullets").add_child(explosion)
+	
+
+	
+	
