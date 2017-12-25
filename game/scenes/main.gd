@@ -2,7 +2,7 @@ extends Node2D
 var grid
 var cell_size = 36
 var explosionObj = load("res://objects/explosion.tscn")
-const world_size = 25
+const world_size = 26
 var world = []
 
 func _ready():
@@ -12,24 +12,44 @@ func _ready():
 		for y in range(world_size):
 			world[x].append(null)
 
-func is_cell_vacant(pos, direction):
+func is_cell_vacant(tank):
+	var direction = tank.direction
+	var pos = tank.get_pos()
 	var grid_pos = world_to_map(pos) + direction
-	if world[grid_pos.x][grid_pos.y] == null:
-		return true
-	else:
-		return false
+#	if world[grid_pos.x][grid_pos.y] == null:
+	for x in range(2):
+		for y in range(2):
+			var cell = world[grid_pos.x + x - 1][grid_pos.y + y - 1]
+			if cell != null:
+				if cell != tank:
+					return false
+	return true
 
 func update_tank_pos(tank):
 	var grid_pos = world_to_map(tank.get_pos())
-	world[grid_pos.x][grid_pos.y] = null
-	
 	var new_grid_pos = grid_pos + tank.direction
-	world[new_grid_pos.x][new_grid_pos.y] = tank
+	for x in range(2):
+		for y in range(2):
+			world[grid_pos.x + x - 1][grid_pos.y + y - 1] = null
+	for x in range(2):
+		for y in range(2):
+			world[new_grid_pos.x + x - 1][new_grid_pos.y + y - 1] = tank
+	
 	var target_pos = map_to_world(new_grid_pos) 
+	var t = ''
+	for x in range(world_size):
+		for y in range(world_size):
+			if world[y][x] != null:
+				t += "[" + world[y][x].get_name()[-1] + "]"
+			else:
+				t += "[  ]"
+		t += '\n'
+	get_node("Label").set_text(t)
 	return target_pos
 
 
 func world_to_map(pos):
+	pos = pos + Vector2(cell_size/4, cell_size/4)
 	var cell = Vector2(int(pos.x / cell_size), int(pos.y / cell_size))
 	return cell
 	

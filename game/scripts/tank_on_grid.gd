@@ -84,11 +84,13 @@ func _fixed_process(delta):
 			direction.x = 1
 		if !is_moving:
 			get_node("Sprite").set_rot(PI*1.5)
+			
+	
 	if not is_moving and direction != Vector2():
 		target_direction = direction
-#		if grid.is_cell_vacant(get_pos(),target_direction):
-		target_pos = update_pos()
-		is_moving = true
+		if main_node.is_cell_vacant(self):
+			target_pos = main_node.update_tank_pos(self)
+			is_moving = true
 	elif is_moving:
 #------ Play animation
 		if !get_node("tracksAnim").is_playing():
