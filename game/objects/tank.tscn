@@ -126,6 +126,8 @@ invincible = false
 
 [node name="rays" type="Node2D" parent="."]
 
+editor/display_folded = true
+
 [node name="rayDown" type="RayCast2D" parent="rays"]
 
 transform/pos = Vector2( -13, 0 )
@@ -195,7 +197,7 @@ type_mask = 15
 editor/display_folded = true
 transform/scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
-vframes = 2
+vframes = 3
 hframes = 2
 __meta__ = {
 "_edit_lock_": true

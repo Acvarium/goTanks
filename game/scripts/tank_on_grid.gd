@@ -112,28 +112,28 @@ func _fixed_process(delta):
 		return
 	direction = Vector2()
 	if Input.is_action_pressed("ui_up") and type == 1 or randDir == 0 and type == 0:
-		currentDir = Vector2(0,-1)
 		if !obstacle(UP):
 			direction.y = -1
 		if !is_moving:
+			currentDir = Vector2(0,-1)
 			get_node("Sprite").set_rot(0)
 	elif Input.is_action_pressed("ui_down") and type == 1 or randDir == 1 and type == 0:
-		currentDir = Vector2(0,1)
 		if !obstacle(DOWN):
 			direction.y = 1
 		if !is_moving:
+			currentDir = Vector2(0,1)
 			get_node("Sprite").set_rot(PI)
 	elif Input.is_action_pressed("ui_left") and type == 1 or randDir == 2 and type == 0:
-		currentDir = Vector2(-1,0)
 		if !obstacle(LEFT):
 			direction.x = -1
 		if !is_moving:
+			currentDir = Vector2(-1,0)
 			get_node("Sprite").set_rot(PI/2)
 	elif Input.is_action_pressed("ui_right") and type == 1 or randDir == 3 and type == 0:
-		currentDir = Vector2(1,0)
 		if !obstacle(RIGHT):
 			direction.x = 1
 		if !is_moving:
+			currentDir = Vector2(1,0)
 			get_node("Sprite").set_rot(PI*1.5)
 			
 	
@@ -171,9 +171,7 @@ func _fixed_process(delta):
 		
 		if get_node("tracksAnim").is_playing():
 			get_node("tracksAnim").stop(true)
-	if direction != Vector2():
-		currentDir = direction
-	
+
 func free_bullet():
 	bullets_in_air -= 1
 	if bullets_in_air < 0:

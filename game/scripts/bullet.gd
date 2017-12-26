@@ -73,6 +73,5 @@ func free_bullet():
 	main_node.bullet_hit(get_pos(), direction)
 	queue_free()
 
-
 func _on_bullet_area_enter( area ):
 	free_bullet()

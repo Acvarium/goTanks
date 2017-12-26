@@ -123,6 +123,7 @@ func spawn(t):
 		var tanks_on_screen = get_node("tanks").get_child_count()
 		var spawn_point = randi()%3 + 2
 		if !is_spawn_point_vacant(spawn_point) or tanks_on_screen >= max_bots_on_screen or bots_count >= bots.size():
+			get_node("spawn_timer").set_wait_time(randf() * 3)
 			get_node("spawn_timer").start()
 			return
 		get_node("spawn_timer").start()
