@@ -1,0 +1,120 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/main.gd" type="Script" id=1]
+[ext_resource path="res://levels/level00.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/tank.tscn" type="PackedScene" id=3]
+[ext_resource path="res://textures/bg.jpg" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 720, 36 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 36, 576 )
+
+[node name="main" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="floor" type="Node2D" parent="."]
+
+[node name="bullets" type="Node2D" parent="."]
+
+[node name="grids" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="grid" parent="grids" instance=ExtResource( 2 )]
+
+[node name="tanks" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="tank" parent="tanks" instance=ExtResource( 3 )]
+
+position = Vector2( 324, 792 )
+type = 1
+
+[node name="Label" type="Label" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 36.0
+margin_top = 36.0
+margin_right = 76.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.125, 1, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "000"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="bg" type="CanvasLayer" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="bg" type="TextureRect" parent="bg"]
+
+modulate = Color( 1, 1, 1, 0.501961 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 936.0
+margin_bottom = 936.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="walls" type="StaticBody2D" parent="."]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
+
+position = Vector2( 468, -36 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="walls"]
+
+position = Vector2( -36, 468 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="walls"]
+
+position = Vector2( 972, 468 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls"]
+
+position = Vector2( 432, 972 )
+shape = SubResource( 1 )
+
+
