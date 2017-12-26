@@ -24,8 +24,8 @@ func _ready():
 	var ta = ""
 	for b in bots:
 		ta += str(b) + "\n"
-	get_node("player1_lifes1").set_text(ta)
-	get_node("player1_lifes").set_text(str(global.player1_lifes))
+	get_node("player1_lifes").set_text(ta)
+	get_node("player1_lifes").set_text(str(global.player_lifes[0]))
 	grid = get_node("grids/grid")
 	change_level(level)
 	for x in range(world_size):
@@ -44,6 +44,15 @@ func shuffleList(list):
         shuffledList.append(list[indexList[x]])
         indexList.remove(x)
     return shuffledList
+
+func set_level(l):
+	global.player1_level = l
+	
+	
+
+func play_sound(sound):
+	get_node("sounds/effect").play("up01")
+
 
 func change_level(l):
 	level = l
@@ -68,6 +77,11 @@ func is_spawn_point_vacant(point):
 				return false
 	return true
 	
+func set_player_lifes(l, player):
+	if player == 1:
+		global.player_lifes[0] = l
+		get_node("player1_lifes").set_text(str(global.player_lifes[0]))
+		
 
 func is_cell_vacant(tank):
 	var direction = tank.direction
@@ -75,6 +89,10 @@ func is_cell_vacant(tank):
 	var grid_pos = world_to_map(pos) + direction
 	for x in range(2):
 		for y in range(2):
+			if (grid_pos.x + x - 1) < 0 or (grid_pos.x + x - 1) >= world.size():
+				return false
+			if (grid_pos.y + y - 1) < 0 or (grid_pos.y + y - 1) >= world[0].size():
+				return false
 			var cell = world[grid_pos.x + x - 1][grid_pos.y + y - 1]
 			if cell != null:
 				if cell != tank:
@@ -85,11 +103,11 @@ func kill_tank(tank):
 	var is_player1 = false
 	if tank.type == 1:
 		is_player1 = true
-		global.player1_lifes -= 1
-		if global.player1_lifes <= 0:
+		global.player_lifes[tank.type - 1] -= 1
+		if global.player_lifes[tank.type - 1] <= 0:
 			game_over()
 	
-		get_node("player1_lifes").set_text(str(global.player1_lifes))
+		get_node("player1_lifes").set_text(str(global.player_lifes[tank.type - 1]))
 	elif tank.type == 0:
 		killed += 1
 		if killed >= bots.size():

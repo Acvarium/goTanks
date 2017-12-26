@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=15 format=1]
 
 [ext_resource path="res://scripts/tank_on_grid.gd" type="Script" id=1]
 [ext_resource path="res://textures/tanks.tex" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://sounds/hit02.smp" type="Sample" id=5]
 [ext_resource path="res://sounds/hit03.smp" type="Sample" id=6]
 [ext_resource path="res://sounds/engine01.smp" type="Sample" id=7]
+[ext_resource path="res://textures/light_test.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -342,6 +343,19 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="shild" type="Sprite" parent="."]
+
+visibility/visible = false
+transform/scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 8 )
+
+[node name="shild" type="Timer" parent="shild"]
+
+process_mode = 1
+wait_time = 10.0
+one_shot = false
+autostart = false
+
 [connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
 
 [connection signal="timeout" from="step" to="." method="_on_step_timeout"]
@@ -349,5 +363,7 @@ max_lines_visible = -1
 [connection signal="timeout" from="fireTimer" to="." method="_on_fireTimer_timeout"]
 
 [connection signal="timeout" from="killer" to="." method="_on_killer_timeout"]
+
+[connection signal="timeout" from="shild/shild" to="." method="_on_shild_timeout"]
 
 

@@ -33,6 +33,7 @@ func _ready():
 	if type == 1:
 		get_node("engine").get_sample_library().get_sample("engine").set_loop_format(1)
 		engine_sound = get_node("engine").play("engine")
+		set_level(global.player_level[type - 1])
 	main_node = get_node("/root/main")
 	get_node("Sprite").set_frame(type * 2)
 	get_node("rays/rayUp").add_exception(self)
@@ -50,7 +51,8 @@ func _ready():
 	else:
 		get_node("step").start()
 		get_node("fireTimer").start()
-	
+
+
 	
 func set_level(l):
 	level = l
@@ -72,8 +74,15 @@ func set_level(l):
 			life = 5
 			max_speed = 80
 			max_bullets = 2
-		get_node("Label").set_text(str(level))
-			
+	else:
+		global.player_level[type - 1] = level
+		if level == 1:
+			max_speed = 170
+			max_bullets = 2
+		if level == 2:
+			bullet_speed = 400
+	get_node("Label").set_text(str(level))
+	
 	
 func _input(event):
 	if Input.is_action_pressed("fire"):
@@ -187,6 +196,11 @@ func obstacle(dir):
 	elif dir == RIGHT:
 		return get_node("rays/rayRight").is_colliding() or get_node("rays/rayRight1").is_colliding()
 
+func shild():
+	get_node("shild").show()
+	get_node("shild/shild").start()
+	invincible = true
+
 func _on_cooldown_timeout():
 	loaded = true
 
@@ -198,6 +212,9 @@ func _on_fireTimer_timeout():
 	get_node("fireTimer").set_wait_time(randf() * max_fire_timeout +0.1)
 	fire()
 
-
 func _on_killer_timeout():
 	queue_free()
+
+func _on_shild_timeout():
+	invincible = false
+	get_node("shild").hide()
