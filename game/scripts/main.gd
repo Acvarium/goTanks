@@ -10,8 +10,9 @@ var mapObj
 var global 
 var bots = []
 var bots_count = 0
+var killed = 0
 
-var max_bots_on_screen = 5
+var max_bots_on_screen = 6
 
 func _ready():
 	global = get_node("/root/global")
@@ -85,7 +86,15 @@ func kill_tank(tank):
 	if tank.type == 1:
 		is_player1 = true
 		global.player1_lifes -= 1
+		if global.player1_lifes <= 0:
+			game_over()
+	
 		get_node("player1_lifes").set_text(str(global.player1_lifes))
+	elif tank.type == 0:
+		killed += 1
+		if killed >= bots.size():
+			global.go = false
+			get_node("/root/global").goto_scene("res://scenes/score.tscn")
 
 				
 	remove_tank(tank)
@@ -188,3 +197,14 @@ func bullet_hit(pos, direction):
 
 func _on_spawn_timer_timeout():
 	spawn(0)
+
+
+func game_over():
+	global.go = true
+	get_node("/root/global").goto_scene("res://scenes/score.tscn")
+		
+
+func _on_bird_area_enter( area ):
+	if area.get_parent().get_name() == "bullets":
+		game_over()
+	

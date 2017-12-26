@@ -194,6 +194,7 @@ type_mask = 15
 
 [node name="Sprite" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 vframes = 2
