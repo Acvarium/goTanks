@@ -4,7 +4,9 @@ var level = 0
 var go = false
 var player1_lifes = 2
 var levels_data = [
-[5,0,0,0,0],[10,3,2,3,2]
+[12,4,3,0,1],
+[10,3,2,3,2],
+[10,3,2,3,2]
 ]
 
 func _ready():

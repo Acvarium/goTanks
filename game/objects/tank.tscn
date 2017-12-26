@@ -126,14 +126,12 @@ invincible = false
 
 [node name="rays" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="rayDown" type="RayCast2D" parent="rays"]
 
 transform/pos = Vector2( -13, 0 )
 enabled = true
 cast_to = Vector2( 0, 64 )
-layer_mask = 1
+layer_mask = 5
 type_mask = 15
 
 [node name="rayDown1" type="RayCast2D" parent="rays"]
@@ -141,7 +139,7 @@ type_mask = 15
 transform/pos = Vector2( 13, 0 )
 enabled = true
 cast_to = Vector2( 0, 64 )
-layer_mask = 1
+layer_mask = 5
 type_mask = 15
 
 [node name="rayUp" type="RayCast2D" parent="rays"]
@@ -149,7 +147,7 @@ type_mask = 15
 transform/pos = Vector2( -13, 0 )
 enabled = true
 cast_to = Vector2( 0, -64 )
-layer_mask = 1
+layer_mask = 5
 type_mask = 15
 
 [node name="rayUp1" type="RayCast2D" parent="rays"]
@@ -157,7 +155,7 @@ type_mask = 15
 transform/pos = Vector2( 13, 0 )
 enabled = true
 cast_to = Vector2( 0, -64 )
-layer_mask = 1
+layer_mask = 5
 type_mask = 15
 
 [node name="rayRight" type="RayCast2D" parent="rays"]
@@ -165,7 +163,7 @@ type_mask = 15
 transform/pos = Vector2( 0, -13 )
 enabled = true
 cast_to = Vector2( 64, 0 )
-layer_mask = 1
+layer_mask = 5
 type_mask = 15
 
 [node name="rayRight1" type="RayCast2D" parent="rays"]
@@ -173,7 +171,7 @@ type_mask = 15
 transform/pos = Vector2( 0, 13 )
 enabled = true
 cast_to = Vector2( 64, 0 )
-layer_mask = 1
+layer_mask = 5
 type_mask = 15
 
 [node name="rayLeft" type="RayCast2D" parent="rays"]
@@ -181,7 +179,7 @@ type_mask = 15
 transform/pos = Vector2( 0, 13 )
 enabled = true
 cast_to = Vector2( -64, 0 )
-layer_mask = 1
+layer_mask = 5
 type_mask = 15
 
 [node name="rayLeft1" type="RayCast2D" parent="rays"]
@@ -189,7 +187,7 @@ type_mask = 15
 transform/pos = Vector2( 0, -13 )
 enabled = true
 cast_to = Vector2( -64, 0 )
-layer_mask = 1
+layer_mask = 5
 type_mask = 15
 
 [node name="Sprite" type="Sprite" parent="."]

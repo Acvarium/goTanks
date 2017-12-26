@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://textures/walls.tex" type="Texture" id=1]
 [ext_resource path="res://textures/trees.tex" type="Texture" id=2]
+[ext_resource path="res://textures/water.tex" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -104,5 +105,30 @@ transform/pos = Vector2( 0, 66.3349 )
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 2
+
+[node name="water" type="Sprite" parent="."]
+
+transform/pos = Vector2( 273.788, -3.78252 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="water"]
+
+transform/pos = Vector2( 0, 0.32354 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 4
+collision/mask = 4
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="water/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
 
 

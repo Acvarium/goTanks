@@ -59,6 +59,7 @@ func set_level(l):
 			max_speed = 150
 		elif level == 1:
 			max_speed = 250
+			max_step_timeout = 1.2
 		elif level == 2:
 			max_speed = 400
 			max_fire_timeout = 0.5

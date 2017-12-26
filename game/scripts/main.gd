@@ -26,7 +26,7 @@ func _ready():
 		ta += str(b) + "\n"
 	get_node("player1_lifes1").set_text(ta)
 	get_node("player1_lifes").set_text(str(global.player1_lifes))
-	grid = get_node("grid")
+	grid = get_node("grids/grid")
 	change_level(level)
 	for x in range(world_size):
 		world.append([])
@@ -47,14 +47,14 @@ func shuffleList(list):
 
 func change_level(l):
 	level = l
-	if has_node("grid"):
-		get_node("grid").queue_free()
+	if get_node("grids").has_node("grid"):
+		get_node("grids/grid").queue_free()
 		var name = "level" + "%02d" % level + ".tscn"
 		
 		mapObj = load("res://levels/" + name)
 		var map = mapObj.instance()
 		map.set_name("grid")
-		add_child(map)
+		get_node("grids").add_child(map)
 		grid = map
 
 func is_spawn_point_vacant(point):
