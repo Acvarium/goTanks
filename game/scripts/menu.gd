@@ -20,3 +20,8 @@ func _on_single_player2_pressed():
 func _on_single_player3_pressed():
 	global.level = 2
 	global.goto_scene("res://scenes/main.tscn")
+
+
+func _on_single_player4_pressed():
+	global.level = 3
+	global.goto_scene("res://scenes/main.tscn")

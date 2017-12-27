@@ -101,13 +101,13 @@ func kill_tank(tank):
 	remove_tank(tank)
 #	get_node("hit_sound").play("explosion02")
 	var explosion = explosionObj.instance()
-	explosion.set_pos(tank.get_pos())
+	explosion.position = tank.position
 	explosion.set_explosion(1)
 	$bullets.add_child(explosion)
 
 	
 	var dirt = explosionObj.instance()
-	dirt.set_pos(tank.get_pos())
+	dirt.position = tank.position
 	dirt.set_explosion(2)
 	$floor.add_child(dirt)
 	tank.queue_free()
@@ -192,9 +192,9 @@ func bullet_hit(pos, direction):
 			grid.set_cell(cells_pos[i].x,cells_pos[i].y,-1)
 #	
 #	get_node("hit_sound").play("hit")
-#	var explosion = explosionObj.instance()
-#	explosion.set_pos(pos)
-#	$bullets.add_child(explosion)
+	var explosion = explosionObj.instance()
+	explosion.position = pos
+	$bullets.add_child(explosion)
 
 func _on_spawn_timer_timeout():
 	spawn(0)
