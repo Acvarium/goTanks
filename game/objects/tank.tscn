@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=15 format=1]
 
 [ext_resource path="res://scripts/tank_on_grid.gd" type="Script" id=1]
 [ext_resource path="res://textures/tanks.tex" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://sounds/hit02.smp" type="Sample" id=5]
 [ext_resource path="res://sounds/hit03.smp" type="Sample" id=6]
 [ext_resource path="res://sounds/engine01.smp" type="Sample" id=7]
+[ext_resource path="res://textures/light_test.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -123,6 +124,12 @@ type = 0
 lavel = 0
 life = 1
 invincible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
 
 [node name="rays" type="Node2D" parent="."]
 
@@ -244,6 +251,43 @@ playback/speed = 2.0
 blend_times = [  ]
 autoplay = ""
 
+[node name="timers" type="Node2D" parent="."]
+
+[node name="cooldown" type="Timer" parent="timers"]
+
+process_mode = 1
+wait_time = 0.2
+one_shot = false
+autostart = false
+
+[node name="step" type="Timer" parent="timers"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = false
+
+[node name="fireTimer" type="Timer" parent="timers"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="killer" type="Timer" parent="timers"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = false
+
+[node name="shild" type="Timer" parent="timers"]
+
+process_mode = 1
+wait_time = 10.0
+one_shot = false
+autostart = false
+
 [node name="fire" type="SamplePlayer" parent="."]
 
 config/polyphony = 50
@@ -289,40 +333,6 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-
-[node name="cooldown" type="Timer" parent="."]
-
-process_mode = 1
-wait_time = 0.2
-one_shot = false
-autostart = false
-
-[node name="step" type="Timer" parent="."]
-
-process_mode = 1
-wait_time = 0.1
-one_shot = false
-autostart = false
-
-[node name="fireTimer" type="Timer" parent="."]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
-
-[node name="killer" type="Timer" parent="."]
-
-process_mode = 1
-wait_time = 0.1
-one_shot = false
-autostart = false
-
 [node name="Label" type="Label" parent="."]
 
 focus/ignore_mouse = true
@@ -342,12 +352,20 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
+[node name="shild" type="Sprite" parent="."]
 
-[connection signal="timeout" from="step" to="." method="_on_step_timeout"]
+visibility/visible = false
+transform/scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 8 )
 
-[connection signal="timeout" from="fireTimer" to="." method="_on_fireTimer_timeout"]
+[connection signal="timeout" from="timers/cooldown" to="." method="_on_cooldown_timeout"]
 
-[connection signal="timeout" from="killer" to="." method="_on_killer_timeout"]
+[connection signal="timeout" from="timers/step" to="." method="_on_step_timeout"]
+
+[connection signal="timeout" from="timers/fireTimer" to="." method="_on_fireTimer_timeout"]
+
+[connection signal="timeout" from="timers/killer" to="." method="_on_killer_timeout"]
+
+[connection signal="timeout" from="timers/shild" to="." method="_on_shild_timeout"]
 
 

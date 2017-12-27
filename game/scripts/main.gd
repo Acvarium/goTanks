@@ -3,6 +3,7 @@ var grid
 var cell_size = 36
 var explosionObj = load("res://objects/explosion.tscn")
 var tankObj = load("res://objects/tank.tscn")
+var bonusObj = load("res://objects/bonus.tscn")
 const world_size = 26
 var world = []
 var level
@@ -15,6 +16,9 @@ var killed = 0
 var max_bots_on_screen = 6
 
 func _ready():
+	set_process_input(true)
+	get_node("timers/spawn_bonus").set_wait_time(randf()*25 + 10)
+	get_node("timers/spawn_bonus").start()
 	global = get_node("/root/global")
 	level = global.level
 	for i in range(5):
@@ -24,10 +28,10 @@ func _ready():
 	var ta = ""
 	for b in bots:
 		ta += str(b) + "\n"
-	get_node("player1_lifes1").set_text(ta)
-	get_node("player1_lifes").set_text(str(global.player1_lifes))
+	get_node("player1_lifes").set_text(ta)
+	get_node("player1_lifes").set_text(str(global.player_lifes[0]))
 	grid = get_node("grids/grid")
-	change_level(level)
+	set_level(level)
 	for x in range(world_size):
 		world.append([])
 		for y in range(world_size):
@@ -35,6 +39,12 @@ func _ready():
 		
 	for t in get_node("tanks").get_children():
 		update_tank_pos(t)
+
+func _input(event):
+	if Input.is_action_pressed("menu"):
+		global.goto_scene("res://scenes/menu.tscn")
+
+
 
 func shuffleList(list):
     var shuffledList = [] 
@@ -44,8 +54,11 @@ func shuffleList(list):
         shuffledList.append(list[indexList[x]])
         indexList.remove(x)
     return shuffledList
+	
+func play_sound(sound):
+	get_node("sounds/effect").play("up01")
 
-func change_level(l):
+func set_level(l):
 	level = l
 	if get_node("grids").has_node("grid"):
 		get_node("grids/grid").queue_free()
@@ -68,6 +81,11 @@ func is_spawn_point_vacant(point):
 				return false
 	return true
 	
+func set_player_lifes(l, player):
+	if player == 1:
+		global.player_lifes[0] = l
+		get_node("player1_lifes").set_text(str(global.player_lifes[0]))
+		
 
 func is_cell_vacant(tank):
 	var direction = tank.direction
@@ -75,21 +93,31 @@ func is_cell_vacant(tank):
 	var grid_pos = world_to_map(pos) + direction
 	for x in range(2):
 		for y in range(2):
+			if (grid_pos.x + x - 1) < 0 or (grid_pos.x + x - 1) >= world.size():
+				return false
+			if (grid_pos.y + y - 1) < 0 or (grid_pos.y + y - 1) >= world[0].size():
+				return false
 			var cell = world[grid_pos.x + x - 1][grid_pos.y + y - 1]
 			if cell != null:
 				if cell != tank:
 					return false
 	return true
 
+func grenade():
+	for t in get_node("tanks").get_children():
+		if t.type == 0:
+			kill_tank(t)
+
 func kill_tank(tank):
 	var is_player1 = false
 	if tank.type == 1:
 		is_player1 = true
-		global.player1_lifes -= 1
-		if global.player1_lifes <= 0:
+		global.player_lifes[tank.type - 1] -= 1
+		global.player_level[tank.type - 1] = 0
+		if global.player_lifes[0] <= 0:
 			game_over()
 	
-		get_node("player1_lifes").set_text(str(global.player1_lifes))
+		get_node("player1_lifes").set_text(str(global.player_lifes[tank.type - 1]))
 	elif tank.type == 0:
 		killed += 1
 		if killed >= bots.size():
@@ -157,17 +185,7 @@ func update_tank_pos(tank):
 			world[new_grid_pos.x + x - 1][new_grid_pos.y + y - 1] = tank
 	
 	var target_pos = map_to_world(new_grid_pos) 
-	var t = ''
-	for x in range(world_size):
-		for y in range(world_size):
-			if world[y][x] != null:
-				t += "[" + world[y][x].get_name()[-1] + "]"
-			else:
-				t += "[  ]"
-		t += '\n'
-	get_node("Label").set_text(t)
 	return target_pos
-
 
 func world_to_map(pos):
 	pos = pos + Vector2(cell_size/4, cell_size/4)
@@ -208,4 +226,37 @@ func game_over():
 func _on_bird_area_enter( area ):
 	if area.get_parent().get_name() == "bullets":
 		game_over()
+	
+func protect():
+	grid.set_cell(11,23,2)
+	grid.set_cell(12,23,2)
+	grid.set_cell(13,23,2)
+	grid.set_cell(14,23,2)
+	grid.set_cell(11,24,2)
+	grid.set_cell(11,25,2)
+	grid.set_cell(14,24,2)
+	grid.set_cell(14,25,2)
+	get_node("timers/protected").start()
+	
+	
+func _on_protected_timeout():
+	grid.set_cell(11,23,0)
+	grid.set_cell(12,23,0)
+	grid.set_cell(13,23,0)
+	grid.set_cell(14,23,0)
+	grid.set_cell(11,24,0)
+	grid.set_cell(11,25,0)
+	grid.set_cell(14,24,0)
+	grid.set_cell(14,25,0)
+
+
+func _on_spawn_bonus_timeout():
+	var pos = Vector2(randf() * 864 + 36, randf() * 864 + 36)
+	var bonus = bonusObj.instance()
+	bonus.set_pos(pos)
+	bonus.set_type(randi()%5)
+	bonus.set_time(randf()*10 + 5)
+	get_node("spawn_points").add_child(bonus)
+	get_node("timers/spawn_bonus").set_wait_time(randf()*25 + 10)
+	get_node("sounds/effect").play("up02")
 	

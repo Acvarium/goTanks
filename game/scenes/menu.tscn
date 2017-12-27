@@ -14,15 +14,69 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 432.0
-margin/top = 432.0
+margin/top = 288.0
 margin/right = 516.0
-margin/bottom = 510.0
+margin/bottom = 366.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 icon = ExtResource( 2 )
 flat = false
 
+[node name="single_player1" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 432.0
+margin/top = 432.0
+margin/right = 516.0
+margin/bottom = 468.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "0"
+flat = false
+
+[node name="single_player2" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 432.0
+margin/top = 468.0
+margin/right = 516.0
+margin/bottom = 504.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "1"
+flat = false
+
+[node name="single_player3" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 432.0
+margin/top = 504.0
+margin/right = 516.0
+margin/bottom = 540.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "2"
+flat = false
+
 [connection signal="pressed" from="single_player" to="." method="_on_single_player_pressed"]
+
+[connection signal="pressed" from="single_player1" to="." method="_on_single_player1_pressed"]
+
+[connection signal="pressed" from="single_player2" to="." method="_on_single_player2_pressed"]
+
+[connection signal="pressed" from="single_player3" to="." method="_on_single_player3_pressed"]
 
 

@@ -8,7 +8,10 @@ func _ready():
 		get_node("message").set_text("GAME OVER")
 		global.go = false
 		global.level = 0
-		global.player1_lifes = 1
+		global.player_lifes[0] = 1
+		global.player_lifes[1] = 1
+		global.player_level[0] = 0
+		global.player_level[1] = 0
 	else:
 		global.level += 1
 		global.level %= global.levels_data.size()
