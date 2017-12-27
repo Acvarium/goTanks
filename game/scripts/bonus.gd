@@ -36,6 +36,10 @@ func _on_Area2D_body_enter( body ):
 					body.set_level(global.player_level[body.type - 1] + 1)
 				elif type == 2:
 					body.shild()
+				elif type == 3:
+					main_node.grenade()
+				elif type == 4:
+					main_node.protect()
 
 func disappear():
 	value -= 1

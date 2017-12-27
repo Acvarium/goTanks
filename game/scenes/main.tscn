@@ -94,8 +94,6 @@ type = 1
 
 [node name="grids" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="grid" type="TileMap" parent="grids"]
 
 mode = 0
@@ -372,7 +370,7 @@ _update_shape_index = 3
 [node name="life_up" parent="." instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 324, 756 )
-type = 1
+type = 4
 
 [node name="life_up1" parent="." instance=ExtResource( 11 )]
 
@@ -387,9 +385,21 @@ type = 2
 [node name="life_up3" parent="." instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 648, 576 )
+type = 3
+
+[node name="timers" type="Node2D" parent="."]
+
+[node name="protected" type="Timer" parent="timers"]
+
+process_mode = 1
+wait_time = 10.0
+one_shot = false
+autostart = false
 
 [connection signal="area_enter" from="bird/bird" to="." method="_on_bird_area_enter"]
 
 [connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]
+
+[connection signal="timeout" from="timers/protected" to="." method="_on_protected_timeout"]
 
 

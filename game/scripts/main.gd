@@ -93,6 +93,11 @@ func is_cell_vacant(tank):
 					return false
 	return true
 
+func grenade():
+	for t in get_node("tanks").get_children():
+		if t.type == 0:
+			kill_tank(t)
+
 func kill_tank(tank):
 	var is_player1 = false
 	if tank.type == 1:
@@ -170,17 +175,7 @@ func update_tank_pos(tank):
 			world[new_grid_pos.x + x - 1][new_grid_pos.y + y - 1] = tank
 	
 	var target_pos = map_to_world(new_grid_pos) 
-	var t = ''
-	for x in range(world_size):
-		for y in range(world_size):
-			if world[y][x] != null:
-				t += "[" + world[y][x].get_name()[-1] + "]"
-			else:
-				t += "[  ]"
-		t += '\n'
-	get_node("Label").set_text(t)
 	return target_pos
-
 
 func world_to_map(pos):
 	pos = pos + Vector2(cell_size/4, cell_size/4)
@@ -222,3 +217,24 @@ func _on_bird_area_enter( area ):
 	if area.get_parent().get_name() == "bullets":
 		game_over()
 	
+func protect():
+	grid.set_cell(11,23,2)
+	grid.set_cell(12,23,2)
+	grid.set_cell(13,23,2)
+	grid.set_cell(14,23,2)
+	grid.set_cell(11,24,2)
+	grid.set_cell(11,25,2)
+	grid.set_cell(14,24,2)
+	grid.set_cell(14,25,2)
+	get_node("timers/protected").start()
+	
+	
+func _on_protected_timeout():
+	grid.set_cell(11,23,0)
+	grid.set_cell(12,23,0)
+	grid.set_cell(13,23,0)
+	grid.set_cell(14,23,0)
+	grid.set_cell(11,24,0)
+	grid.set_cell(11,25,0)
+	grid.set_cell(14,24,0)
+	grid.set_cell(14,25,0)
