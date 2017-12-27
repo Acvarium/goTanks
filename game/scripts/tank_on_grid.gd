@@ -90,6 +90,8 @@ func set_level(l):
 		life = BLD[level][5]
 	else:
 #Set Level for player
+		if level > PLD.size() - 1:
+			level = PLD.size() - 1
 		global.player_level[type - 1] = level
 		max_speed = PLD[level][0]
 		bullet_speed = PLD[level][1]

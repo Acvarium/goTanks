@@ -3,6 +3,7 @@ var grid
 var cell_size = 36
 var explosionObj = load("res://objects/explosion.tscn")
 var tankObj = load("res://objects/tank.tscn")
+var bonusObj = load("res://objects/bonus.tscn")
 const world_size = 26
 var world = []
 var level
@@ -15,6 +16,8 @@ var killed = 0
 var max_bots_on_screen = 6
 
 func _ready():
+	get_node("timers/spawn_bonus").set_wait_time(randf()*40 + 10)
+	get_node("timers/spawn_bonus").start()
 	global = get_node("/root/global")
 	level = global.level
 	for i in range(5):
@@ -238,3 +241,15 @@ func _on_protected_timeout():
 	grid.set_cell(11,25,0)
 	grid.set_cell(14,24,0)
 	grid.set_cell(14,25,0)
+
+
+func _on_spawn_bonus_timeout():
+	var pos = Vector2(randf() * 864 + 36, randf() * 864 + 36)
+	var bonus = bonusObj.instance()
+	bonus.set_pos(pos)
+	bonus.set_type(randi()%5)
+	bonus.set_time(randf()*10 + 5)
+	get_node("spawn_points").add_child(bonus)
+	get_node("timers/spawn_bonus").set_wait_time(randf()*40 + 10)
+	get_node("sounds/effect").play("up02")
+	

@@ -5,6 +5,7 @@ var direction = Vector2(0,-1)
 var owner_type = 0
 var owner
 var owner_name
+var wr
 
 func set_speed(s):
 	speed = s
@@ -28,6 +29,7 @@ func set_owner(own):
 	owner = own
 	owner_type = owner.type
 	owner_name = owner.get_name()
+	wr = weakref(owner)
 
 	
 func _fixed_process(delta):
@@ -68,7 +70,7 @@ func _on_bullet_body_enter( body ):
 
 func free_bullet():
 	if owner:
-		if main_node.has_node("tanks/" + owner_name):
+		if (wr.get_ref()):
 			owner.free_bullet()
 	main_node.bullet_hit(get_pos(), direction)
 	queue_free()

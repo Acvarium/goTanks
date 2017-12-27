@@ -9,6 +9,10 @@ func set_type(t):
 	type = t
 	set_frame(type)
 
+func set_time(t):
+	time = t
+	get_node("Timer").set_wait_time(t)
+	
 func _ready():
 	global = get_node("/root/global")
 	main_node = get_node("/root/main")
