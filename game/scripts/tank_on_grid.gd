@@ -97,6 +97,8 @@ func set_level(l):
 		bullet_speed = PLD[level][1]
 		max_bullets = PLD[level][2]
 	get_node("Label").set_text(str(level))
+	
+	
 func _input(event):
 	if Input.is_action_pressed("fire"):
 		fire()

@@ -16,6 +16,7 @@ var killed = 0
 var max_bots_on_screen = 6
 
 func _ready():
+	set_process_input(true)
 	get_node("timers/spawn_bonus").set_wait_time(randf()*40 + 10)
 	get_node("timers/spawn_bonus").start()
 	global = get_node("/root/global")
@@ -38,6 +39,12 @@ func _ready():
 		
 	for t in get_node("tanks").get_children():
 		update_tank_pos(t)
+
+func _input(event):
+	if Input.is_action_pressed("menu"):
+		global.goto_scene("res://scenes/menu.tscn")
+
+
 
 func shuffleList(list):
     var shuffledList = [] 
