@@ -28,16 +28,23 @@ func _on_Area2D_body_enter( body ):
 	if value > 0:
 		if body.get_parent() == main_node.get_node("tanks"):
 			if body.type > 0:
-				value -= 1
 				main_node.play_sound("up01")
-				set_process(false)
-				get_node("anim").stop(true)
-				get_node("Timer").set_wait_time(0.2)
-				get_node("Timer").start()
-				set_modulate(Color(1,1,0.5,1))
+				disappear()
 				if type == 0:
 					main_node.set_player_lifes(global.player_lifes[body.type - 1] + 1, body.type)
 				elif type == 1:
 					body.set_level(global.player_level[body.type - 1] + 1)
 				elif type == 2:
 					body.shild()
+
+func disappear():
+	value -= 1
+	set_process(false)
+	get_node("anim").stop(true)
+	get_node("Timer").set_wait_time(0.2)
+	get_node("Timer").start()
+	set_modulate(Color(1,1,0.5,1))
+
+func _on_Area2D_area_enter( area ):
+	if area.get_parent() == main_node.get_node("bullets"):
+		disappear()

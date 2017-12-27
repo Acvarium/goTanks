@@ -56,8 +56,6 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-collision/layers = 4
-collision/mask = 4
 __meta__ = {
 "_edit_lock_": true
 }
@@ -78,6 +76,8 @@ process_mode = 1
 wait_time = 20.0
 one_shot = false
 autostart = true
+
+[connection signal="area_enter" from="Area2D" to="." method="_on_Area2D_area_enter"]
 
 [connection signal="body_enter" from="Area2D" to="." method="_on_Area2D_body_enter"]
 

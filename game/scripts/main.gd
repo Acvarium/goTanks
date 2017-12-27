@@ -27,7 +27,7 @@ func _ready():
 	get_node("player1_lifes").set_text(ta)
 	get_node("player1_lifes").set_text(str(global.player_lifes[0]))
 	grid = get_node("grids/grid")
-	change_level(level)
+	set_level(level)
 	for x in range(world_size):
 		world.append([])
 		for y in range(world_size):
@@ -44,17 +44,11 @@ func shuffleList(list):
         shuffledList.append(list[indexList[x]])
         indexList.remove(x)
     return shuffledList
-
-func set_level(l):
-	global.player1_level = l
 	
-	
-
 func play_sound(sound):
 	get_node("sounds/effect").play("up01")
 
-
-func change_level(l):
+func set_level(l):
 	level = l
 	if get_node("grids").has_node("grid"):
 		get_node("grids/grid").queue_free()
@@ -104,7 +98,8 @@ func kill_tank(tank):
 	if tank.type == 1:
 		is_player1 = true
 		global.player_lifes[tank.type - 1] -= 1
-		if global.player_lifes[tank.type - 1] <= 0:
+		global.player_level[tank.type - 1] = 0
+		if global.player_lifes[0] <= 0:
 			game_over()
 	
 		get_node("player1_lifes").set_text(str(global.player_lifes[tank.type - 1]))

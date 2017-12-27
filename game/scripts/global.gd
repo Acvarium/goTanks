@@ -7,7 +7,7 @@ var player_level = [0,0]
 var player_lifes = [2,0]
 
 var levels_data = [
-[18,0,2,0,0],
+[18,5,2,5,5],
 [11,0,4,0,2],
 [10,0,4,0,2]
 ]

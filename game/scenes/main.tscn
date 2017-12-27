@@ -12,7 +12,7 @@
 [ext_resource path="res://sounds/up01.smp" type="Sample" id=10]
 [ext_resource path="res://objects/bonus.tscn" type="PackedScene" id=11]
 
-[sub_resource type="SampleLibrary" id=2]
+[sub_resource type="SampleLibrary" id=1]
 
 samples/explosion01 = {
 "db": 10.0,
@@ -39,17 +39,17 @@ samples/hit02 = {
 "sample": ExtResource( 8 )
 }
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 24, 24 )
 
-[sub_resource type="SampleLibrary" id=7]
+[sub_resource type="SampleLibrary" id=4]
 
 samples/up01 = {
 "db": 0.0,
@@ -58,7 +58,7 @@ samples/up01 = {
 "sample": ExtResource( 10 )
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 36, 576 )
@@ -149,7 +149,7 @@ params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
 params/attenuation/distance_exp = 1.0
 config/polyphony = 50
-config/samples = SubResource( 2 )
+config/samples = SubResource( 1 )
 config/pitch_random = 0.0
 
 [node name="Label" type="Label" parent="."]
@@ -178,7 +178,7 @@ texture = ExtResource( 9 )
 [node name="bird" type="Area2D" parent="bird"]
 
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -188,14 +188,14 @@ angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bird/bird"]
 
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="bird"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 4 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -207,7 +207,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D1" type="CollisionShape2D" parent="bird/StaticBody2D"]
 
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 
@@ -225,7 +225,7 @@ params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
 params/attenuation/distance_exp = 1.0
 config/polyphony = 1
-config/samples = SubResource( 7 )
+config/samples = SubResource( 4 )
 config/pitch_random = 0.0
 
 [node name="spawn_points" type="Node2D" parent="."]
@@ -320,16 +320,16 @@ autostart = true
 
 editor/display_folded = true
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, -36, 468 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 1 )
+shapes/1/shape = SubResource( 5 )
 shapes/1/transform = Matrix32( 1, 0, 0, 1, 972, 468 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 1 )
+shapes/2/shape = SubResource( 5 )
 shapes/2/transform = Matrix32( -4.37114e-08, -1, 1, -4.37114e-08, 468, 972 )
 shapes/2/trigger = false
-shapes/3/shape = SubResource( 1 )
+shapes/3/shape = SubResource( 5 )
 shapes/3/transform = Matrix32( -4.37114e-08, -1, 1, -4.37114e-08, 504, -36 )
 shapes/3/trigger = false
 collision/layers = 1
@@ -342,14 +342,14 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="end"]
 
 transform/pos = Vector2( -36, 468 )
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 
 [node name="CollisionShape2D1" type="CollisionShape2D" parent="end"]
 
 transform/pos = Vector2( 972, 468 )
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 1
 
@@ -357,7 +357,7 @@ _update_shape_index = 1
 
 transform/pos = Vector2( 468, 972 )
 transform/rot = 90.0
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 2
 
@@ -365,7 +365,7 @@ _update_shape_index = 2
 
 transform/pos = Vector2( 504, -36 )
 transform/rot = 90.0
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 3
 
