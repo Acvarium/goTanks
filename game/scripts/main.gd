@@ -17,7 +17,7 @@ var max_bots_on_screen = 6
 
 func _ready():
 	set_process_input(true)
-	get_node("timers/spawn_bonus").set_wait_time(randf()*40 + 10)
+	get_node("timers/spawn_bonus").set_wait_time(randf()*25 + 10)
 	get_node("timers/spawn_bonus").start()
 	global = get_node("/root/global")
 	level = global.level
@@ -257,6 +257,6 @@ func _on_spawn_bonus_timeout():
 	bonus.set_type(randi()%5)
 	bonus.set_time(randf()*10 + 5)
 	get_node("spawn_points").add_child(bonus)
-	get_node("timers/spawn_bonus").set_wait_time(randf()*40 + 10)
+	get_node("timers/spawn_bonus").set_wait_time(randf()*25 + 10)
 	get_node("sounds/effect").play("up02")
 	
