@@ -121,7 +121,6 @@ visibility/opacity = 0.0
 texture = ExtResource( 3 )
 vframes = 4
 hframes = 4
-frame = 9
 
 [node name="Sprite" type="Sprite" parent="."]
 

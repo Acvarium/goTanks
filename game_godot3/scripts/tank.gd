@@ -26,8 +26,39 @@ var speed = 0
 var max_speed = 150
 var velocity = Vector2()
 
+#Player Levels Data
+# 0 max_speed
+# 1 bullet_speed
+# 2 max_bullets
+
+const PLD = [
+[150, 350, 1],
+[150, 350, 2],
+[150, 420, 2],
+[180, 430, 2]
+]
+
+#Bot Levels Data
+# 0 max_speed
+# 1 bullet_speed
+# 2 max_bullets
+# 3 max_step_timeout
+# 4 max_fire_timeout
+# 5 life
+const BLD = [
+[150, 350, 1, 3, 1, 1],
+[250, 350, 1, 1.5, 1, 1],
+[400, 410, 1, 1.5, 0.5, 1],
+[100, 350, 1, 3, 1, 4],
+[80, 350, 2, 3, 1, 5],
+]
+
 func _ready():
 	randomize()
+#	if type == 1:
+#		get_node("engine").get_sample_library().get_sample("engine").set_loop_format(1)
+#		engine_sound = get_node("engine").play("engine")
+#		set_level(global.player_level[type - 1])
 	main_node = get_node("/root/main")
 	$Sprite.set_frame(type * 2)
 	$rays/rayUp.add_exception(self)
@@ -42,31 +73,29 @@ func _ready():
 		set_process_input(true)
 	else:
 		set_process_input(false)
-		$step.start()
-		$fireTimer.start()
+		$timers/step.start()
+		$timers/fireTimer.start()
 	
 	
 func set_level(l):
 	level = l
 	if type == 0:
-		if level == 0:
-			max_speed = 150
-		elif level == 1:
-			max_speed = 250
-			max_step_timeout = 1.2
-		elif level == 2:
-			max_speed = 400
-			max_fire_timeout = 0.5
-			max_step_timeout = 1.5
-			bullet_speed = 400
-		elif level == 3:
-			life = 5
-			max_speed = 100
-		elif level == 4:
-			life = 5
-			max_speed = 80
-			max_bullets = 2
-			
+		max_speed = BLD[level][0]
+		bullet_speed = BLD[level][1]
+		max_bullets = BLD[level][2]
+		max_step_timeout = BLD[level][3]
+		max_fire_timeout = BLD[level][4]
+		life = BLD[level][5]
+	else:
+#Set Level for player
+		if level > PLD.size() - 1:
+			level = PLD.size() - 1
+		global.player_level[type - 1] = level
+		max_speed = PLD[level][0]
+		bullet_speed = PLD[level][1]
+		max_bullets = PLD[level][2]
+	get_node("Label").set_text(str(level))
+	
 	
 func _input(event):
 	if Input.is_action_pressed("fire"):
@@ -79,14 +108,15 @@ func fire():
 	if bullets_in_air < max_bullets and loaded:
 		bullets_in_air += 1
 #		$fireAnim.play("fire")
+#		get_node("fire").play("fire")
 		var bullet = bulletObj.instance()
 		bullet.position = get_node("Sprite/muzzle").global_position
 		bullet.set_speed(bullet_speed)
 		bullet.set_direction(currentDir)
 		bullet.set_owner(self)
 		main_node.get_node("bullets").add_child(bullet)
-#		loaded = false
-#		get_node("cooldown").start()
+		loaded = false
+		$timers/cooldown.start()
 
 func hit():
 	if invincible:
@@ -171,17 +201,26 @@ func obstacle(dir):
 	elif dir == RIGHT:
 		return $rays/rayRight.is_colliding() or $rays/rayRight1.is_colliding()
 
+func shild():
+	get_node("shild").show()
+	get_node("timers/shild").start()
+	invincible = true
+
 func _on_cooldown_timeout():
 	loaded = true
 
 func _on_step_timeout():
 	randDir = randi()%5
-	$step.set_wait_time(randf() * max_step_timeout + 0.2)
+	$timers/step.set_wait_time(randf() * max_step_timeout + 0.2)
 
 func _on_fireTimer_timeout():
-	$fireTimer.set_wait_time(randf() * max_fire_timeout +0.1)
+	$timers/fireTimer.set_wait_time(randf() * max_fire_timeout +0.1)
 	fire()
 
 
 func _on_killer_timeout():
 	queue_free()
+
+func _on_shild_timeout():
+	invincible = false
+	get_node("shild").hide()

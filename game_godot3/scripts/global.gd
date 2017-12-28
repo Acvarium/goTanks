@@ -2,11 +2,15 @@ extends Node
 var current_scene = null
 var level = 0
 var go = false
-var player1_lifes = 2
+
+var player_level = [0,0]
+var player_lifes = [2,0]
+
 var levels_data = [
-[18,0,2,0,0],
+[10,2,3,2,3],
 [11,0,4,0,2],
-[10,0,4,0,2]
+[10,0,4,0,2],
+[10,5,1,0,0],
 ]
 
 func _ready():
