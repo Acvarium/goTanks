@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://textures/walls.png" type="Texture" id=1]
+[ext_resource path="res://textures/trees.png" type="Texture" id=2]
+[ext_resource path="res://textures/water.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -9,13 +11,13 @@ extents = Vector2( 18, 18 )
 
 [node name="main" type="Node2D"]
 
-[node name="bricks0" type="Sprite" parent="."]
+[node name="bricks0" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 1 )
 vframes = 2
 hframes = 4
 
-[node name="StaticBody2D" type="StaticBody2D" parent="bricks0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="bricks0" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -25,11 +27,11 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="bricks0/StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bricks0/StaticBody2D" index="0"]
 
 shape = SubResource( 1 )
 
-[node name="bricks1" type="Sprite" parent="."]
+[node name="bricks1" type="Sprite" parent="." index="1"]
 
 position = Vector2( 108, 0 )
 texture = ExtResource( 1 )
@@ -37,7 +39,7 @@ vframes = 2
 hframes = 4
 frame = 1
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="bricks1"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="bricks1" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -47,11 +49,11 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="bricks1/StaticBody2D2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bricks1/StaticBody2D2" index="0"]
 
 shape = SubResource( 1 )
 
-[node name="stone0" type="Sprite" parent="."]
+[node name="stone0" type="Sprite" parent="." index="2"]
 
 position = Vector2( 252, 0 )
 texture = ExtResource( 1 )
@@ -59,7 +61,7 @@ vframes = 2
 hframes = 4
 frame = 2
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="stone0"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="stone0" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -69,7 +71,44 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="stone0/StaticBody2D3"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stone0/StaticBody2D3" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="trees" type="Sprite" parent="." index="3"]
+
+position = Vector2( 360, 0 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 2
+frame = 2
+_sections_unfolded = [ "Animation", "Region" ]
+
+[node name="trees2" type="Sprite" parent="." index="4"]
+
+position = Vector2( 540, 36 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Region" ]
+
+[node name="water" type="Sprite" parent="." index="5"]
+
+position = Vector2( 252, 80 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="water" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="water/StaticBody2D3" index="0"]
 
 shape = SubResource( 1 )
 

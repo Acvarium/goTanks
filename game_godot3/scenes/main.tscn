@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://objects/tank.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/level00.tscn" type="PackedScene" id=3]
 [ext_resource path="res://textures/bg.jpg" type="Texture" id=4]
 [ext_resource path="res://textures/bird.png" type="Texture" id=5]
+[ext_resource path="res://sounds/explosion02.ogg" type="AudioStream" id=6]
+[ext_resource path="res://sounds/hit.ogg" type="AudioStream" id=7]
+[ext_resource path="res://sounds/up01.ogg" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -221,6 +224,7 @@ max_lines_visible = -1
 
 [node name="bird" type="Sprite" parent="." index="10"]
 
+editor/display_folded = true
 position = Vector2( 468, 900 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
@@ -253,6 +257,34 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bird/StaticBody2D" index="0"]
 
 shape = SubResource( 4 )
+
+[node name="sounds" type="Node2D" parent="." index="11"]
+
+[node name="explosion" type="AudioStreamPlayer" parent="sounds" index="0"]
+
+stream = ExtResource( 6 )
+volume_db = -10.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="hit" type="AudioStreamPlayer2D" parent="sounds" index="1"]
+
+stream = ExtResource( 7 )
+volume_db = -15.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="bonus" type="AudioStreamPlayer" parent="sounds" index="2"]
+
+stream = ExtResource( 8 )
+volume_db = -15.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="timeout" from="timers/protected" to="." method="_on_protected_timeout"]
 

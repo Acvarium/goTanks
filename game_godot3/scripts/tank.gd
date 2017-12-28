@@ -70,9 +70,10 @@ func _ready():
 	$rays/rayLeft1.add_exception(self)
 	$rays/rayRight1.add_exception(self)
 	if type == 1:
-		set_process_input(true)
-	else:
-		set_process_input(false)
+		$sounds/engine.play()
+		pass
+	elif type == 0:
+		$sounds/fire.volume_db = -40
 		$timers/step.start()
 		$timers/fireTimer.start()
 	
@@ -108,7 +109,8 @@ func fire():
 	if bullets_in_air < max_bullets and loaded:
 		bullets_in_air += 1
 #		$fireAnim.play("fire")
-#		get_node("fire").play("fire")
+		$sounds/fire.play()
+		
 		var bullet = bulletObj.instance()
 		bullet.position = get_node("Sprite/muzzle").global_position
 		bullet.set_speed(bullet_speed)
@@ -120,7 +122,8 @@ func fire():
 
 func hit():
 	if invincible:
-#		get_node("fire").play("hit03")
+		$sounds/hit2.play()
+		
 		return
 	life -= 1
 	if life <= 0:
@@ -128,7 +131,7 @@ func hit():
 		main_node.kill_tank(self)
 	else:
 		pass
-#		get_node("fire").play("hit03")
+		$sounds/hit2.play()
 
 func _physics_process(delta):
 	if dead:
@@ -167,6 +170,11 @@ func _physics_process(delta):
 			is_moving = true
 	elif is_moving:
 #------ Play animation
+		if type == 1:
+			pass
+			$sounds/engine.stop()
+			if !$sounds/engine2.playing:
+				$sounds/engine2.play()
 		if !$tracksAnim.is_playing():
 			$tracksAnim.play("tracks" + str(type))
 			
@@ -183,6 +191,12 @@ func _physics_process(delta):
 		move_and_collide(velocity)
 	else:
 #------ Stop animation
+		if type == 1:
+			pass
+			if !$sounds/engine.playing:
+				$sounds/engine.play()
+			$sounds/engine2.stop()
+			
 		if $tracksAnim.is_playing():
 			$tracksAnim.stop(true)
 
@@ -224,3 +238,6 @@ func _on_killer_timeout():
 func _on_shild_timeout():
 	invincible = false
 	get_node("shild").hide()
+
+func _on_fire_finished():
+	$sounds/fire.stop()

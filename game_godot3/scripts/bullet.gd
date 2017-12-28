@@ -68,7 +68,7 @@ func free_bullet():
 	if owner:
 		if main_node.has_node("tanks/" + owner_name):
 			owner.free_bullet()
-	main_node.bullet_hit(position, direction)
+	main_node.bullet_hit(position, direction, owner)
 	queue_free()
 
 func _on_bullet_area_enter( area ):

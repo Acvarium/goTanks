@@ -91,8 +91,6 @@ stretch_mode = 0
 
 [node name="tanks" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="tank" parent="tanks" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 324, 900 )
@@ -177,7 +175,6 @@ max_lines_visible = -1
 
 [node name="bird" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 468, 900 )
 texture = ExtResource( 9 )
 

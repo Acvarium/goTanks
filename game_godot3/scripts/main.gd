@@ -122,7 +122,7 @@ func kill_tank(tank):
 
 				
 	remove_tank(tank)
-#	get_node("hit_sound").play("explosion02")
+	$sounds/explosion.play()
 	var explosion = explosionObj.instance()
 	explosion.position = tank.position
 	explosion.set_explosion(1)
@@ -194,7 +194,7 @@ func map_to_world(cell):
 	var pos = Vector2(cell.x * cell_size, cell.y * cell_size)
 	return pos
 	
-func bullet_hit(pos, direction):
+func bullet_hit(pos, direction, owner):
 	var shift = Vector2(0.5,0)
 	if !abs(direction.y):
 		shift = Vector2(0,0.5)
@@ -206,8 +206,7 @@ func bullet_hit(pos, direction):
 			grid.set_cell(cells_pos[i].x,cells_pos[i].y,1)
 		elif cells_id[i] == 1:
 			grid.set_cell(cells_pos[i].x,cells_pos[i].y,-1)
-#	
-#	get_node("hit_sound").play("hit")
+	$sounds/hit.play()
 	var explosion = explosionObj.instance()
 	explosion.position = pos
 	$bullets.add_child(explosion)
@@ -247,6 +246,10 @@ func _on_protected_timeout():
 	grid.set_cell(11,25,0)
 	grid.set_cell(14,24,0)
 	grid.set_cell(14,25,0)
+
+func play_sound(sound):
+	if sound == 'up':
+		$sounds/bonus.play()
 
 
 func _on_spawn_bonus_timeout():
