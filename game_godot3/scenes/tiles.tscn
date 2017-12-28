@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://textures/walls.png" type="Texture" id=1]
-[ext_resource path="res://textures/trees.png" type="Texture" id=2]
-[ext_resource path="res://textures/water.png" type="Texture" id=3]
-[ext_resource path="res://textures/bricks.png" type="Texture" id=4]
+[ext_resource path="res://textures/tree02.png" type="Texture" id=2]
+[ext_resource path="res://textures/trees.png" type="Texture" id=3]
+[ext_resource path="res://textures/water.png" type="Texture" id=4]
+[ext_resource path="res://textures/bricks.png" type="Texture" id=5]
+[ext_resource path="res://textures/bricks_dark.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -14,10 +16,11 @@ extents = Vector2( 18, 18 )
 
 [node name="bricks0" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
+modulate = Color( 0.0234375, 1, 0.0844727, 1 )
 texture = ExtResource( 1 )
 vframes = 2
 hframes = 4
+_sections_unfolded = [ "Visibility" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="bricks0" index="0"]
 
@@ -84,22 +87,19 @@ shape = SubResource( 1 )
 
 position = Vector2( 360, 0 )
 texture = ExtResource( 2 )
-vframes = 2
-hframes = 2
-frame = 2
 _sections_unfolded = [ "Animation", "Region" ]
 
 [node name="trees2" type="Sprite" parent="." index="4"]
 
 position = Vector2( 540, 36 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Animation", "Region" ]
 
 [node name="water" type="Sprite" parent="." index="5"]
 
 editor/display_folded = true
 position = Vector2( 252, 80 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 vframes = 2
 hframes = 2
 _sections_unfolded = [ "Animation" ]
@@ -122,7 +122,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( 18, 162 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 _sections_unfolded = [ "Animation" ]
@@ -148,7 +148,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( 54, 162 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 1
@@ -175,7 +175,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( 90, 162 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 3
@@ -202,7 +202,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( 18, 198 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 4
@@ -229,7 +229,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( 54, 198 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 10
@@ -256,7 +256,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( 90, 198 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 11
@@ -283,7 +283,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( 18, 234 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 12
@@ -310,7 +310,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( 54, 234 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 13
@@ -337,7 +337,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( 90, 234 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 15
@@ -365,7 +365,7 @@ shape = SubResource( 1 )
 editor/display_folded = true
 modulate = Color( 0.460938, 0.340302, 0.340302, 1 )
 position = Vector2( 198, 162 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 _sections_unfolded = [ "Animation", "Visibility" ]
@@ -392,7 +392,7 @@ shape = SubResource( 1 )
 editor/display_folded = true
 modulate = Color( 0.458824, 0.337255, 0.337255, 1 )
 position = Vector2( 234, 162 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 1
@@ -420,7 +420,7 @@ shape = SubResource( 1 )
 editor/display_folded = true
 modulate = Color( 0.458824, 0.337255, 0.337255, 1 )
 position = Vector2( 270, 162 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 3
@@ -448,7 +448,7 @@ shape = SubResource( 1 )
 editor/display_folded = true
 modulate = Color( 0.458824, 0.337255, 0.337255, 1 )
 position = Vector2( 198, 198 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 4
@@ -476,7 +476,7 @@ shape = SubResource( 1 )
 editor/display_folded = true
 modulate = Color( 0.458824, 0.337255, 0.337255, 1 )
 position = Vector2( 234, 198 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 10
@@ -504,7 +504,7 @@ shape = SubResource( 1 )
 editor/display_folded = true
 modulate = Color( 0.458824, 0.337255, 0.337255, 1 )
 position = Vector2( 270, 198 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 11
@@ -532,7 +532,7 @@ shape = SubResource( 1 )
 editor/display_folded = true
 modulate = Color( 0.458824, 0.337255, 0.337255, 1 )
 position = Vector2( 198, 234 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 12
@@ -560,7 +560,7 @@ shape = SubResource( 1 )
 editor/display_folded = true
 modulate = Color( 0.458824, 0.337255, 0.337255, 1 )
 position = Vector2( 234, 234 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 13
@@ -588,7 +588,7 @@ shape = SubResource( 1 )
 editor/display_folded = true
 modulate = Color( 0.458824, 0.337255, 0.337255, 1 )
 position = Vector2( 270, 234 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
 frame = 15
@@ -610,5 +610,96 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="j08/StaticBody2D2" index="0"]
 
 shape = SubResource( 1 )
+
+[node name="e" type="Node2D" parent="." index="24"]
+
+[node name="k00" type="Sprite" parent="e" index="0"]
+
+modulate = Color( 1, 1, 1, 0.33702 )
+position = Vector2( 378, 162 )
+texture = ExtResource( 6 )
+vframes = 4
+hframes = 4
+_sections_unfolded = [ "Animation", "Visibility" ]
+
+[node name="k01" type="Sprite" parent="e" index="1"]
+
+modulate = Color( 1, 1, 1, 0.33702 )
+position = Vector2( 414, 162 )
+texture = ExtResource( 6 )
+vframes = 4
+hframes = 4
+frame = 1
+_sections_unfolded = [ "Animation", "Material", "Visibility" ]
+
+[node name="k02" type="Sprite" parent="e" index="2"]
+
+modulate = Color( 1, 1, 1, 0.33702 )
+position = Vector2( 450, 162 )
+texture = ExtResource( 6 )
+vframes = 4
+hframes = 4
+frame = 3
+_sections_unfolded = [ "Animation", "Material", "Visibility" ]
+
+[node name="k03" type="Sprite" parent="e" index="3"]
+
+modulate = Color( 1, 1, 1, 0.33702 )
+position = Vector2( 378, 198 )
+texture = ExtResource( 6 )
+vframes = 4
+hframes = 4
+frame = 4
+_sections_unfolded = [ "Animation", "Visibility" ]
+
+[node name="k04" type="Sprite" parent="e" index="4"]
+
+modulate = Color( 1, 1, 1, 0.33702 )
+position = Vector2( 414, 198 )
+texture = ExtResource( 6 )
+vframes = 4
+hframes = 4
+frame = 10
+_sections_unfolded = [ "Animation", "Region", "Visibility" ]
+
+[node name="k05" type="Sprite" parent="e" index="5"]
+
+modulate = Color( 1, 1, 1, 0.33702 )
+position = Vector2( 450, 198 )
+texture = ExtResource( 6 )
+vframes = 4
+hframes = 4
+frame = 11
+_sections_unfolded = [ "Animation", "Visibility" ]
+
+[node name="k06" type="Sprite" parent="e" index="6"]
+
+modulate = Color( 1, 1, 1, 0.33702 )
+position = Vector2( 378, 234 )
+texture = ExtResource( 6 )
+vframes = 4
+hframes = 4
+frame = 12
+_sections_unfolded = [ "Animation", "Visibility" ]
+
+[node name="k07" type="Sprite" parent="e" index="7"]
+
+modulate = Color( 1, 1, 1, 0.33702 )
+position = Vector2( 414, 234 )
+texture = ExtResource( 6 )
+vframes = 4
+hframes = 4
+frame = 13
+_sections_unfolded = [ "Animation", "Region", "Visibility" ]
+
+[node name="k08" type="Sprite" parent="e" index="8"]
+
+modulate = Color( 1, 1, 1, 0.33702 )
+position = Vector2( 450, 234 )
+texture = ExtResource( 6 )
+vframes = 4
+hframes = 4
+frame = 15
+_sections_unfolded = [ "Animation", "Visibility" ]
 
 

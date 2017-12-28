@@ -210,7 +210,8 @@ func bullet_hit(pos, direction, owner):
 				var new_tile_id = grid.tile_set.find_tile_by_name('j' + tile_name[1] + tile_name[2])
 				grid.set_cell(cells_pos[i].x,cells_pos[i].y, new_tile_id)
 			elif tile_name[0] == 'j':
-				grid.set_cell(cells_pos[i].x,cells_pos[i].y,-1)
+				var new_tile_id = grid.tile_set.find_tile_by_name('k' + tile_name[1] + tile_name[2])
+				grid.set_cell(cells_pos[i].x,cells_pos[i].y, new_tile_id)
 	$sounds/hit.play()
 	var explosion = explosionObj.instance()
 	explosion.position = pos
@@ -241,16 +242,15 @@ func protect():
 	grid.set_cell(14,25,2)
 	get_node("timers/protected").start()
 	
-	
 func _on_protected_timeout():
-	grid.set_cell(11,23,0)
-	grid.set_cell(12,23,0)
-	grid.set_cell(13,23,0)
-	grid.set_cell(14,23,0)
-	grid.set_cell(11,24,0)
-	grid.set_cell(11,25,0)
-	grid.set_cell(14,24,0)
-	grid.set_cell(14,25,0)
+	grid.set_cell(11,23,grid.tile_set.find_tile_by_name('h00'))
+	grid.set_cell(12,23,grid.tile_set.find_tile_by_name('h01'))
+	grid.set_cell(13,23,grid.tile_set.find_tile_by_name('h01'))
+	grid.set_cell(14,23,grid.tile_set.find_tile_by_name('h02'))
+	grid.set_cell(11,24,grid.tile_set.find_tile_by_name('h03'))
+	grid.set_cell(11,25,grid.tile_set.find_tile_by_name('h03'))
+	grid.set_cell(14,24,grid.tile_set.find_tile_by_name('h05'))
+	grid.set_cell(14,25,grid.tile_set.find_tile_by_name('h05'))
 
 func play_sound(sound):
 	if sound == 'up':
@@ -264,5 +264,6 @@ func _on_spawn_bonus_timeout():
 	bonus.set_time(randf()*10 + 5)
 	get_node("spawn_points").add_child(bonus)
 	get_node("timers/spawn_bonus").set_wait_time(randf()*25 + 10)
+	$sounds/bonus2.play()
 #	get_node("sounds/effect").play("up02")
 	
