@@ -44,7 +44,6 @@ func _input(event):
 		global.goto_scene("res://scenes/menu.tscn")
 
 
-
 func shuffleList(list):
     var shuffledList = [] 
     var indexList = range(list.size())

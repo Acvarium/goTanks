@@ -55,10 +55,7 @@ const BLD = [
 
 func _ready():
 	randomize()
-#	if type == 1:
-#		get_node("engine").get_sample_library().get_sample("engine").set_loop_format(1)
-#		engine_sound = get_node("engine").play("engine")
-#		set_level(global.player_level[type - 1])
+
 	main_node = get_node("/root/main")
 	$Sprite.set_frame(type * 2)
 	$rays/rayUp.add_exception(self)
@@ -71,7 +68,7 @@ func _ready():
 	$rays/rayRight1.add_exception(self)
 	if type == 1:
 		$sounds/engine.play()
-		pass
+		set_level(global.player_level[0])
 	elif type == 0:
 		$sounds/fire.volume_db = -40
 		$timers/step.start()
@@ -108,7 +105,6 @@ func set_type(t):
 func fire():
 	if bullets_in_air < max_bullets and loaded:
 		bullets_in_air += 1
-#		$fireAnim.play("fire")
 		$sounds/fire.play()
 		
 		var bullet = bulletObj.instance()
