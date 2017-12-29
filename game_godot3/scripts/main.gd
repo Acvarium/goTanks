@@ -194,7 +194,8 @@ func map_to_world(cell):
 	var pos = Vector2(cell.x * cell_size, cell.y * cell_size)
 	return pos
 	
-func bullet_hit(pos, direction, owner):
+func bullet_hit(pos, direction, owner, is_grid):
+	var not_water = true
 	var shift = Vector2(0.5,0)
 #	var tail_set = grid.tile_set
 	if !abs(direction.y):
@@ -205,6 +206,8 @@ func bullet_hit(pos, direction, owner):
 		var tile_name = grid.tile_set.tile_get_name(grid.get_cell(cells_pos[i][0],cells_pos[i][1])) 
 		
 		if tile_name:
+			if tile_name[0] != 'w':
+				not_water = false
 			print(tile_name + ' ' +  str(grid.tile_set.find_tile_by_name(tile_name)))
 			if tile_name[0] == 'h':
 				var new_tile_id = grid.tile_set.find_tile_by_name('j' + tile_name[1] + tile_name[2])
@@ -212,10 +215,13 @@ func bullet_hit(pos, direction, owner):
 			elif tile_name[0] == 'j':
 				var new_tile_id = grid.tile_set.find_tile_by_name('k' + tile_name[1] + tile_name[2])
 				grid.set_cell(cells_pos[i].x,cells_pos[i].y, new_tile_id)
-	$sounds/hit.play()
-	var explosion = explosionObj.instance()
-	explosion.position = pos
-	$bullets.add_child(explosion)
+			
+	if !not_water or !is_grid:
+		$sounds/hit.play()
+		var explosion = explosionObj.instance()
+		explosion.position = pos
+		$bullets.add_child(explosion)
+	return(!not_water)
 
 func _on_spawn_timer_timeout():
 	spawn(0)

@@ -67,8 +67,6 @@ autoplay = ""
 
 [node name="rays" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
-
 [node name="rayUp" type="RayCast2D" parent="rays" index="0"]
 
 position = Vector2( -13, 0 )

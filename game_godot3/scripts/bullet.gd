@@ -6,6 +6,7 @@ var owner_type = 0
 var owner
 var owner_name
 var wr
+var is_grid = false
 
 func set_speed(s):
 	speed = s
@@ -43,6 +44,11 @@ func _on_bullet_body_entered( body ):
 #Do not count owner of a bullet
 	if body == owner:
 		return
+	if body.get_parent() == main_node.get_node("grids"):
+		is_grid = true
+	else:
+		is_grid = false
+#
 #If owner is a BOT
 	if owner_type == 0:
 		
@@ -67,13 +73,15 @@ func _on_bullet_body_entered( body ):
 		free_bullet()
 
 func free_bullet():
-	if owner:
-		if (wr.get_ref()):
-			owner.free_bullet()
-	main_node.bullet_hit(position, direction, owner)
-	queue_free()
+	print('hit')
+	if main_node.bullet_hit(position, direction, owner, is_grid) or !is_grid:
+		if owner:
+			if (wr.get_ref()):
+				owner.free_bullet()
+		queue_free()
 
 func _on_bullet_area_enter( area ):
+	is_grid = false
 	free_bullet()
 
 
