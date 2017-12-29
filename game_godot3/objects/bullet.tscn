@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 8, 6.552 )
+extents = Vector2( 8, 6 )
 
 [node name="bullet" type="Area2D"]
 

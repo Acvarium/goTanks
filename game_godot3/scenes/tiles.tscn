@@ -16,9 +16,9 @@ extents = Vector2( 18, 18 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 36, 36 )
+extents = Vector2( 24, 24 )
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" index="0"]
 
 [node name="bricks0" type="Sprite" parent="." index="0"]
 
@@ -69,6 +69,7 @@ shape = SubResource( 1 )
 
 [node name="stone0" type="Sprite" parent="." index="2"]
 
+editor/display_folded = true
 position = Vector2( 180, 0 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Animation" ]

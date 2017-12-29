@@ -16,7 +16,7 @@ extents = Vector2( 18, 18 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 36, 36 )
+extents = Vector2( 24, 24 )
 
 [resource]
 
