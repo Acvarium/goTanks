@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="762.84378"
-     inkscape:cy="-83.589055"
+     inkscape:zoom="8"
+     inkscape:cx="-146.73227"
+     inkscape:cy="57.340288"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -80,6 +80,18 @@
   </sodipodi:namedview>
   <defs
      id="defs211787">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5553">
+      <stop
+         style="stop-color:#ebebeb;stop-opacity:1;"
+         offset="0"
+         id="stop5549" />
+      <stop
+         style="stop-color:#ebebeb;stop-opacity:0;"
+         offset="1"
+         id="stop5551" />
+    </linearGradient>
     <linearGradient
        id="linearGradient3049"
        inkscape:collect="always">
@@ -3405,6 +3417,82 @@
          stdDeviation="0.010787656"
          id="feGaussianBlur3715" />
     </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4583"
+       x="-0.1032"
+       width="1.2064"
+       y="-0.1032"
+       height="1.2064">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.8066717"
+         id="feGaussianBlur4585" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4589">
+      <rect
+         style="opacity:1;vector-effect:none;fill:#8b8b91;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.2066451;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4591"
+         width="40.499928"
+         height="40.499866"
+         x="-135.74992"
+         y="349.12506"
+         ry="0"
+         inkscape:export-xdpi="95.999992"
+         inkscape:export-ydpi="95.999992"
+         inkscape:export-filename="/home/vit/ProjectG70/dash/tinytanks/sprite.png" />
+    </clipPath>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4665"
+       x="-0.174"
+       width="1.348"
+       y="-0.174"
+       height="1.348">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.51552407"
+         id="feGaussianBlur4667" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5403"
+       x="-0.192"
+       width="1.384"
+       y="-0.192"
+       height="1.384">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.56885414"
+         id="feGaussianBlur5405" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5545"
+       x="-0.0432"
+       width="1.0864"
+       y="-0.0432"
+       height="1.0864">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.75628116"
+         id="feGaussianBlur5547" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5553"
+       id="linearGradient5555"
+       x1="-41.870312"
+       y1="212.43791"
+       x2="-41.870312"
+       y2="218.19261"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <metadata
      id="metadata211790">
@@ -12769,5 +12857,122 @@ QuAsMKSK0NTI8FxzJAbfLj7vf9/M/gPGxX8vddY07wAAAABJRU5ErkJggg==
        inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/water_anim2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
+    <rect
+       inkscape:export-filename="/home/vit/ProjectG70/dash/tinytanks/sprite.png"
+       inkscape:export-ydpi="95.999992"
+       inkscape:export-xdpi="95.999992"
+       ry="0"
+       y="295.53903"
+       x="174.78566"
+       height="22.224964"
+       width="22.224998"
+       id="rect4358"
+       style="opacity:1;vector-effect:none;fill:#8b8b91;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.11339989;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <g
+       id="g4686"
+       transform="translate(18.272774)">
+      <rect
+         style="opacity:1;vector-effect:none;fill:#8b8b91;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.05467485;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4676"
+         width="10.715606"
+         height="10.71559"
+         x="-47.033802"
+         y="209.95747"
+         ry="0"
+         inkscape:export-xdpi="95.999992"
+         inkscape:export-ydpi="95.999992"
+         inkscape:export-filename="/home/vit/ProjectG70/dash/tinytanks/sprite.png" />
+      <path
+         sodipodi:nodetypes="ccccccccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4678"
+         d="m -47.23639,209.75902 v 11.11663 h 11.116632 v -11.11663 z m 4.740793,0.54518 c 3.353313,-0.0109 4.773007,0.0218 5.083412,0.11628 0.410607,0.20066 0.646413,0.35169 0.72192,0.79685 l 0.01033,3.63595 c 0.0058,2.02609 -0.0045,3.81361 -0.02325,4.03748 -0.03822,0.4576 -0.107189,0.64978 -0.315226,0.88005 -0.158679,0.17564 -0.281487,0.24666 -0.558105,0.32246 -0.170331,0.0467 -0.734476,0.0555 -3.924308,0.0625 -2.048976,0.005 -3.818152,-0.006 -3.931545,-0.0233 -0.414586,-0.0628 -0.765683,-0.32023 -0.950327,-0.69763 -0.1562,-0.31912 -0.170281,-0.74036 -0.15348,-4.52685 0.01601,-3.60353 0.01908,-3.66825 0.188103,-3.99511 0.270875,-0.41049 0.52733,-0.59841 1.010274,-0.59841 z"
+         style="opacity:0.98999999;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17361139;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         transform="matrix(0.98168491,0,0,0.98168491,-11.676328,3.943516)"
+         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.32699999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4665)"
+         id="rect4680"
+         width="7.1106768"
+         height="7.1106768"
+         x="-34.114704"
+         y="211.75993"
+         ry="1.0523738" />
+      <rect
+         ry="0.88597047"
+         y="212.32211"
+         x="-44.669159"
+         height="5.9863234"
+         width="5.9863234"
+         id="rect4682"
+         style="opacity:1;vector-effect:none;fill:#fdfdfd;fill-opacity:1;stroke:none;stroke-width:0.27529415;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         clip-path="url(#clipPath4589)"
+         style="opacity:0.98999999;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:3.30330706;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4583)"
+         d="m -136.51562,348.375 v 42.01562 H -94.5 V 348.375 Z m 17.91796,2.06055 c 12.67394,-0.0413 18.03971,0.0823 19.212894,0.43945 1.551901,0.75843 2.443136,1.32925 2.728516,3.01172 l 0.03906,13.74219 c 0.02192,7.65766 -0.01717,14.41364 -0.08789,15.25976 -0.144439,1.72951 -0.405125,2.45586 -1.191406,3.32617 -0.599732,0.66384 -1.063886,0.93227 -2.109374,1.21875 -0.64377,0.17651 -2.77597,0.20988 -14.83203,0.23633 -7.74416,0.017 -14.43081,-0.0229 -14.85938,-0.0879 -1.56694,-0.23739 -2.89392,-1.21032 -3.59179,-2.63672 -0.59036,-1.20612 -0.64358,-2.79819 -0.58008,-17.10937 0.0605,-13.61964 0.0721,-13.86424 0.71094,-15.09961 1.02378,-1.55147 1.99306,-2.26172 3.81836,-2.26172 z"
+         id="path4684"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccccccccc"
+         transform="matrix(0.26458333,0,0,0.26458333,-11.116633,117.5848)" />
+    </g>
+    <rect
+       style="opacity:1;vector-effect:none;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.05467485;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4600"
+       width="10.715606"
+       height="10.71559"
+       x="-47.033802"
+       y="209.95747"
+       ry="0"
+       inkscape:export-xdpi="82.255135"
+       inkscape:export-ydpi="82.255135"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/c_block.png" />
+    <path
+       sodipodi:nodetypes="ccccccccccccccccccc"
+       inkscape:connector-curvature="0"
+       id="path4602"
+       d="m -47.23639,209.75902 v 11.11663 h 11.116632 v -11.11663 z m 4.740793,0.54518 c 3.353313,-0.0109 4.773007,0.0218 5.083412,0.11628 0.410607,0.20066 0.646413,0.35169 0.72192,0.79685 l 0.01033,3.63595 c 0.0058,2.02609 -0.0045,3.81361 -0.02325,4.03748 -0.03822,0.4576 -0.107189,0.64978 -0.315226,0.88005 -0.158679,0.17564 -0.281487,0.24666 -0.558105,0.32246 -0.170331,0.0467 -0.734476,0.0555 -3.924308,0.0625 -2.048976,0.005 -3.818152,-0.006 -3.931545,-0.0233 -0.414586,-0.0628 -0.765683,-0.32023 -0.950327,-0.69763 -0.1562,-0.31912 -0.170281,-0.74036 -0.15348,-4.52685 0.01601,-3.60353 0.01908,-3.66825 0.188103,-3.99511 0.270875,-0.41049 0.52733,-0.59841 1.010274,-0.59841 z"
+       style="opacity:0.98999999;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17361139;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/c_block.png"
+       inkscape:export-xdpi="82.255135"
+       inkscape:export-ydpi="82.255135" />
+    <rect
+       transform="matrix(1.0959476,0,0,1.0959476,-8.184533,-20.658984)"
+       style="opacity:0.694;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.32699999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter5403)"
+       id="rect4604"
+       width="7.1106768"
+       height="7.1106768"
+       x="-34.114704"
+       y="211.75993"
+       ry="1.0523738"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/c_block.png"
+       inkscape:export-xdpi="82.255135"
+       inkscape:export-ydpi="82.255135" />
+    <rect
+       ry="1.1502876"
+       y="211.42914"
+       x="-45.562126"
+       height="7.7722607"
+       width="7.7722607"
+       id="rect4606"
+       style="opacity:0.136;vector-effect:none;fill:url(#linearGradient5555);fill-opacity:1;stroke:none;stroke-width:0.35742438;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/c_block.png"
+       inkscape:export-xdpi="82.255135"
+       inkscape:export-ydpi="82.255135" />
+    <path
+       clip-path="url(#clipPath4589)"
+       style="opacity:0.98999999;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.88976383;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter5545)"
+       d="m -136.51562,348.375 v 42.01562 H -94.5 V 348.375 Z m 17.91796,2.06055 c 12.67394,-0.0413 18.03971,0.0823 19.212894,0.43945 1.551901,0.75843 2.443136,1.32925 2.728516,3.01172 l 0.03906,13.74219 c 0.02192,7.65766 -0.01717,14.41364 -0.08789,15.25976 -0.144439,1.72951 -0.405125,2.45586 -1.191406,3.32617 -0.599732,0.66384 -1.063886,0.93227 -2.109374,1.21875 -0.64377,0.17651 -2.77597,0.20988 -14.83203,0.23633 -7.74416,0.017 -14.43081,-0.0229 -14.85938,-0.0879 -1.56694,-0.23739 -2.89392,-1.21032 -3.59179,-2.63672 -0.59036,-1.20612 -0.64358,-2.79819 -0.58008,-17.10937 0.0605,-13.61964 0.0721,-13.86424 0.71094,-15.09961 1.02378,-1.55147 1.99306,-2.26172 3.81836,-2.26172 z"
+       id="path4608"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccc"
+       transform="matrix(0.26458333,0,0,0.26458333,-11.116633,117.5848)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/c_block.png"
+       inkscape:export-xdpi="82.255135"
+       inkscape:export-ydpi="82.255135" />
+    <path
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m -66.522495,208.98952 c -0.220359,-0.001 -0.428848,0.0627 -0.58789,0.18554 -0.159523,0.12322 -0.267668,0.30902 -0.271485,0.53125 v 0.002 l 0.07855,1.11133 c 0.102984,-0.54328 0.0586,-1.14458 0.368021,-1.39319 0.115933,-0.0825 0.279984,-0.13185 0.457412,-0.13054 h 4.331064 c 0.246027,0.007 0.400084,0.0909 0.503345,0.2064 0.230905,0.29914 0.294044,1.04066 0.324728,1.37556 l 0.09509,-1.01367 v -0.004 c -0.01008,-0.1912 -0.07095,-0.40053 -0.210937,-0.57031 -0.139988,-0.16979 -0.362485,-0.29218 -0.664063,-0.30078 h -0.002 -4.419921 z"
+       id="path5407"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccc" />
   </g>
 </svg>
