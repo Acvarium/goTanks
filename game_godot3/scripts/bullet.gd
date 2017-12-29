@@ -73,7 +73,6 @@ func _on_bullet_body_entered( body ):
 		free_bullet()
 
 func free_bullet():
-	print('hit')
 	if main_node.bullet_hit(position, direction, owner, is_grid) or !is_grid:
 		if owner:
 			if (wr.get_ref()):

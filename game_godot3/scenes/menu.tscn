@@ -3,7 +3,7 @@
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
 [ext_resource path="res://textures/bird.png" type="Texture" id=2]
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -29,150 +29,12 @@ icon = ExtResource( 2 )
 flat = false
 align = 1
 
-[node name="single_player1" type="Button" parent="." index="1"]
+[node name="pos" type="Position2D" parent="." index="1"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 396.0
-margin_top = 468.0
-margin_right = 540.0
-margin_bottom = 488.0
-rect_pivot_offset = Vector2( 0, 0 )
-mouse_filter = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "0"
-flat = false
-align = 1
+position = Vector2( 468, 468 )
 
-[node name="single_player2" type="Button" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 396.0
-margin_top = 504.0
-margin_right = 540.0
-margin_bottom = 524.0
-rect_pivot_offset = Vector2( 0, 0 )
-mouse_filter = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "1"
-flat = false
-align = 1
-
-[node name="single_player3" type="Button" parent="." index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 396.0
-margin_top = 540.0
-margin_right = 540.0
-margin_bottom = 560.0
-rect_pivot_offset = Vector2( 0, 0 )
-mouse_filter = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "2"
-flat = false
-align = 1
-
-[node name="single_player4" type="Button" parent="." index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 396.0
-margin_top = 576.0
-margin_right = 540.0
-margin_bottom = 596.0
-rect_pivot_offset = Vector2( 0, 0 )
-mouse_filter = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "3"
-flat = false
-align = 1
-
-[node name="single_player5" type="Button" parent="." index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 396.0
-margin_top = 612.0
-margin_right = 540.0
-margin_bottom = 632.0
-rect_pivot_offset = Vector2( 0, 0 )
-mouse_filter = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "4"
-flat = false
-align = 1
-
-[node name="single_player6" type="Button" parent="." index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 396.0
-margin_top = 648.0
-margin_right = 540.0
-margin_bottom = 668.0
-rect_pivot_offset = Vector2( 0, 0 )
-mouse_filter = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "5"
-flat = false
-align = 1
+[node name="buttons" type="Node2D" parent="." index="2"]
 
 [connection signal="pressed" from="single_player" to="." method="_on_single_player_pressed"]
-
-[connection signal="pressed" from="single_player1" to="." method="_on_single_player1_pressed"]
-
-[connection signal="pressed" from="single_player2" to="." method="_on_single_player2_pressed"]
-
-[connection signal="pressed" from="single_player3" to="." method="_on_single_player3_pressed"]
-
-[connection signal="pressed" from="single_player4" to="." method="_on_single_player4_pressed"]
-
-[connection signal="pressed" from="single_player5" to="." method="_on_single_player5_pressed"]
-
-[connection signal="pressed" from="single_player6" to="." method="_on_single_player6_pressed"]
 
 

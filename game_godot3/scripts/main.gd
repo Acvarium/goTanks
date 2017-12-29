@@ -208,7 +208,6 @@ func bullet_hit(pos, direction, owner, is_grid):
 		if tile_name:
 			if tile_name[0] != 'w':
 				not_water = false
-			print(tile_name + ' ' +  str(grid.tile_set.find_tile_by_name(tile_name)))
 			if tile_name[0] == 'h':
 				var new_tile_id = grid.tile_set.find_tile_by_name('j' + tile_name[1] + tile_name[2])
 				grid.set_cell(cells_pos[i].x,cells_pos[i].y, new_tile_id)
