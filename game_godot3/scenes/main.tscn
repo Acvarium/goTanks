@@ -270,16 +270,13 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="hit" type="AudioStreamPlayer2D" parent="sounds" index="1"]
+[node name="hit" type="AudioStreamPlayer" parent="sounds" index="1"]
 
-visible = false
 stream = ExtResource( 7 )
 volume_db = -15.0
 autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
 
 [node name="bonus" type="AudioStreamPlayer" parent="sounds" index="2"]
 

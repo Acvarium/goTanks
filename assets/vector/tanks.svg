@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="301.56817"
-     inkscape:cy="-182.76692"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="-367.71613"
+     inkscape:cy="-367.44194"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -8762,13 +8762,13 @@
        height="19.049999"
        x="-152.39999"
        y="313.37646"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/bonus.png"
        inkscape:export-xdpi="192"
        inkscape:export-ydpi="192" />
     <g
        id="g6006"
        transform="matrix(0.87804879,0,0,0.87804879,-17.531882,66.063176)"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/bonus.png"
        inkscape:export-xdpi="192"
        inkscape:export-ydpi="192">
       <rect
@@ -8862,7 +8862,7 @@
     <rect
        inkscape:export-ydpi="192"
        inkscape:export-xdpi="192"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/bonus.png"
        ry="0"
        y="313.37646"
        x="-133.34999"
@@ -8872,7 +8872,7 @@
        style="opacity:0;vector-effect:none;fill:#ffffff;fill-opacity:0.95319154;stroke:none;stroke-width:0.8043685;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
        id="g6030"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/bonus.png"
        inkscape:export-xdpi="192"
        inkscape:export-ydpi="192">
       <rect
@@ -8914,13 +8914,13 @@
        inkscape:randomized="0"
        d="m -120.07499,328.50541 -3.78192,-2.69007 -3.57482,2.76539 1.38973,-4.4281 -3.73472,-2.54531 4.64083,-0.0466 1.26663,-4.33846 1.47846,4.39927 4.51754,-0.13602 -3.72709,2.76555 z"
        inkscape:transform-center-x="2.3340321e-06"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/bonus.png"
        inkscape:export-xdpi="192"
        inkscape:export-ydpi="192" />
     <g
        id="g6036"
        transform="translate(19.04999)"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/bonus.png"
        inkscape:export-xdpi="192"
        inkscape:export-ydpi="192">
       <rect
@@ -8949,7 +8949,7 @@
     <g
        transform="translate(38.1)"
        id="g6042"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/bonus.png"
        inkscape:export-xdpi="192"
        inkscape:export-ydpi="192">
       <rect
@@ -8978,7 +8978,7 @@
     <g
        id="g6048"
        transform="translate(57.150003)"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/bonus.png"
        inkscape:export-xdpi="192"
        inkscape:export-ydpi="192">
       <rect
@@ -9012,9 +9012,8 @@
        id="rect6050"
        style="opacity:1;vector-effect:none;fill:#ff5555;fill-opacity:0.95319154;stroke:none;stroke-width:2.94042969;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
-       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.95319154;stroke:none;stroke-width:4.97007895;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m -409.52344,759.11719 c -4.94294,30.75425 8.83618,28.98932 13.54364,36.32888 4.95297,-8.27189 18.71815,-6.04787 13.50324,-36.32888 z"
-       transform="matrix(0.26458333,0,0,0.26458333,0,117.5848)"
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0.95319154;stroke:none;stroke-width:1.31500006;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -69.906354,283.44897 c -1.307819,8.13706 2.337906,7.67009 3.583421,9.61202 1.310474,-2.18861 4.952511,-1.60017 3.572733,-9.61202 z"
        id="rect6052"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
@@ -9024,7 +9023,7 @@
     <g
        id="g2158"
        transform="translate(-0.12538773,-0.38125347)"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/bonus.png"
        inkscape:export-xdpi="192"
        inkscape:export-ydpi="192">
       <path
@@ -9045,25 +9044,32 @@
          style="fill:#ffffff;stroke-width:0.09398774"
          inkscape:connector-curvature="0" />
     </g>
-    <path
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.78319204px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       d="m -249.48633,756.20312 c -6.7837,-0.12749 -11.1361,3.06578 -13.89062,6.03907 l 0.10742,2.85937 4.11914,0.36524 -3.61719,2.00586 0.92969,4.03125 -3.02734,-2.81641 -2.75138,2.30178 0.94864,-3.92483 -0.16211,-0.14062 c -1.59996,2.87347 -1.68456,4.69203 -2.94336,5.16406 -1.56638,0.58738 -3.71924,-0.39186 -3.52344,0.88086 0,0 5.38435,1.37135 10.2793,2.83984 4.89495,1.46846 2.54479,5.18733 10.47461,6.85157 7.92982,1.66431 9.5948,-0.39105 14.68555,0.58789 3.9118,0.75228 5.60482,1.55185 6.18945,1.88672 -0.19771,-0.24365 -0.37442,-0.84555 -0.0215,-2.375 0.58739,-2.54533 4.69731,-20.06991 -9.49805,-24.96485 -3.10523,-1.07077 -5.85837,-1.54593 -8.29883,-1.5918 z m 17.81836,28.93165 c 0.13133,0.16184 0.27149,0.16992 0.27149,0.16992 0,0 -0.0953,-0.069 -0.27149,-0.16992 z"
-       transform="matrix(0.26458333,0,0,0.26458333,0,117.5848)"
-       id="path2171"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccccccccccccccccc"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+    <g
+       id="g3748"
+       transform="translate(-38.100135,-1.2183904e-4)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/bonus.png"
        inkscape:export-xdpi="192"
-       inkscape:export-ydpi="192" />
-    <path
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.20721956px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       d="m -66.680227,324.40428 c 0,0 -2.381052,2.74737 -2.637474,2.94884 -0.256422,0.20147 -0.549474,0.0915 -0.549474,0.0915 l -0.03663,0.21978 0.75095,0.47621 c 0,0 0.860841,-0.65937 1.758316,-1.72168 0.897474,-1.06231 1.611788,-1.88652 1.611788,-1.88652 z"
-       id="path2173"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccc"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
-       inkscape:export-xdpi="192"
-       inkscape:export-ydpi="192" />
+       inkscape:export-ydpi="192">
+      <path
+         inkscape:export-ydpi="192"
+         inkscape:export-xdpi="192"
+         inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+         sodipodi:nodetypes="cccccccccccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path2171"
+         transform="matrix(0.26458333,0,0,0.26458333,0,117.5848)"
+         d="m -249.48633,756.20312 c -6.7837,-0.12749 -11.1361,3.06578 -13.89062,6.03907 l 0.10742,2.85937 4.11914,0.36524 -3.61719,2.00586 0.92969,4.03125 -3.02734,-2.81641 -2.75138,2.30178 0.94864,-3.92483 -0.16211,-0.14062 c -1.59996,2.87347 -1.68456,4.69203 -2.94336,5.16406 -1.56638,0.58738 -3.71924,-0.39186 -3.52344,0.88086 0,0 5.38435,1.37135 10.2793,2.83984 4.89495,1.46846 2.54479,5.18733 10.47461,6.85157 7.92982,1.66431 9.5948,-0.39105 14.68555,0.58789 3.9118,0.75228 5.60482,1.55185 6.18945,1.88672 -0.19771,-0.24365 -0.37442,-0.84555 -0.0215,-2.375 0.58739,-2.54533 4.69731,-20.06991 -9.49805,-24.96485 -3.10523,-1.07077 -5.85837,-1.54593 -8.29883,-1.5918 z m 17.81836,28.93165 c 0.13133,0.16184 0.27149,0.16992 0.27149,0.16992 0,0 -0.0953,-0.069 -0.27149,-0.16992 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.78319204px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="192"
+         inkscape:export-xdpi="192"
+         inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/bonus.png"
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         id="path2173"
+         d="m -66.680227,324.40428 c 0,0 -2.381052,2.74737 -2.637474,2.94884 -0.256422,0.20147 -0.549474,0.0915 -0.549474,0.0915 l -0.03663,0.21978 0.75095,0.47621 c 0,0 0.860841,-0.65937 1.758316,-1.72168 0.897474,-1.06231 1.611788,-1.88652 1.611788,-1.88652 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.20721956px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    </g>
     <path
        inkscape:export-ydpi="192"
        inkscape:export-xdpi="192"
@@ -9193,5 +9199,49 @@
          y="236.01472"
          ry="3.0371773" />
     </g>
+    <image
+       y="271.49051"
+       x="89.927063"
+       id="image3738"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAABHNCSVQICAgIfAhkiAAAAJhJREFU
+WIXtl8ENgCAMRYvpDt5wA+9GxtcFdAM3cAI8FSUhEQmGf+g79VCSl08oYCY3e2oMG2NaO1DXWoBI
+JW4gJPhLsxuPUC+brSYBkYRKCCohqIQAIRENq+cwSmH7M7uXKH+gQSQBIRFtx1t8f90d7AsfVqXr
+UkBsh0oIKiFASHBH+Wdt3YdQ17THSKL5R5RAklAJAULiAt1IE+MEi5JSAAAAAElFTkSuQmCC
+"
+       preserveAspectRatio="none"
+       height="8.7312498"
+       width="8.7312498" />
+    <rect
+       style="opacity:0.49300005;vector-effect:none;fill:#766b1e;fill-opacity:1;stroke:none;stroke-width:1.30799258;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3741"
+       width="3.7702909"
+       height="21.827999"
+       x="114.93722"
+       y="256.80536"
+       ry="0"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/cr.png"
+       inkscape:export-xdpi="82"
+       inkscape:export-ydpi="82" />
+    <rect
+       ry="0"
+       y="-127.7364"
+       x="265.83423"
+       height="21.827999"
+       width="3.7702909"
+       id="rect3744"
+       style="opacity:0.49300005;vector-effect:none;fill:#766b1e;fill-opacity:1;stroke:none;stroke-width:1.30799258;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="rotate(90)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/cr.png"
+       inkscape:export-xdpi="82"
+       inkscape:export-ydpi="82" />
+    <path
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.28541261px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m -64.726429,317.6877 -0.187069,2.42167 -3.172679,3.25883 -1.789956,-1.85086 c -1.998313,2.21729 -2.846325,3.64911 -2.390311,7.06395 3.305289,0.16653 4.530674,0.0119 7.135308,-3.06817 l -2.222393,-1.50887 3.185662,-3.16477 2.521819,-0.41746 0.682947,-0.55953 -3.225659,-2.68546 z"
+       id="path3763"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccc"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game_godot3/textures/bonus.png"
+       inkscape:export-xdpi="192"
+       inkscape:export-ydpi="192" />
   </g>
 </svg>
