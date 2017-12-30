@@ -126,6 +126,8 @@ func kill_tank(tank):
 			global.go = false
 #----------------------------------------------
 #Додати звук перемоги
+			$UI/game_over.text = "  VICTORY"
+			$UI/end_anim.play("game_over")
 			$timers/end.start()
 
 				
@@ -237,7 +239,10 @@ func add_explosion(pos, type):
 	var explosion = explosionObj.instance()
 	explosion.position = pos
 	explosion.set_explosion(type)
-	$bullets.add_child(explosion)
+	if type == 2:
+		$floor.add_child(explosion)
+	else:
+		$bullets.add_child(explosion)
 
 func _on_bird_area_enter( area ):
 	if area.get_parent().get_name() == "bullets":
@@ -245,6 +250,8 @@ func _on_bird_area_enter( area ):
 		var bird_pos = $bird.position
 		$bird.queue_free()
 		add_explosion($bird.position, 1)
+		add_explosion($bird.position, 2)
+		
 		$timers/end.start()
 		$UI/end_anim.play("game_over")
 #		game_over()

@@ -1,20 +1,19 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://levels/level00.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/tank.tscn" type="PackedScene" id=3]
 [ext_resource path="res://textures/bg.jpg" type="Texture" id=4]
-[ext_resource path="res://objects/bonus.tscn" type="PackedScene" id=5]
-[ext_resource path="res://textures/bird.png" type="Texture" id=6]
-[ext_resource path="res://sounds/explosion02.ogg" type="AudioStream" id=7]
-[ext_resource path="res://sounds/hit.ogg" type="AudioStream" id=8]
-[ext_resource path="res://sounds/up01.ogg" type="AudioStream" id=9]
-[ext_resource path="res://sounds/up02.ogg" type="AudioStream" id=10]
-[ext_resource path="res://tilesets/walls.tres" type="TileSet" id=11]
-[ext_resource path="res://textures/water_anim0.png" type="Texture" id=12]
-[ext_resource path="res://textures/water_anim1.png" type="Texture" id=13]
-[ext_resource path="res://textures/water_anim2.png" type="Texture" id=14]
-[ext_resource path="res://fonts/04B_08_0.TTF" type="DynamicFontData" id=15]
+[ext_resource path="res://textures/bird.png" type="Texture" id=5]
+[ext_resource path="res://sounds/explosion02.ogg" type="AudioStream" id=6]
+[ext_resource path="res://sounds/hit.ogg" type="AudioStream" id=7]
+[ext_resource path="res://sounds/up01.ogg" type="AudioStream" id=8]
+[ext_resource path="res://sounds/up02.ogg" type="AudioStream" id=9]
+[ext_resource path="res://tilesets/walls.tres" type="TileSet" id=10]
+[ext_resource path="res://textures/water_anim0.png" type="Texture" id=11]
+[ext_resource path="res://textures/water_anim1.png" type="Texture" id=12]
+[ext_resource path="res://textures/water_anim2.png" type="Texture" id=13]
+[ext_resource path="res://fonts/04B_08_0.TTF" type="DynamicFontData" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -52,7 +51,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ]
+"values": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ]
 }
 
 [sub_resource type="DynamicFont" id=6]
@@ -60,7 +59,7 @@ tracks/0/keys = {
 size = 16
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 15 )
+font_data = ExtResource( 14 )
 _sections_unfolded = [ "Font" ]
 
 [sub_resource type="Animation" id=7]
@@ -237,8 +236,6 @@ softness = 0.0
 
 [node name="timers" type="Node2D" parent="." index="8"]
 
-editor/display_folded = true
-
 [node name="protected" type="Timer" parent="timers" index="0"]
 
 process_mode = 1
@@ -259,11 +256,6 @@ process_mode = 1
 wait_time = 0.5
 one_shot = false
 autostart = true
-
-[node name="bonus" parent="timers/spawn_timer" index="0" instance=ExtResource( 5 )]
-
-position = Vector2( 324, 792 )
-type = 2
 
 [node name="end" type="Timer" parent="timers" index="3"]
 
@@ -296,7 +288,7 @@ max_lines_visible = -1
 editor/display_folded = true
 position = Vector2( 468, 900 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="bird" type="Area2D" parent="bird" index="0"]
@@ -333,7 +325,7 @@ editor/display_folded = true
 
 [node name="explosion" type="AudioStreamPlayer" parent="sounds" index="0"]
 
-stream = ExtResource( 7 )
+stream = ExtResource( 6 )
 volume_db = -10.0
 autoplay = false
 mix_target = 0
@@ -341,7 +333,7 @@ bus = "Master"
 
 [node name="hit" type="AudioStreamPlayer" parent="sounds" index="1"]
 
-stream = ExtResource( 8 )
+stream = ExtResource( 7 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
@@ -349,7 +341,7 @@ bus = "Master"
 
 [node name="bonus" type="AudioStreamPlayer" parent="sounds" index="2"]
 
-stream = ExtResource( 9 )
+stream = ExtResource( 8 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
@@ -357,7 +349,7 @@ bus = "Master"
 
 [node name="bonus2" type="AudioStreamPlayer" parent="sounds" index="3"]
 
-stream = ExtResource( 10 )
+stream = ExtResource( 9 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
@@ -368,7 +360,7 @@ bus = "Master"
 editor/display_folded = true
 visible = false
 mode = 0
-tile_set = ExtResource( 11 )
+tile_set = ExtResource( 10 )
 cell_size = Vector2( 36, 36 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -447,7 +439,7 @@ text = "GAME OVER"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Size Flags", "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "Anchor", "Grow Direction", "Rect", "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="end_anim" type="AnimationPlayer" parent="UI" index="1"]
 
