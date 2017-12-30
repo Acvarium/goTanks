@@ -340,7 +340,7 @@ func spawn_bonus(type):
 	$sounds/bonus2.play()
 
 func _on_spawn_bonus_timeout():
-	spawn_bonus(randi()%5)
+	spawn_bonus(randi()%3 + 2)
 	$timers/spawn_bonus.set_wait_time(randf() * 50 + 15)
 
 func _on_end_timeout():
