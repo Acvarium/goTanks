@@ -18,7 +18,7 @@ extents = Vector2( 18, 18 )
 custom_solver_bias = 0.0
 extents = Vector2( 24, 24 )
 
-[node name="main" type="Node2D" index="0"]
+[node name="main" type="Node2D"]
 
 [node name="bricks0" type="Sprite" parent="." index="0"]
 

@@ -157,8 +157,6 @@ shape = SubResource( 1 )
 
 [node name="spawn_points" type="Node2D" parent="." index="7"]
 
-editor/display_folded = true
-
 [node name="point00" type="PinJoint2D" parent="spawn_points" index="0"]
 
 position = Vector2( 324, 900 )
@@ -232,6 +230,7 @@ autostart = true
 
 [node name="player1_lifes" type="Label" parent="." index="9"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -356,6 +355,27 @@ playback/speed = 0.3
 blend_times = [  ]
 autoplay = "water"
 _sections_unfolded = [ "Playback Options", "playback" ]
+
+[node name="Label2" type="Label" parent="." index="13"]
+
+modulate = Color( 1, 1, 1, 0.66298 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 756.0
+margin_top = 900.0
+margin_right = 899.0
+margin_bottom = 914.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Press Ctrl+M for menu"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility" ]
 
 [connection signal="timeout" from="timers/protected" to="." method="_on_protected_timeout"]
 
