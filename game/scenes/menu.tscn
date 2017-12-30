@@ -1,100 +1,82 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
-[ext_resource path="res://textures/bird.tex" type="Texture" id=2]
+[ext_resource path="res://textures/bird.png" type="Texture" id=2]
+[ext_resource path="res://textures/prev/l00.png" type="Texture" id=3]
 
-[node name="main" type="Node2D"]
+[sub_resource type="Animation" id=1]
 
-script/script = ExtResource( 1 )
+resource_name = "f"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("preview:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
-[node name="single_player" type="Button" parent="."]
+[node name="main" type="Node2D" index="0"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 432.0
-margin/top = 288.0
-margin/right = 516.0
-margin/bottom = 366.0
+script = ExtResource( 1 )
+
+[node name="single_player" type="Button" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 390.0
+margin_top = 216.0
+margin_right = 546.0
+margin_bottom = 366.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 icon = ExtResource( 2 )
 flat = false
+align = 1
 
-[node name="single_player1" type="Button" parent="."]
+[node name="pos" type="Position2D" parent="." index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 432.0
-margin/top = 432.0
-margin/right = 516.0
-margin/bottom = 468.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "0"
-flat = false
+position = Vector2( 468, 468 )
 
-[node name="single_player2" type="Button" parent="."]
+[node name="buttons" type="Node2D" parent="." index="2"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 432.0
-margin/top = 468.0
-margin/right = 516.0
-margin/bottom = 504.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "1"
-flat = false
+[node name="preview" type="Sprite" parent="." index="3"]
 
-[node name="single_player3" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 216, 585 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 432.0
-margin/top = 504.0
-margin/right = 516.0
-margin/bottom = 540.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "2"
-flat = false
+[node name="anim" type="AnimationPlayer" parent="." index="4"]
 
-[node name="single_player4" type="Button" parent="."]
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
+anims/f = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 432.0
-margin/top = 540.0
-margin/right = 516.0
-margin/bottom = 576.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "3"
-flat = false
+[connection signal="mouse_entered" from="single_player" to="." method="_on_single_player_mouse_entered"]
+
+[connection signal="mouse_exited" from="single_player" to="." method="_on_single_player_mouse_exited"]
 
 [connection signal="pressed" from="single_player" to="." method="_on_single_player_pressed"]
-
-[connection signal="pressed" from="single_player1" to="." method="_on_single_player1_pressed"]
-
-[connection signal="pressed" from="single_player2" to="." method="_on_single_player2_pressed"]
-
-[connection signal="pressed" from="single_player3" to="." method="_on_single_player3_pressed"]
-
-[connection signal="pressed" from="single_player4" to="." method="_on_single_player4_pressed"]
 
 

@@ -23,7 +23,7 @@ func _ready():
 func _process(delta):
 	var time_left = get_node("Timer").get_time_left()
 	var speed = ((time - time_left) / time * 2) + 1
-	get_node("anim").set_speed(speed)
+	get_node("anim").set_speed_scale(speed)
 
 func _on_Timer_timeout():
 	queue_free()
@@ -32,7 +32,7 @@ func _on_Area2D_body_enter( body ):
 	if value > 0:
 		if body.get_parent() == main_node.get_node("tanks"):
 			if body.type > 0:
-				main_node.play_sound("up01")
+				main_node.play_sound("up")
 				disappear()
 				if type == 0:
 					main_node.set_player_lifes(global.player_lifes[body.type - 1] + 1, body.type)

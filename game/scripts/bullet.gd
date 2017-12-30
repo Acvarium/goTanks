@@ -6,24 +6,24 @@ var owner_type = 0
 var owner
 var owner_name
 var wr
+var is_grid = false
 
 func set_speed(s):
 	speed = s
 
 func _ready():
 	main_node = get_node("/root/main")
-	set_fixed_process(true)
 	
 func set_direction(dir):
 	direction = dir
 	if direction.y == -1:
-		set_rot(0)
+		rotation = 0
 	elif direction.x == 1:
-		set_rot(PI * 1.5)
+		rotation = PI * 0.5
 	elif direction.y == 1:
-		set_rot(PI)
+		rotation = PI
 	elif direction.x == -1:
-		set_rot(PI * 0.5)
+		rotation = PI * 1.5
 		
 func set_owner(own):
 	owner = own
@@ -32,19 +32,23 @@ func set_owner(own):
 	wr = weakref(owner)
 
 	
-func _fixed_process(delta):
-	var pos = get_pos()
-	var rot = get_rot()
-	pos += speed * direction * delta
-	set_pos(pos)
+func _physics_process(delta):
+	position += speed * direction * delta
+
 
 func _on_Timer_timeout():
 	free_bullet()
 
-func _on_bullet_body_enter( body ):
+
+func _on_bullet_body_entered( body ):
 #Do not count owner of a bullet
 	if body == owner:
 		return
+	if body.get_parent() == main_node.get_node("grids"):
+		is_grid = true
+	else:
+		is_grid = false
+#
 #If owner is a BOT
 	if owner_type == 0:
 		
@@ -69,11 +73,14 @@ func _on_bullet_body_enter( body ):
 		free_bullet()
 
 func free_bullet():
-	if owner:
-		if (wr.get_ref()):
-			owner.free_bullet()
-	main_node.bullet_hit(get_pos(), direction)
-	queue_free()
+	if main_node.bullet_hit(position, direction, owner, is_grid) or !is_grid:
+		if owner:
+			if (wr.get_ref()):
+				owner.free_bullet()
+		queue_free()
 
 func _on_bullet_area_enter( area ):
+	is_grid = false
 	free_bullet()
+
+

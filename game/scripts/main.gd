@@ -13,10 +13,10 @@ var bots = []
 var bots_count = 0
 var killed = 0
 
+
 var max_bots_on_screen = 6
 
 func _ready():
-	set_process_input(true)
 	get_node("timers/spawn_bonus").set_wait_time(randf()*25 + 10)
 	get_node("timers/spawn_bonus").start()
 	global = get_node("/root/global")
@@ -28,8 +28,6 @@ func _ready():
 	var ta = ""
 	for b in bots:
 		ta += str(b) + "\n"
-	get_node("player1_lifes").set_text(ta)
-	get_node("player1_lifes").set_text(str(global.player_lifes[0]))
 	grid = get_node("grids/grid")
 	set_level(level)
 	for x in range(world_size):
@@ -39,11 +37,11 @@ func _ready():
 		
 	for t in get_node("tanks").get_children():
 		update_tank_pos(t)
+	get_node("player1_lifes").set_text(str(global.player_lifes[0]))
 
 func _input(event):
 	if Input.is_action_pressed("menu"):
 		global.goto_scene("res://scenes/menu.tscn")
-
 
 
 func shuffleList(list):
@@ -54,26 +52,25 @@ func shuffleList(list):
         shuffledList.append(list[indexList[x]])
         indexList.remove(x)
     return shuffledList
-	
-func play_sound(sound):
-	get_node("sounds/effect").play("up01")
 
+
+#????????????????????????????
 func set_level(l):
 	level = l
-	if get_node("grids").has_node("grid"):
-		get_node("grids/grid").queue_free()
+	if $grids.has_node("grid"):
+		$grids/grid.queue_free()
 		var name = "level" + "%02d" % level + ".tscn"
 		
 		mapObj = load("res://levels/" + name)
 		var map = mapObj.instance()
 		map.set_name("grid")
-		get_node("grids").add_child(map)
+		$grids.add_child(map)
 		grid = map
 
 func is_spawn_point_vacant(point):
 	var point_name = "spawn_points/point" + "%02d" % point 
 	
-	var grid_pos = world_to_map(get_node(point_name).get_pos())
+	var grid_pos = world_to_map(get_node(point_name).position)
 	for x in range(2):
 		for y in range(2):
 			var cell = world[grid_pos.x + x - 1][grid_pos.y + y - 1]
@@ -89,8 +86,7 @@ func set_player_lifes(l, player):
 
 func is_cell_vacant(tank):
 	var direction = tank.direction
-	var pos = tank.get_pos()
-	var grid_pos = world_to_map(pos) + direction
+	var grid_pos = world_to_map(tank.position) + direction
 	for x in range(2):
 		for y in range(2):
 			if (grid_pos.x + x - 1) < 0 or (grid_pos.x + x - 1) >= world.size():
@@ -122,21 +118,21 @@ func kill_tank(tank):
 		killed += 1
 		if killed >= bots.size():
 			global.go = false
-			get_node("/root/global").goto_scene("res://scenes/score.tscn")
+			global.goto_scene("res://scenes/score.tscn")
 
 				
 	remove_tank(tank)
-	get_node("hit_sound").play("explosion02")
+	$sounds/explosion.play()
 	var explosion = explosionObj.instance()
-	explosion.set_pos(tank.get_pos())
+	explosion.position = tank.position
 	explosion.set_explosion(1)
-	get_node("bullets").add_child(explosion)
+	$bullets.add_child(explosion)
 
 	
 	var dirt = explosionObj.instance()
-	dirt.set_pos(tank.get_pos())
+	dirt.position = tank.position
 	dirt.set_explosion(2)
-	get_node("floor").add_child(dirt)
+	$floor.add_child(dirt)
 	tank.queue_free()
 	if is_player1:
 		spawn(1)
@@ -146,31 +142,31 @@ func spawn(t):
 	var type = t
 	var level = 0
 	if t == 1:
-		spawn_pos = get_node("spawn_points/point00").get_pos()
+		spawn_pos = $spawn_points/point00.position
 	elif t == 0:
-		var tanks_on_screen = get_node("tanks").get_child_count()
+		var tanks_on_screen = $tanks.get_child_count()
 		var spawn_point = randi()%3 + 2
 		if !is_spawn_point_vacant(spawn_point) or tanks_on_screen >= max_bots_on_screen or bots_count >= bots.size():
-			get_node("spawn_timer").set_wait_time(randf() * 3)
-			get_node("spawn_timer").start()
+			$timers/spawn_timer.set_wait_time(randf() * 3)
+			$timers/spawn_timer.start()
 			return
-		get_node("spawn_timer").start()
-		spawn_pos = get_node("spawn_points/point" + "%02d" % spawn_point).get_pos()
+		$timers/spawn_timer.start()
+		spawn_pos = get_node("spawn_points/point" + "%02d" % spawn_point).position
 		level = bots[bots_count]
 		bots_count += 1
 
 	var tank = tankObj.instance()
 	tank.set_level(level)
-	tank.set_pos(spawn_pos)
+	tank.position = spawn_pos
 	tank.set_type(type)
 	tank.set_name("tank")
 	
-	get_node("tanks").add_child(tank)
+	$tanks.add_child(tank)
 	update_tank_pos(tank)
 
 
 func remove_tank(tank):
-	var grid_pos = world_to_map(tank.get_pos())
+	var grid_pos = world_to_map(tank.position)
 	for x in range(world_size):
 		for y in range(world_size):
 			if world[x][y] == tank:
@@ -178,14 +174,16 @@ func remove_tank(tank):
 
 func update_tank_pos(tank):
 	remove_tank(tank)
-	var grid_pos = world_to_map(tank.get_pos())
+	var grid_pos = world_to_map(tank.position)
 	var new_grid_pos = grid_pos + tank.direction
 	for x in range(2):
 		for y in range(2):
 			world[new_grid_pos.x + x - 1][new_grid_pos.y + y - 1] = tank
 	
 	var target_pos = map_to_world(new_grid_pos) 
+
 	return target_pos
+
 
 func world_to_map(pos):
 	pos = pos + Vector2(cell_size/4, cell_size/4)
@@ -196,23 +194,33 @@ func map_to_world(cell):
 	var pos = Vector2(cell.x * cell_size, cell.y * cell_size)
 	return pos
 	
-func bullet_hit(pos, direction):
+func bullet_hit(pos, direction, owner, is_grid):
+	var not_water = true
 	var shift = Vector2(0.5,0)
+#	var tail_set = grid.tile_set
 	if !abs(direction.y):
 		shift = Vector2(0,0.5)
 	var cells_pos = [grid.world_to_map(pos + 9 * (direction + shift)), grid.world_to_map(pos + 9 * (direction - shift))]
-	var cells_id = [grid.get_cell(cells_pos[0].x,cells_pos[0].y), grid.get_cell(cells_pos[1].x,cells_pos[1].y)]
-
+#	gri
 	for i in range(2):
-		if cells_id[i] == 0:
-			grid.set_cell(cells_pos[i].x,cells_pos[i].y,1)
-		elif cells_id[i] == 1:
-			grid.set_cell(cells_pos[i].x,cells_pos[i].y,-1)
-#	
-	get_node("hit_sound").play("hit")
-	var explosion = explosionObj.instance()
-	explosion.set_pos(pos)
-	get_node("bullets").add_child(explosion)
+		var tile_name = grid.tile_set.tile_get_name(grid.get_cell(cells_pos[i][0],cells_pos[i][1])) 
+		
+		if tile_name:
+			if tile_name[0] != 'w':
+				not_water = false
+			if tile_name[0] == 'h':
+				var new_tile_id = grid.tile_set.find_tile_by_name('j' + tile_name[1] + tile_name[2])
+				grid.set_cell(cells_pos[i].x,cells_pos[i].y, new_tile_id)
+			elif tile_name[0] == 'j':
+				var new_tile_id = grid.tile_set.find_tile_by_name('k' + tile_name[1] + tile_name[2])
+				grid.set_cell(cells_pos[i].x,cells_pos[i].y, new_tile_id)
+			
+	if !not_water or !is_grid:
+		$sounds/hit.play()
+		var explosion = explosionObj.instance()
+		explosion.position = pos
+		$bullets.add_child(explosion)
+	return(!not_water)
 
 func _on_spawn_timer_timeout():
 	spawn(0)
@@ -227,6 +235,7 @@ func _on_bird_area_enter( area ):
 	if area.get_parent().get_name() == "bullets":
 		game_over()
 	
+
 func protect():
 	grid.set_cell(11,23,2)
 	grid.set_cell(12,23,2)
@@ -238,25 +247,28 @@ func protect():
 	grid.set_cell(14,25,2)
 	get_node("timers/protected").start()
 	
-	
 func _on_protected_timeout():
-	grid.set_cell(11,23,0)
-	grid.set_cell(12,23,0)
-	grid.set_cell(13,23,0)
-	grid.set_cell(14,23,0)
-	grid.set_cell(11,24,0)
-	grid.set_cell(11,25,0)
-	grid.set_cell(14,24,0)
-	grid.set_cell(14,25,0)
+	grid.set_cell(11,23,grid.tile_set.find_tile_by_name('h00'))
+	grid.set_cell(12,23,grid.tile_set.find_tile_by_name('h01'))
+	grid.set_cell(13,23,grid.tile_set.find_tile_by_name('h01'))
+	grid.set_cell(14,23,grid.tile_set.find_tile_by_name('h02'))
+	grid.set_cell(11,24,grid.tile_set.find_tile_by_name('h03'))
+	grid.set_cell(11,25,grid.tile_set.find_tile_by_name('h03'))
+	grid.set_cell(14,24,grid.tile_set.find_tile_by_name('h05'))
+	grid.set_cell(14,25,grid.tile_set.find_tile_by_name('h05'))
+
+func play_sound(sound):
+	if sound == 'up':
+		$sounds/bonus.play()
 
 
 func _on_spawn_bonus_timeout():
-	var pos = Vector2(randf() * 864 + 36, randf() * 864 + 36)
 	var bonus = bonusObj.instance()
-	bonus.set_pos(pos)
+	bonus.position = Vector2(randf() * 864 + 36, randf() * 864 + 36)
 	bonus.set_type(randi()%5)
 	bonus.set_time(randf()*10 + 5)
 	get_node("spawn_points").add_child(bonus)
 	get_node("timers/spawn_bonus").set_wait_time(randf()*25 + 10)
-	get_node("sounds/effect").play("up02")
+	$sounds/bonus2.play()
+#	get_node("sounds/effect").play("up02")
 	

@@ -1,48 +1,46 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/bullet.gd" type="Script" id=1]
-[ext_resource path="res://textures/bullet.tex" type="Texture" id=2]
+[ext_resource path="res://textures/bullet.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 4.99948, 6.552 )
+extents = Vector2( 8, 6 )
 
 [node name="bullet" type="Area2D"]
 
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
+input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 1 )
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
-transform/scale = Vector2( 0.4, 0.25 )
+scale = Vector2( 0.35, 0.25 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." index="2"]
 
 process_mode = 1
 wait_time = 15.0
 one_shot = false
 autostart = false
 
-[connection signal="area_enter" from="." to="." method="_on_bullet_area_enter"]
+[connection signal="area_entered" from="." to="." method="_on_bullet_area_enter"]
 
-[connection signal="body_enter" from="." to="." method="_on_bullet_body_enter"]
+[connection signal="body_entered" from="." to="." method="_on_bullet_body_entered"]
 
 
