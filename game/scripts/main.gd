@@ -114,7 +114,9 @@ func kill_tank(tank):
 			global.player_lifes[0] = 0
 #			
 			global.go = true
-			$timers/end.start()
+#--------------------------------------------------------------------
+			$timers/end.start()				#Додати звук поразки
+			$UI/end_anim.play("game_over")
 #			game_over()
 	
 		$player1_lifes.set_text(str(global.player_lifes[tank.type - 1]))
@@ -122,7 +124,9 @@ func kill_tank(tank):
 		killed += 1
 		if killed >= bots.size():
 			global.go = false
-			global.goto_scene("res://scenes/score.tscn")
+#----------------------------------------------
+#Додати звук перемоги
+			$timers/end.start()
 
 				
 	remove_tank(tank)
@@ -235,12 +239,6 @@ func add_explosion(pos, type):
 	explosion.set_explosion(type)
 	$bullets.add_child(explosion)
 
-
-func game_over():
-#	global.go = true
-	get_node("/root/global").goto_scene("res://scenes/score.tscn")
-		
-
 func _on_bird_area_enter( area ):
 	if area.get_parent().get_name() == "bullets":
 		global.go = true
@@ -248,6 +246,7 @@ func _on_bird_area_enter( area ):
 		$bird.queue_free()
 		add_explosion($bird.position, 1)
 		$timers/end.start()
+		$UI/end_anim.play("game_over")
 #		game_over()
 	
 
@@ -286,7 +285,6 @@ func _on_spawn_bonus_timeout():
 	$sounds/bonus2.play()
 #	get_node("sounds/effect").play("up02")
 
-
 func _on_end_timeout():
-	if global.go:
-		game_over()
+#end of level by fail or vine
+	get_node("/root/global").goto_scene("res://scenes/score.tscn")
