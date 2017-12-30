@@ -183,7 +183,6 @@ shape = SubResource( 1 )
 [node name="spawn_points" type="Node2D" parent="." index="7"]
 
 editor/display_folded = true
-visible = false
 
 [node name="point00" type="PinJoint2D" parent="spawn_points" index="0"]
 
@@ -461,7 +460,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="UI" type="CanvasLayer" parent="." index="15"]
 
-layer = 1
+layer = 6
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
