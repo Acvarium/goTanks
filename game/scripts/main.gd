@@ -46,12 +46,18 @@ func _ready():
 	for t in get_node("tanks").get_children():
 		update_tank_pos(t)
 	get_node("player1_lifes").set_text(str(global.player_lifes[0]))
-	
-	main_bonuses_at.append(randi() % (bots.size() - 2) + 1)
-	main_bonuses_at.append(randi() % (bots.size() - 2) + 1)
-	while(main_bonuses_at[1] == main_bonuses_at[0]):
-		main_bonuses_at[1]  = randi() % (bots.size() - 2) + 1
-	print(main_bonuses_at[0],' ', main_bonuses_at[1])
+	if bots.size() > 5:
+		main_bonuses_at.append(randi() % (bots.size() - 2) + 1)
+		main_bonuses_at.append(randi() % (bots.size() - 2) + 1)
+		while(main_bonuses_at[1] == main_bonuses_at[0]):
+			main_bonuses_at[1]  = randi() % (bots.size() - 2) + 1
+		print(main_bonuses_at[0],' ', main_bonuses_at[1])
+	else:
+		main_bonuses_at.append(-1)
+		main_bonuses_at.append(-1)
+		
+	$sounds/start.play()
+		
 func _input(event):
 	if Input.is_action_pressed("menu"):
 		global.goto_scene("res://scenes/menu.tscn")
@@ -141,8 +147,12 @@ func kill_tank(tank):
 #----------------------------------------------
 #Додати звук перемоги
 			$UI/game_over.text = "  VICTORY"
+			$sounds/victory.play()
 			$UI/end_anim.play("game_over")
+			$timers/end.wait_time = 5
 			$timers/end.start()
+			
+			
 
 		elif killed >= main_bonuses_at[0]  and main_bonuses_at[0] != -1:
 			main_bonuses_at[0] = -1

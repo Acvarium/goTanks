@@ -1,0 +1,14 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/victory.ogg-9495c76c777843b146935012b9674139.oggstr"
+
+[deps]
+
+source_md5="b2456718b04354ccf018163dd594ac50"
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://levels/level00.tscn" type="PackedScene" id=2]
@@ -6,15 +6,17 @@
 [ext_resource path="res://textures/bg.jpg" type="Texture" id=4]
 [ext_resource path="res://textures/bird.png" type="Texture" id=5]
 [ext_resource path="res://sounds/explosion02.ogg" type="AudioStream" id=6]
-[ext_resource path="res://sounds/hit.ogg" type="AudioStream" id=7]
-[ext_resource path="res://sounds/up01.ogg" type="AudioStream" id=8]
-[ext_resource path="res://sounds/up02.ogg" type="AudioStream" id=9]
-[ext_resource path="res://sounds/failure.ogg" type="AudioStream" id=10]
-[ext_resource path="res://tilesets/walls.tres" type="TileSet" id=11]
-[ext_resource path="res://textures/water_anim0.png" type="Texture" id=12]
-[ext_resource path="res://textures/water_anim1.png" type="Texture" id=13]
-[ext_resource path="res://textures/water_anim2.png" type="Texture" id=14]
-[ext_resource path="res://fonts/04B_08_0.TTF" type="DynamicFontData" id=15]
+[ext_resource path="res://sounds/victory.ogg" type="AudioStream" id=7]
+[ext_resource path="res://sounds/hit.ogg" type="AudioStream" id=8]
+[ext_resource path="res://sounds/up01.ogg" type="AudioStream" id=9]
+[ext_resource path="res://sounds/up02.ogg" type="AudioStream" id=10]
+[ext_resource path="res://sounds/failure.ogg" type="AudioStream" id=11]
+[ext_resource path="res://sounds/start.ogg" type="AudioStream" id=12]
+[ext_resource path="res://tilesets/walls.tres" type="TileSet" id=13]
+[ext_resource path="res://textures/water_anim0.png" type="Texture" id=14]
+[ext_resource path="res://textures/water_anim1.png" type="Texture" id=15]
+[ext_resource path="res://textures/water_anim2.png" type="Texture" id=16]
+[ext_resource path="res://fonts/04B_08_0.TTF" type="DynamicFontData" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -52,7 +54,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ]
+"values": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ]
 }
 
 [sub_resource type="DynamicFont" id=6]
@@ -60,7 +62,7 @@ tracks/0/keys = {
 size = 16
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 15 )
+font_data = ExtResource( 17 )
 _sections_unfolded = [ "Font" ]
 
 [sub_resource type="Animation" id=7]
@@ -337,7 +339,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="hit" type="AudioStreamPlayer" parent="sounds" index="1"]
+[node name="victory" type="AudioStreamPlayer" parent="sounds" index="1"]
 
 stream = ExtResource( 7 )
 volume_db = -15.0
@@ -345,7 +347,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="bonus" type="AudioStreamPlayer" parent="sounds" index="2"]
+[node name="hit" type="AudioStreamPlayer" parent="sounds" index="2"]
 
 stream = ExtResource( 8 )
 volume_db = -15.0
@@ -353,7 +355,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="bonus2" type="AudioStreamPlayer" parent="sounds" index="3"]
+[node name="bonus" type="AudioStreamPlayer" parent="sounds" index="3"]
 
 stream = ExtResource( 9 )
 volume_db = -15.0
@@ -361,10 +363,26 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="failure" type="AudioStreamPlayer" parent="sounds" index="4"]
+[node name="bonus2" type="AudioStreamPlayer" parent="sounds" index="4"]
 
 stream = ExtResource( 10 )
+volume_db = -15.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="failure" type="AudioStreamPlayer" parent="sounds" index="5"]
+
+stream = ExtResource( 11 )
 volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="start" type="AudioStreamPlayer" parent="sounds" index="6"]
+
+stream = ExtResource( 12 )
+volume_db = -10.0
 autoplay = false
 mix_target = 0
 bus = "Master"
@@ -374,7 +392,7 @@ bus = "Master"
 editor/display_folded = true
 visible = false
 mode = 0
-tile_set = ExtResource( 11 )
+tile_set = ExtResource( 13 )
 cell_size = Vector2( 36, 36 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
