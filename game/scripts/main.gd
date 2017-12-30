@@ -33,9 +33,7 @@ func _ready():
 		for j in range(global.levels_data[level][i]):
 			bots.append(i)
 	bots = shuffleList(bots)
-	var ta = ""
-	for b in bots:
-		ta += str(b) + "\n"
+	print(bots)
 	grid = get_node("grids/grid")
 	set_level(level)
 	for x in range(world_size):
@@ -43,15 +41,14 @@ func _ready():
 		for y in range(world_size):
 			world[x].append(null)
 		
-	for t in get_node("tanks").get_children():
-		update_tank_pos(t)
 	if global.player_lifes[0] > 0:
 		spawn(1)
 	if global.player_lifes[1] > 0:
 		spawn(2)
-	
 	else:
 		$player2_lifes.hide()
+	for t in get_node("tanks").get_children():
+		update_tank_pos(t)
 	get_node("player1_lifes").set_text(str(global.player_lifes[0]))
 	get_node("player2_lifes").set_text(str(global.player_lifes[1]))
 	if bots.size() > 5:
@@ -214,12 +211,15 @@ func spawn(t):
 		bots_count += 1
 
 	var tank = tankObj.instance()
-	tank.set_level(global.player_level[t - 1])
 	tank.position = spawn_pos
 	tank.set_type(t)
 	tank.set_name("tank")
 	if t > 0:
+		tank.set_level(global.player_level[t - 1])
 		tank.shild(2)
+	else:
+		tank.set_level(level)
+		
 	$tanks.add_child(tank)
 	update_tank_pos(tank)
 
