@@ -12,11 +12,19 @@ var global
 var bots = []
 var bots_count = 0
 var killed = 0
-
-
+var main_bonuses_at = []
+var main_bonus_selected = -1
 var max_bots_on_screen = 6
 
+# Bonuses:
+# 1 life
+# 2 level up
+# 3 shild
+# 4 granate 
+# 5 protected
+
 func _ready():
+	randomize()
 	get_node("timers/spawn_bonus").set_wait_time(randf()*25 + 10)
 	get_node("timers/spawn_bonus").start()
 	global = get_node("/root/global")
@@ -38,11 +46,15 @@ func _ready():
 	for t in get_node("tanks").get_children():
 		update_tank_pos(t)
 	get_node("player1_lifes").set_text(str(global.player_lifes[0]))
-
+	
+	main_bonuses_at.append(randi() % (bots.size() - 2) + 1)
+	main_bonuses_at.append(randi() % (bots.size() - 2) + 1)
+	while(main_bonuses_at[1] == main_bonuses_at[0]):
+		main_bonuses_at[1]  = randi() % (bots.size() - 2) + 1
+	print(main_bonuses_at[0],' ', main_bonuses_at[1])
 func _input(event):
 	if Input.is_action_pressed("menu"):
 		global.goto_scene("res://scenes/menu.tscn")
-
 
 func shuffleList(list):
     var shuffledList = [] 
@@ -117,11 +129,13 @@ func kill_tank(tank):
 #--------------------------------------------------------------------
 			$timers/end.start()				#Додати звук поразки
 			$UI/end_anim.play("game_over")
+			$sounds/failure.play()
 #			game_over()
 	
 		$player1_lifes.set_text(str(global.player_lifes[tank.type - 1]))
 	elif tank.type == 0:
 		killed += 1
+			
 		if killed >= bots.size():
 			global.go = false
 #----------------------------------------------
@@ -130,6 +144,16 @@ func kill_tank(tank):
 			$UI/end_anim.play("game_over")
 			$timers/end.start()
 
+		elif killed >= main_bonuses_at[0]  and main_bonuses_at[0] != -1:
+			main_bonuses_at[0] = -1
+			$timers/main_bonus.wait_time = randf() * 5
+			main_bonus_selected = 0
+			$timers/main_bonus.start()
+		elif killed >= main_bonuses_at[1] and main_bonuses_at[1] != -1:
+			main_bonuses_at[1] = -1
+			$timers/main_bonus.wait_time = randf() * 5
+			main_bonus_selected = 1
+			$timers/main_bonus.start()
 				
 	remove_tank(tank)
 	$sounds/explosion.play()
@@ -254,6 +278,7 @@ func _on_bird_area_enter( area ):
 		
 		$timers/end.start()
 		$UI/end_anim.play("game_over")
+		$sounds/failure.play()
 #		game_over()
 	
 
@@ -282,16 +307,24 @@ func play_sound(sound):
 	if sound == 'up':
 		$sounds/bonus.play()
 
-func _on_spawn_bonus_timeout():
+func spawn_bonus(type):
+	print(type)
 	var bonus = bonusObj.instance()
 	bonus.position = Vector2(randf() * 864 + 36, randf() * 864 + 36)
-	bonus.set_type(randi()%5)
+	bonus.set_type(type)
 	bonus.set_time(randf()*10 + 5)
-	get_node("spawn_points").add_child(bonus)
-	get_node("timers/spawn_bonus").set_wait_time(randf()*25 + 10)
+	$spawn_points.add_child(bonus)
 	$sounds/bonus2.play()
-#	get_node("sounds/effect").play("up02")
+
+func _on_spawn_bonus_timeout():
+	spawn_bonus(randi()%5)
+	$timers/spawn_bonus.set_wait_time(randf() * 50 + 15)
 
 func _on_end_timeout():
 #end of level by fail or vine
 	get_node("/root/global").goto_scene("res://scenes/score.tscn")
+
+func _on_main_bonus_timeout():
+	if main_bonus_selected != -1:
+		spawn_bonus(main_bonus_selected)
+		main_bonus_selected = -1
