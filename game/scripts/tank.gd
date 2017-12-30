@@ -96,7 +96,7 @@ func set_level(l):
 	
 	
 func _input(event):
-	if Input.is_action_pressed("fire"):
+	if Input.is_action_pressed("fire") and type == 1 or Input.is_action_pressed("p2_fire") and type == 2:
 		fire()
 
 func set_type(t):
@@ -133,25 +133,25 @@ func _physics_process(delta):
 	if dead:
 		return
 	direction = Vector2()
-	if Input.is_action_pressed("ui_up") and type == 1 or randDir == 0 and type == 0:
+	if Input.is_action_pressed("ui_up") and type == 1 or randDir == 0 and type == 0 or Input.is_action_pressed("p2_up") and type == 2:
 		if !obstacle(UP):
 			direction.y = -1
 		if !is_moving:
 			currentDir = Vector2(0,-1)
 			$Sprite.rotation = 0
-	elif Input.is_action_pressed("ui_down") and type == 1 or randDir == 1 and type == 0:
+	elif Input.is_action_pressed("ui_down") and type == 1 or randDir == 1 and type == 0 or Input.is_action_pressed("p2_down") and type == 2:
 		if !obstacle(DOWN):
 			direction.y = 1
 		if !is_moving:
 			currentDir = Vector2(0,1)
 			$Sprite.rotation = PI
-	elif Input.is_action_pressed("ui_left") and type == 1 or randDir == 2 and type == 0:
+	elif Input.is_action_pressed("ui_left") and type == 1 or randDir == 2 and type == 0 or Input.is_action_pressed("p2_left") and type == 2:
 		if !obstacle(LEFT):
 			direction.x = -1
 		if !is_moving:
 			currentDir = Vector2(-1,0)
 			$Sprite.rotation = PI*1.5
-	elif Input.is_action_pressed("ui_right") and type == 1 or randDir == 3 and type == 0:
+	elif Input.is_action_pressed("ui_right") and type == 1 or randDir == 3 and type == 0 or Input.is_action_pressed("p2_right") and type == 2:
 		if !obstacle(RIGHT):
 			direction.x = 1
 		if !is_moving:

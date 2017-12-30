@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
-[ext_resource path="res://textures/bird.png" type="Texture" id=2]
-[ext_resource path="res://textures/prev/l00.png" type="Texture" id=3]
+[ext_resource path="res://textures/prev/l00.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 
@@ -33,10 +32,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 390.0
-margin_top = 216.0
-margin_right = 546.0
-margin_bottom = 366.0
+margin_left = 391.0
+margin_top = 252.0
+margin_right = 547.0
+margin_bottom = 324.0
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 0
 size_flags_horizontal = 1
@@ -45,24 +44,46 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 2 )
+text = "SINGLE PLAYER"
 flat = false
 align = 1
 
-[node name="pos" type="Position2D" parent="." index="1"]
+[node name="double_player" type="Button" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 390.0
+margin_top = 338.0
+margin_right = 546.0
+margin_bottom = 410.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "DOUBLE PLAYER"
+flat = false
+align = 1
+
+[node name="pos" type="Position2D" parent="." index="2"]
 
 position = Vector2( 468, 468 )
 
-[node name="buttons" type="Node2D" parent="." index="2"]
+[node name="buttons" type="Node2D" parent="." index="3"]
 
-[node name="preview" type="Sprite" parent="." index="3"]
+[node name="preview" type="Sprite" parent="." index="4"]
 
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 216, 585 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="anim" type="AnimationPlayer" parent="." index="4"]
+[node name="anim" type="AnimationPlayer" parent="." index="5"]
 
 playback_process_mode = 1
 playback_default_blend_time = 0.0
@@ -78,5 +99,11 @@ autoplay = ""
 [connection signal="mouse_exited" from="single_player" to="." method="_on_single_player_mouse_exited"]
 
 [connection signal="pressed" from="single_player" to="." method="_on_single_player_pressed"]
+
+[connection signal="mouse_entered" from="double_player" to="." method="_on_single_player_mouse_entered"]
+
+[connection signal="mouse_exited" from="double_player" to="." method="_on_single_player_mouse_exited"]
+
+[connection signal="pressed" from="double_player" to="." method="_on_double_player_pressed"]
 
 

@@ -60,9 +60,9 @@ func _on_bullet_body_entered( body ):
 		free_bullet()
 		
 #If owner is player
-	elif owner_type == 1:
+	elif owner_type > 0:
 		if body.get_parent() == main_node.get_node("tanks"):
-			if body.type == 1:
+			if body.type > 0:
 				return
 			elif body.type == 0:
 				body.hit()

@@ -67,6 +67,8 @@ autoplay = ""
 
 [node name="rays" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
+
 [node name="rayUp" type="RayCast2D" parent="rays" index="0"]
 
 position = Vector2( -13, 0 )
@@ -132,6 +134,8 @@ cast_to = Vector2( 50, 0 )
 collision_mask = 1
 
 [node name="timers" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
 
 [node name="step" type="Timer" parent="timers" index="0"]
 
@@ -210,6 +214,8 @@ texture = ExtResource( 3 )
 _sections_unfolded = [ "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="sounds" type="Node2D" parent="." index="7"]
+
+editor/display_folded = true
 
 [node name="fire" type="AudioStreamPlayer" parent="sounds" index="0"]
 

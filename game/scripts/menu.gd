@@ -13,7 +13,7 @@ func _ready():
 	
 func _on_single_player_pressed():
 	global.level = 0
-	print('aaaaaaaaaaaaaaaaaaa')
+	global.player_lifes = [1,0]
 	global.goto_scene("res://scenes/main.tscn")
 
 
@@ -36,3 +36,10 @@ func _on_single_player_mouse_entered():
 
 func _on_single_player_mouse_exited():
 	mouse_exited()
+
+
+func _on_double_player_pressed():
+	global.level = 0
+	global.player_lifes = [1,1]
+	global.goto_scene("res://scenes/main.tscn")
+	
