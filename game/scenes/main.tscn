@@ -1,18 +1,19 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://levels/level00.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/tank.tscn" type="PackedScene" id=3]
 [ext_resource path="res://textures/bg.jpg" type="Texture" id=4]
-[ext_resource path="res://textures/bird.png" type="Texture" id=5]
-[ext_resource path="res://sounds/explosion02.ogg" type="AudioStream" id=6]
-[ext_resource path="res://sounds/hit.ogg" type="AudioStream" id=7]
-[ext_resource path="res://sounds/up01.ogg" type="AudioStream" id=8]
-[ext_resource path="res://sounds/up02.ogg" type="AudioStream" id=9]
-[ext_resource path="res://tilesets/walls.tres" type="TileSet" id=10]
-[ext_resource path="res://textures/water_anim0.png" type="Texture" id=11]
-[ext_resource path="res://textures/water_anim1.png" type="Texture" id=12]
-[ext_resource path="res://textures/water_anim2.png" type="Texture" id=13]
+[ext_resource path="res://objects/bonus.tscn" type="PackedScene" id=5]
+[ext_resource path="res://textures/bird.png" type="Texture" id=6]
+[ext_resource path="res://sounds/explosion02.ogg" type="AudioStream" id=7]
+[ext_resource path="res://sounds/hit.ogg" type="AudioStream" id=8]
+[ext_resource path="res://sounds/up01.ogg" type="AudioStream" id=9]
+[ext_resource path="res://sounds/up02.ogg" type="AudioStream" id=10]
+[ext_resource path="res://tilesets/walls.tres" type="TileSet" id=11]
+[ext_resource path="res://textures/water_anim0.png" type="Texture" id=12]
+[ext_resource path="res://textures/water_anim1.png" type="Texture" id=13]
+[ext_resource path="res://textures/water_anim2.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -50,10 +51,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ]
+"values": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ]
 }
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -66,6 +67,8 @@ editor/display_folded = true
 [node name="grid" parent="grids" index="0" instance=ExtResource( 2 )]
 
 [node name="tanks" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
 
 [node name="tank" parent="tanks" index="0" instance=ExtResource( 3 )]
 
@@ -157,6 +160,8 @@ shape = SubResource( 1 )
 
 [node name="spawn_points" type="Node2D" parent="." index="7"]
 
+editor/display_folded = true
+
 [node name="point00" type="PinJoint2D" parent="spawn_points" index="0"]
 
 position = Vector2( 324, 900 )
@@ -204,9 +209,6 @@ softness = 0.0
 
 [node name="timers" type="Node2D" parent="." index="8"]
 
-editor/display_folded = true
-visible = false
-
 [node name="protected" type="Timer" parent="timers" index="0"]
 
 process_mode = 1
@@ -228,9 +230,20 @@ wait_time = 0.5
 one_shot = false
 autostart = true
 
+[node name="bonus" parent="timers/spawn_timer" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 324, 792 )
+type = 2
+
+[node name="end" type="Timer" parent="timers" index="3"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = false
+
 [node name="player1_lifes" type="Label" parent="." index="9"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -250,10 +263,9 @@ max_lines_visible = -1
 
 [node name="bird" type="Sprite" parent="." index="10"]
 
-editor/display_folded = true
 position = Vector2( 468, 900 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="bird" type="Area2D" parent="bird" index="0"]
@@ -286,12 +298,9 @@ shape = SubResource( 4 )
 
 [node name="sounds" type="Node2D" parent="." index="11"]
 
-editor/display_folded = true
-visible = false
-
 [node name="explosion" type="AudioStreamPlayer" parent="sounds" index="0"]
 
-stream = ExtResource( 6 )
+stream = ExtResource( 7 )
 volume_db = -10.0
 autoplay = false
 mix_target = 0
@@ -299,7 +308,7 @@ bus = "Master"
 
 [node name="hit" type="AudioStreamPlayer" parent="sounds" index="1"]
 
-stream = ExtResource( 7 )
+stream = ExtResource( 8 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
@@ -307,7 +316,7 @@ bus = "Master"
 
 [node name="bonus" type="AudioStreamPlayer" parent="sounds" index="2"]
 
-stream = ExtResource( 8 )
+stream = ExtResource( 9 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
@@ -315,7 +324,7 @@ bus = "Master"
 
 [node name="bonus2" type="AudioStreamPlayer" parent="sounds" index="3"]
 
-stream = ExtResource( 9 )
+stream = ExtResource( 10 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
@@ -326,7 +335,7 @@ bus = "Master"
 editor/display_folded = true
 visible = false
 mode = 0
-tile_set = ExtResource( 10 )
+tile_set = ExtResource( 11 )
 cell_size = Vector2( 36, 36 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -382,6 +391,8 @@ _sections_unfolded = [ "Visibility" ]
 [connection signal="timeout" from="timers/spawn_bonus" to="." method="_on_spawn_bonus_timeout"]
 
 [connection signal="timeout" from="timers/spawn_timer" to="." method="_on_spawn_timer_timeout"]
+
+[connection signal="timeout" from="timers/end" to="." method="_on_end_timeout"]
 
 [connection signal="area_entered" from="bird/bird" to="." method="_on_bird_area_enter"]
 

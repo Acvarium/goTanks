@@ -133,8 +133,6 @@ collision_mask = 1
 
 [node name="timers" type="Node2D" parent="." index="2"]
 
-editor/display_folded = true
-
 [node name="step" type="Timer" parent="timers" index="0"]
 
 process_mode = 1
@@ -185,7 +183,6 @@ shape = SubResource( 3 )
 
 [node name="Label" type="Label" parent="." index="5"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

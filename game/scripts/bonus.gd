@@ -39,7 +39,7 @@ func _on_Area2D_body_enter( body ):
 				elif type == 1:
 					body.set_level(global.player_level[body.type - 1] + 1)
 				elif type == 2:
-					body.shild()
+					body.shild(10)
 				elif type == 3:
 					main_node.grenade()
 				elif type == 4:

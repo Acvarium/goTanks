@@ -211,9 +211,10 @@ func obstacle(dir):
 	elif dir == RIGHT:
 		return $rays/rayRight.is_colliding() or $rays/rayRight1.is_colliding()
 
-func shild():
-	get_node("shild").show()
-	get_node("timers/shild").start()
+func shild(time):
+	$shild.show()
+	$timers/shild.wait_time = time
+	$timers/shild.start()
 	invincible = true
 
 func _on_cooldown_timeout():

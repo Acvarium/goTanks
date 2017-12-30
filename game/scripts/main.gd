@@ -111,9 +111,13 @@ func kill_tank(tank):
 		global.player_lifes[tank.type - 1] -= 1
 		global.player_level[tank.type - 1] = 0
 		if global.player_lifes[0] <= 0:
-			game_over()
+			global.player_lifes[0] = 0
+#			
+			global.go = true
+			$timers/end.start()
+#			game_over()
 	
-		get_node("player1_lifes").set_text(str(global.player_lifes[tank.type - 1]))
+		$player1_lifes.set_text(str(global.player_lifes[tank.type - 1]))
 	elif tank.type == 0:
 		killed += 1
 		if killed >= bots.size():
@@ -127,14 +131,13 @@ func kill_tank(tank):
 	explosion.position = tank.position
 	explosion.set_explosion(1)
 	$bullets.add_child(explosion)
-
 	
 	var dirt = explosionObj.instance()
 	dirt.position = tank.position
 	dirt.set_explosion(2)
 	$floor.add_child(dirt)
 	tank.queue_free()
-	if is_player1:
+	if is_player1 and !global.go:
 		spawn(1)
 		
 func spawn(t):
@@ -160,7 +163,8 @@ func spawn(t):
 	tank.position = spawn_pos
 	tank.set_type(type)
 	tank.set_name("tank")
-	
+	if t > 0:
+		tank.shild(2)
 	$tanks.add_child(tank)
 	update_tank_pos(tank)
 
@@ -216,24 +220,35 @@ func bullet_hit(pos, direction, owner, is_grid):
 				grid.set_cell(cells_pos[i].x,cells_pos[i].y, new_tile_id)
 			
 	if !not_water or !is_grid:
-		$sounds/hit.play()
-		var explosion = explosionObj.instance()
-		explosion.position = pos
-		$bullets.add_child(explosion)
+		add_explosion(pos, 0)
 	return(!not_water)
 
 func _on_spawn_timer_timeout():
 	spawn(0)
 
+func add_explosion(pos, type):
+	if type == 0:
+		$sounds/hit.play()
+#	elif 
+	var explosion = explosionObj.instance()
+	explosion.position = pos
+	explosion.set_explosion(type)
+	$bullets.add_child(explosion)
+
 
 func game_over():
-	global.go = true
+#	global.go = true
 	get_node("/root/global").goto_scene("res://scenes/score.tscn")
 		
 
 func _on_bird_area_enter( area ):
 	if area.get_parent().get_name() == "bullets":
-		game_over()
+		global.go = true
+		var bird_pos = $bird.position
+		$bird.queue_free()
+		add_explosion($bird.position, 1)
+		$timers/end.start()
+#		game_over()
 	
 
 func protect():
@@ -261,7 +276,6 @@ func play_sound(sound):
 	if sound == 'up':
 		$sounds/bonus.play()
 
-
 func _on_spawn_bonus_timeout():
 	var bonus = bonusObj.instance()
 	bonus.position = Vector2(randf() * 864 + 36, randf() * 864 + 36)
@@ -271,4 +285,8 @@ func _on_spawn_bonus_timeout():
 	get_node("timers/spawn_bonus").set_wait_time(randf()*25 + 10)
 	$sounds/bonus2.play()
 #	get_node("sounds/effect").play("up02")
-	
+
+
+func _on_end_timeout():
+	if global.go:
+		game_over()
