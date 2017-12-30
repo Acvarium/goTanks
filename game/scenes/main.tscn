@@ -182,6 +182,7 @@ shape = SubResource( 1 )
 
 [node name="spawn_points" type="Node2D" parent="." index="7"]
 
+editor/display_folded = true
 visible = false
 
 [node name="point00" type="PinJoint2D" parent="spawn_points" index="0"]

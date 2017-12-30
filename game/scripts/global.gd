@@ -3,11 +3,12 @@ var current_scene = null
 var level = 0
 var go = false
 
-var player_level = [0,3]
+var player_level = [0,0]
 var player_lifes = [1,0]
 
 var levels_data = [
 [18,2,0,0,0],
+#[1,0,0,0,0],
 [11,4,0,0,2],
 [10,4,0,0,2],
 [2,5,10,0,3],

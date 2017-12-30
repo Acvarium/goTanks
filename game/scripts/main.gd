@@ -49,6 +49,9 @@ func _ready():
 		spawn(1)
 	if global.player_lifes[1] > 0:
 		spawn(2)
+	
+	else:
+		$player2_lifes.hide()
 	get_node("player1_lifes").set_text(str(global.player_lifes[0]))
 	get_node("player2_lifes").set_text(str(global.player_lifes[1]))
 	if bots.size() > 5:
@@ -211,7 +214,7 @@ func spawn(t):
 		bots_count += 1
 
 	var tank = tankObj.instance()
-	tank.set_level(level)
+	tank.set_level(global.player_level[t - 1])
 	tank.position = spawn_pos
 	tank.set_type(t)
 	tank.set_name("tank")
@@ -342,7 +345,10 @@ func _on_spawn_bonus_timeout():
 
 func _on_end_timeout():
 #end of level by fail or vine
-	get_node("/root/global").goto_scene("res://scenes/score.tscn")
+	if global.go:
+		get_node("/root/global").goto_scene("res://scenes/menu.tscn")
+	else:
+		get_node("/root/global").goto_scene("res://scenes/score.tscn")
 
 func _on_main_bonus_timeout():
 	if main_bonus_selected != -1:

@@ -94,15 +94,7 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[connection signal="mouse_entered" from="single_player" to="." method="_on_single_player_mouse_entered"]
-
-[connection signal="mouse_exited" from="single_player" to="." method="_on_single_player_mouse_exited"]
-
 [connection signal="pressed" from="single_player" to="." method="_on_single_player_pressed"]
-
-[connection signal="mouse_entered" from="double_player" to="." method="_on_single_player_mouse_entered"]
-
-[connection signal="mouse_exited" from="double_player" to="." method="_on_single_player_mouse_exited"]
 
 [connection signal="pressed" from="double_player" to="." method="_on_double_player_pressed"]
 
