@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/tank.gd" type="Script" id=1]
 [ext_resource path="res://textures/tanks.png" type="Texture" id=2]
@@ -39,6 +39,25 @@ tracks/0/keys = {
 
 custom_solver_bias = 0.0
 extents = Vector2( 30, 30 )
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "shild"
+length = 0.2
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("shild:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
 
 [node name="tank" type="KinematicBody2D"]
 
@@ -183,6 +202,7 @@ position = Vector2( 0, -136 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
 
+visible = false
 shape = SubResource( 3 )
 
 [node name="Label" type="Label" parent="." index="5"]
@@ -208,10 +228,12 @@ max_lines_visible = -1
 [node name="shild" type="Sprite" parent="." index="6"]
 
 visible = false
-modulate = Color( 1, 1, 1, 0.502745 )
-scale = Vector2( 0.5, 0.5 )
+modulate = Color( 1, 1, 1, 0.784549 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Material", "Offset", "Region", "Transform", "Visibility" ]
+hframes = 2
+frame = 1
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="sounds" type="Node2D" parent="." index="7"]
 
@@ -261,6 +283,18 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 _sections_unfolded = [ "Transform" ]
+
+[node name="shild_anim" type="AnimationPlayer" parent="." index="8"]
+
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
+anims/shild = SubResource( 4 )
+playback/active = true
+playback/speed = 1.2
+blend_times = [  ]
+autoplay = "shild"
+_sections_unfolded = [ "Playback Options", "playback" ]
 
 [connection signal="timeout" from="timers/step" to="." method="_on_step_timeout"]
 

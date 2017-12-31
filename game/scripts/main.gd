@@ -214,9 +214,9 @@ func spawn(t):
 	tank.position = spawn_pos
 	tank.set_type(t)
 	tank.set_name("tank")
+	tank.shild(2)
 	if t > 0:
 		tank.set_level(global.player_level[t - 1])
-		tank.shild(2)
 	else:
 		tank.set_level(level)
 		
@@ -303,6 +303,7 @@ func _on_bird_area_enter( area ):
 		$timers/end.start()
 		$UI/end_anim.play("game_over")
 		$sounds/failure.play()
+		
 #		game_over()
 
 func protect():
@@ -346,6 +347,7 @@ func _on_spawn_bonus_timeout():
 func _on_end_timeout():
 #end of level by fail or vine
 	if global.go:
+		global.default_values(0)
 		get_node("/root/global").goto_scene("res://scenes/menu.tscn")
 	else:
 		get_node("/root/global").goto_scene("res://scenes/score.tscn")
