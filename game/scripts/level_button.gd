@@ -12,6 +12,8 @@ func set_level(l):
 	
 func _on_Button_pressed():
 	global.level = level
+	global.player_level = [0,0]
+	global.player_lifes = [1,0]
 	global.goto_scene("res://scenes/main.tscn")
 
 

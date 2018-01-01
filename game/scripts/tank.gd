@@ -77,6 +77,8 @@ func _ready():
 	elif type == 0:
 		if level == 1:
 			$Sprite.set_frame(7)
+		elif level == 4:
+			$Sprite.set_frame(9)
 			
 		$sounds/fire.volume_db = -40
 		$timers/step.start()
@@ -138,6 +140,7 @@ func hit():
 		$sounds/hit2.play()
 
 func _physics_process(delta):
+	
 	if dead:
 		return
 	direction = Vector2()
@@ -174,13 +177,14 @@ func _physics_process(delta):
 			is_moving = true
 	elif is_moving:
 #------ Play animation
+		var anim_name = "bot" + "%02d" % level 
 		if type == 1:
-			pass
+			anim_name = "tracks" +  "%02d" % type 
 			$sounds/engine.stop()
 			if !$sounds/engine2.playing:
 				$sounds/engine2.play()
 		if !$tracksAnim.is_playing():
-			$tracksAnim.play("tracks" + str(type))
+			$tracksAnim.play(anim_name)
 			
 		speed = max_speed
 		velocity = speed * target_direction * delta

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scripts/tank.gd" type="Script" id=1]
 [ext_resource path="res://textures/tanks.png" type="Texture" id=2]
@@ -9,7 +9,26 @@
 [ext_resource path="res://sounds/hit02.ogg" type="AudioStream" id=7]
 [ext_resource path="res://sounds/hit03.ogg" type="AudioStream" id=8]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
+
+resource_name = "bot00"
+length = 0.2
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=1]
 
 resource_name = "bot01"
 length = 0.2
@@ -28,16 +47,73 @@ tracks/0/keys = {
 "values": [ 6 ]
 }
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=7]
 
-resource_name = "tracks0"
+resource_name = "bot02"
+length = 0.2
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=8]
+
+resource_name = "bot03"
+length = 0.2
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 8, 9 ]
+}
+
+[sub_resource type="Animation" id=9]
+
+resource_name = "bot04"
+length = 0.2
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 8, 9 ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "tracks00"
 length = 1.0
 loop = false
 step = 0.1
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource_name = "tracks1"
+resource_name = "tracks01"
 length = 0.2
 loop = true
 step = 0.1
@@ -54,14 +130,13 @@ tracks/0/keys = {
 "values": [ 2, 3 ]
 }
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 30, 30 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 
-resource_name = "shild"
 length = 0.2
 loop = true
 step = 0.1
@@ -96,9 +171,13 @@ invincible = false
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 root_node = NodePath("..")
-anims/bot01 = SubResource( 5 )
-anims/tracks0 = SubResource( 1 )
-anims/tracks1 = SubResource( 2 )
+anims/bot00 = SubResource( 6 )
+anims/bot01 = SubResource( 1 )
+anims/bot02 = SubResource( 7 )
+anims/bot03 = SubResource( 8 )
+anims/bot04 = SubResource( 9 )
+anims/tracks00 = SubResource( 2 )
+anims/tracks01 = SubResource( 3 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -209,10 +288,10 @@ autostart = false
 editor/display_folded = true
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
-vframes = 4
+vframes = 5
 hframes = 2
-frame = 6
-_sections_unfolded = [ "Animation" ]
+frame = 9
+_sections_unfolded = [ "Animation", "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -224,7 +303,7 @@ position = Vector2( 0, -136 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
 
 visible = false
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Label" type="Label" parent="." index="5"]
 
@@ -310,7 +389,7 @@ _sections_unfolded = [ "Transform" ]
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 root_node = NodePath("..")
-anims/shild = SubResource( 4 )
+anims/shild = SubResource( 5 )
 playback/active = true
 playback/speed = 1.2
 blend_times = [  ]
