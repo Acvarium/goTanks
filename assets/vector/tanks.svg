@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.883871"
-     inkscape:cx="77.58418"
-     inkscape:cy="-422.0488"
+     inkscape:zoom="0.94193549"
+     inkscape:cx="-106.77819"
+     inkscape:cy="-549.23408"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -80,6 +80,18 @@
   </sodipodi:namedview>
   <defs
      id="defs211787">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5107">
+      <stop
+         style="stop-color:#1c1c1c;stop-opacity:1"
+         offset="0"
+         id="stop5103" />
+      <stop
+         style="stop-color:#323232;stop-opacity:1"
+         offset="1"
+         id="stop5105" />
+    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient4314">
@@ -139,18 +151,6 @@
          style="stop-color:#7bd737;stop-opacity:0;"
          offset="1"
          id="stop3827" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient3124">
-      <stop
-         style="stop-color:#1b1b1b;stop-opacity:1"
-         offset="0"
-         id="stop3120" />
-      <stop
-         style="stop-color:#333333;stop-opacity:1"
-         offset="1"
-         id="stop3122" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -3740,189 +3740,6 @@
        y1="390.89938"
        x2="-13.328385"
        y2="394.33896" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3128"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3130"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782"
-       gradientTransform="translate(0.06213342,-0.35635974)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3132"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914"
-       gradientTransform="translate(0.06213342,0.18934339)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3161"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3163"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0.06213342,-0.35635974)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3165"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0.06213342,0.18934339)"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3175"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3177"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0.06213342,-0.35635974)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3179"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0.06213342,0.18934339)"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4314"
-       id="linearGradient3231"
-       gradientUnits="userSpaceOnUse"
-       x1="-13.328385"
-       y1="390.89938"
-       x2="-13.328385"
-       y2="394.33896" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3233"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3235"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0.06213342,-0.35635974)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3237"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0.06213342,0.18934339)"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3239"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3241"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0.06213342,-0.35635974)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3243"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0.06213342,0.18934339)"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3245"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3247"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0.06213342,-0.35635974)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient3249"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0.06213342,0.18934339)"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914" />
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
@@ -3949,15 +3766,6 @@
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4306"
-       id="linearGradient4227"
-       gradientUnits="userSpaceOnUse"
-       x1="-13.328385"
-       y1="390.89938"
-       x2="-13.328385"
-       y2="394.33896" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4306"
        id="linearGradient4536"
        gradientUnits="userSpaceOnUse"
        x1="-13.328385"
@@ -3965,96 +3773,6 @@
        x2="-13.328385"
        y2="394.33896"
        gradientTransform="translate(22.34551,-33.670662)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4538"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073"
-       gradientTransform="translate(22.34551,-34.024352)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4540"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(22.407643,-34.380712)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4543"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(22.354976,-33.835009)"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4545"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073"
-       gradientTransform="translate(22.34551,-26.76484)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4547"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(22.407643,-27.1212)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4549"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(22.354976,-26.575497)"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4551"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073"
-       gradientTransform="translate(22.34551,-19.505335)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4553"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(22.407643,-19.861695)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4555"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(22.354976,-19.315992)"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4314"
@@ -4065,96 +3783,6 @@
        x2="-13.328385"
        y2="394.33896"
        gradientTransform="translate(-8.595507,-33.670662)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4559"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073"
-       gradientTransform="translate(-8.595507,-34.024352)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4561"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-8.5333736,-34.380712)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4563"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-8.6650423,-33.835009)"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4565"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073"
-       gradientTransform="translate(-8.595507,-26.76484)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4567"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-8.5333736,-27.1212)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4569"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-8.6650423,-26.575497)"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4571"
-       gradientUnits="userSpaceOnUse"
-       x1="-14.084269"
-       y1="392.25452"
-       x2="-14.084269"
-       y2="392.78073"
-       gradientTransform="translate(-8.595507,-19.505335)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4573"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-8.5333736,-19.861695)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4575"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-8.6650423,-19.315992)"
-       x1="-14.272282"
-       y1="393.11496"
-       x2="-14.272282"
-       y2="393.86914" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient221017"
@@ -4279,66 +3907,6 @@
        y1="118.70905"
        x2="12.409352"
        y2="118.70905" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4768"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(22.407643,-30.979318)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4770"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(22.407643,-23.719806)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4772"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(22.407643,-16.460301)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4774"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-8.5333736,-30.979318)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4776"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-8.5333736,-23.719806)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3124"
-       id="linearGradient4778"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-8.5333736,-16.460301)"
-       x1="-14.266435"
-       y1="391.55978"
-       x2="-14.266435"
-       y2="392.16782" />
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath4877">
@@ -4348,6 +3916,24 @@
          id="path4879"
          inkscape:connector-curvature="0" />
     </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5107"
+       id="linearGradient5125"
+       gradientUnits="userSpaceOnUse"
+       x1="-12.710421"
+       y1="360.65939"
+       x2="-12.710421"
+       y2="357.00778" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5107"
+       id="linearGradient5133"
+       x1="0.73786503"
+       y1="361.26791"
+       x2="0.65755981"
+       y2="357.01941"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <metadata
      id="metadata211790">
@@ -6583,7 +6169,7 @@
     <g
        id="g3216"
        transform="translate(-17.898215,170.55826)"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/tanks.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
        inkscape:export-xdpi="329.14279"
        inkscape:export-ydpi="329.14279">
       <path
@@ -7017,7 +6603,7 @@
     <g
        transform="translate(26.744419,170.55826)"
        id="g3430"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/tanks.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
        inkscape:export-xdpi="329.14279"
        inkscape:export-ydpi="329.14279">
       <path
@@ -8125,7 +7711,7 @@
        inkscape:export-ydpi="164.57146" />
     <g
        id="g5881"
-       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/assets/textures/tanks.png"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
        inkscape:export-xdpi="329"
        inkscape:export-ydpi="329">
       <g
@@ -9119,7 +8705,10 @@
     <g
        style="display:inline;opacity:1"
        id="g5071"
-       transform="translate(27.003727,193.00144)">
+       transform="translate(27.003727,193.00144)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329">
       <rect
          style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.34800005;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect3733"
@@ -9527,7 +9116,10 @@
     <g
        style="display:inline;opacity:1"
        id="g6413"
-       transform="translate(26.31032,193.00144)">
+       transform="translate(26.31032,193.00144)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329">
       <rect
          ry="2.1166666"
          y="143.31552"
@@ -11173,528 +10765,466 @@
          inkscape:export-xdpi="329.14285"
          inkscape:export-ydpi="329.14285" />
     </g>
+    <path
+       style="opacity:0.76000001;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter3818)"
+       d="m -7.0665745,356.00296 c -0.078229,0 -0.1410758,0.0628 -0.1410758,0.14107 v 0.14933 c 0,0.0782 0.062841,0.14108 0.1410758,0.14108 h 0.8061537 c 0.078229,0 0.1415917,-0.0628 0.1415917,-0.14108 v -0.14933 c 0,-0.0782 -0.063362,-0.14107 -0.1415917,-0.14107 z m -0.2402946,0.44389 c -0.1826392,0 -0.3296946,0.14706 -0.3296946,0.3297 v 0.34882 c 0,0.18265 0.1470554,0.3297 0.3296946,0.3297 h 1.2872588 c 0.1826392,0 0.3291787,-0.14705 0.3291787,-0.3297 v -0.34882 c 2.6e-6,-0.18264 -0.1465395,-0.3297 -0.3291787,-0.3297 z m -6.6853809,0.48421 c -0.518234,0 -0.935341,0.41712 -0.935341,0.93536 v 2.09804 c 0,0.51824 0.417107,0.93535 0.935341,0.93535 h 1.799892 c 0.170561,0 0.3282,-0.0485 0.465603,-0.12763 v 3.54602 c -0.137403,-0.0791 -0.295042,-0.12763 -0.465603,-0.12763 h -1.799892 c -0.518234,0 -0.935341,0.41711 -0.935341,0.93535 v 2.09804 c 0,0.51824 0.417107,0.93536 0.935341,0.93536 h 1.799892 c 0.170561,0 0.3282,-0.0485 0.465603,-0.12764 v 3.54603 c -0.137403,-0.0791 -0.295042,-0.12764 -0.465603,-0.12764 h -1.799892 c -0.518234,0 -0.935341,0.41712 -0.935341,0.93536 v 2.09804 c 0,0.51824 0.417107,0.93535 0.935341,0.93535 h 1.799892 c 0.518234,0 0.93586,-0.41711 0.93586,-0.93535 v -1.09294 l 0.405144,0.58134 h 8.4341092 0.1291908 l 0.035658,-0.062 v 0.57359 c 0,0.51824 0.4171066,0.93535 0.9353422,0.93535 h 1.80040683 c 0.51823567,0 0.93534357,-0.41711 0.93534357,-0.93535 v -2.09804 c 0,-0.51824 -0.4171079,-0.93536 -0.93534357,-0.93536 H -1.3170539 c -0.077909,0 -0.152524,0.0122 -0.2247926,0.03 v -3.35072 c 0.072269,0.0178 0.1468834,0.03 0.2247926,0.03 h 1.80040683 c 0.51823567,0 0.93534357,-0.41712 0.93534357,-0.93536 v -2.09804 c 0,-0.51824 -0.4171079,-0.93535 -0.93534357,-0.93535 H -1.3170539 c -0.077909,0 -0.152524,0.0122 -0.2247926,0.03 v -3.35071 c 0.072269,0.0178 0.1468834,0.03 0.2247926,0.03 h 1.80040683 c 0.51823567,0 0.93534357,-0.41711 0.93534357,-0.93535 v -2.09804 c 0,-0.51824 -0.4171079,-0.93536 -0.93534357,-0.93536 H -1.3170539 c -0.5182356,0 -0.9353422,0.41712 -0.9353422,0.93536 v 1.14668 l -0.3126449,-0.4961 -3.5191647,-0.0155 -0.024286,-0.60357 c -0.0095,-0.23606 -0.1343104,-0.42632 -0.3012731,-0.42632 l -0.5074629,5e-4 c -0.16696,0 -0.291256,0.19029 -0.3007572,0.42632 l -0.024289,0.59844 -3.4566351,-0.015 -0.557589,0.92913 v -1.54458 c 0,-0.51824 -0.417626,-0.93536 -0.93586,-0.93536 z"
+       id="rect3323"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect3021"
+       id="use3023"
+       transform="translate(0,7.259505)"
+       width="100%"
+       height="100%"
+       style="fill:#222648;stroke:#000000;fill-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient5125);fill-opacity:1;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3021"
+       width="3.6710937"
+       height="3.96875"
+       x="-14.927623"
+       y="356.93106"
+       ry="0.93544334"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <use
+       height="100%"
+       width="100%"
+       transform="translate(0,14.51901)"
+       id="use3025"
+       xlink:href="#rect3021"
+       y="0"
+       x="0"
+       style="fill:#222648;fill-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <use
+       style="fill:#222648;stroke:#000000;fill-opacity:1"
+       height="100%"
+       width="100%"
+       transform="matrix(-1,0,0,1,-13.508895,7.259505)"
+       id="use3198"
+       xlink:href="#rect3021"
+       y="0"
+       x="0"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       ry="0.93544334"
+       y="356.93106"
+       x="-1.4187278"
+       height="3.96875"
+       width="3.6710937"
+       id="rect3200"
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient5133);fill-opacity:1;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="scale(-1,1)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <use
+       style="fill:#222648;fill-opacity:1"
+       x="0"
+       y="0"
+       xlink:href="#rect3021"
+       id="use3202"
+       transform="matrix(-1,0,0,1,-13.508895,14.51901)"
+       width="100%"
+       height="100%"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <path
+       sodipodi:nodetypes="cccccccccccc"
+       inkscape:connector-curvature="0"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#6ec532;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m -1.5414449,360.1406 v 12.53885 0.0362 l -0.121956,0.17466 -0.624252,1.08159 h -0.129189 -8.4341101 l -0.875399,-1.25625 v -12.5212 l 1.027844,-1.71256 8.1337711,0.0351 z"
+       id="path2525"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <path
+       sodipodi:nodetypes="ccccccc"
+       inkscape:connector-curvature="0"
+       id="path2527"
+       d="m -10.56221,358.71919 -0.905237,1.48591 -0.0105,0.82616 h 9.6880991 l -0.02303,-0.84249 -0.892703,-1.46958 z"
+       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2879);fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <path
+       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2881);fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -10.831325,373.73348 -0.636122,-1.05533 -0.0105,-1.25674 h 9.6880991 l -0.02303,1.27307 -0.623588,1.039 z"
+       id="path2529"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       ry="0.71806186"
+       y="360.6825"
+       x="-11.147429"
+       height="4.3596611"
+       width="9.0270634"
+       id="rect2531"
+       style="display:inline;opacity:0.578;vector-effect:none;fill:url(#linearGradient2883);fill-opacity:1;stroke:none;stroke-width:0.46499997;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221131)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <g
-       id="g4389">
+       transform="translate(-17.717786,236.79295)"
+       id="g2539"
+       style="display:inline"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329">
       <path
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.34200003;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient2885);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter221177-7);color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         d="M 7.3453082,135.16177 6.2891824,123.70614 6.2592861,135.17292 Z"
+         id="path2535"
          inkscape:connector-curvature="0"
-         id="rect3323"
-         d="m -7.0665745,356.00296 c -0.078229,0 -0.1410758,0.0628 -0.1410758,0.14107 v 0.14933 c 0,0.0782 0.062841,0.14108 0.1410758,0.14108 h 0.8061537 c 0.078229,0 0.1415917,-0.0628 0.1415917,-0.14108 v -0.14933 c 0,-0.0782 -0.063362,-0.14107 -0.1415917,-0.14107 z m -0.2402946,0.44389 c -0.1826392,0 -0.3296946,0.14706 -0.3296946,0.3297 v 0.34882 c 0,0.18265 0.1470554,0.3297 0.3296946,0.3297 h 1.2872588 c 0.1826392,0 0.3291787,-0.14705 0.3291787,-0.3297 v -0.34882 c 2.6e-6,-0.18264 -0.1465395,-0.3297 -0.3291787,-0.3297 z m -6.6853809,0.48421 c -0.518234,0 -0.935341,0.41712 -0.935341,0.93536 v 2.09804 c 0,0.51824 0.417107,0.93535 0.935341,0.93535 h 1.799892 c 0.170561,0 0.3282,-0.0485 0.465603,-0.12763 v 3.54602 c -0.137403,-0.0791 -0.295042,-0.12763 -0.465603,-0.12763 h -1.799892 c -0.518234,0 -0.935341,0.41711 -0.935341,0.93535 v 2.09804 c 0,0.51824 0.417107,0.93536 0.935341,0.93536 h 1.799892 c 0.170561,0 0.3282,-0.0485 0.465603,-0.12764 v 3.54603 c -0.137403,-0.0791 -0.295042,-0.12764 -0.465603,-0.12764 h -1.799892 c -0.518234,0 -0.935341,0.41712 -0.935341,0.93536 v 2.09804 c 0,0.51824 0.417107,0.93535 0.935341,0.93535 h 1.799892 c 0.518234,0 0.93586,-0.41711 0.93586,-0.93535 v -1.09294 l 0.405144,0.58134 h 8.4341092 0.1291908 l 0.035658,-0.062 v 0.57359 c 0,0.51824 0.4171066,0.93535 0.9353422,0.93535 h 1.80040683 c 0.51823567,0 0.93534357,-0.41711 0.93534357,-0.93535 v -2.09804 c 0,-0.51824 -0.4171079,-0.93536 -0.93534357,-0.93536 H -1.3170539 c -0.077909,0 -0.152524,0.0122 -0.2247926,0.03 v -3.35072 c 0.072269,0.0178 0.1468834,0.03 0.2247926,0.03 h 1.80040683 c 0.51823567,0 0.93534357,-0.41712 0.93534357,-0.93536 v -2.09804 c 0,-0.51824 -0.4171079,-0.93535 -0.93534357,-0.93535 H -1.3170539 c -0.077909,0 -0.152524,0.0122 -0.2247926,0.03 v -3.35071 c 0.072269,0.0178 0.1468834,0.03 0.2247926,0.03 h 1.80040683 c 0.51823567,0 0.93534357,-0.41711 0.93534357,-0.93535 v -2.09804 c 0,-0.51824 -0.4171079,-0.93536 -0.93534357,-0.93536 H -1.3170539 c -0.5182356,0 -0.9353422,0.41712 -0.9353422,0.93536 v 1.14668 l -0.3126449,-0.4961 -3.5191647,-0.0155 -0.024286,-0.60357 c -0.0095,-0.23606 -0.1343104,-0.42632 -0.3012731,-0.42632 l -0.5074629,5e-4 c -0.16696,0 -0.291256,0.19029 -0.3007572,0.42632 l -0.024289,0.59844 -3.4566351,-0.015 -0.557589,0.92913 v -1.54458 c 0,-0.51824 -0.417626,-0.93536 -0.93586,-0.93536 z"
-         style="opacity:0.76000001;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter3818)" />
-      <g
-         transform="translate(0.12055414,-33.670662)"
-         id="g3283">
-        <g
-           id="g3196">
-          <use
-             style="fill:#000000;stroke:#000000"
-             height="100%"
-             width="100%"
-             transform="translate(0,7.259505)"
-             id="use3023"
-             xlink:href="#rect3021"
-             y="0"
-             x="0" />
-          <rect
-             ry="0.93544334"
-             y="390.60172"
-             x="-15.048177"
-             height="3.96875"
-             width="3.6710937"
-             id="rect3021"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4227);fill-opacity:1;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <use
-             style="fill:#000000"
-             x="0"
-             y="0"
-             xlink:href="#rect3021"
-             id="use3025"
-             transform="translate(0,14.51901)"
-             width="100%"
-             height="100%" />
-          <g
-             id="g3151">
-            <rect
-               ry="0.28063297"
-               y="392.30545"
-               x="-14.967093"
-               height="0.56126595"
-               width="1.5551746"
-               id="rect3106"
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3128);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <rect
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3130);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               id="rect3104"
-               width="1.5551746"
-               height="0.56126595"
-               x="-14.90496"
-               y="391.15564"
-               ry="0.28063297" />
-            <rect
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3132);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               id="rect3108"
-               width="1.5551746"
-               height="0.56126595"
-               x="-14.90496"
-               y="393.45526"
-               ry="0.28063297" />
-          </g>
-          <g
-             transform="translate(0,7.2595117)"
-             id="g3159">
-            <rect
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3161);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               id="rect3153"
-               width="1.5551746"
-               height="0.56126595"
-               x="-14.967093"
-               y="392.30545"
-               ry="0.28063297" />
-            <rect
-               ry="0.28063297"
-               y="391.15564"
-               x="-14.90496"
-               height="0.56126595"
-               width="1.5551746"
-               id="rect3155"
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3163);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <rect
-               ry="0.28063297"
-               y="393.45526"
-               x="-14.90496"
-               height="0.56126595"
-               width="1.5551746"
-               id="rect3157"
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3165);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          </g>
-          <g
-             id="g3173"
-             transform="translate(0,14.519017)">
-            <rect
-               ry="0.28063297"
-               y="392.30545"
-               x="-14.967093"
-               height="0.56126595"
-               width="1.5551746"
-               id="rect3167"
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3175);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <rect
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3177);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               id="rect3169"
-               width="1.5551746"
-               height="0.56126595"
-               x="-14.90496"
-               y="391.15564"
-               ry="0.28063297" />
-            <rect
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3179);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               id="rect3171"
-               width="1.5551746"
-               height="0.56126595"
-               x="-14.90496"
-               y="393.45526"
-               ry="0.28063297" />
-          </g>
-        </g>
-        <g
-           id="g3229"
-           transform="matrix(-1,0,0,1,-13.750003,0)">
-          <use
-             x="0"
-             y="0"
-             xlink:href="#rect3021"
-             id="use3198"
-             transform="translate(0,7.259505)"
-             width="100%"
-             height="100%"
-             style="fill:#000000;stroke:#000000" />
-          <rect
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient3231);fill-opacity:1.0;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect3200"
-             width="3.6710937"
-             height="3.96875"
-             x="-15.048177"
-             y="390.60172"
-             ry="0.93544334" />
-          <use
-             height="100%"
-             width="100%"
-             transform="translate(0,14.51901)"
-             id="use3202"
-             xlink:href="#rect3021"
-             y="0"
-             x="0"
-             style="fill:#000000" />
-          <g
-             id="g3211">
-            <rect
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3233);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               id="rect3204"
-               width="1.5551746"
-               height="0.56126595"
-               x="-14.967093"
-               y="392.30545"
-               ry="0.28063297" />
-            <rect
-               ry="0.28063297"
-               y="391.15564"
-               x="-14.90496"
-               height="0.56126595"
-               width="1.5551746"
-               id="rect3206"
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3235);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <rect
-               ry="0.28063297"
-               y="393.45526"
-               x="-14.90496"
-               height="0.56126595"
-               width="1.5551746"
-               id="rect3208"
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3237);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          </g>
-          <g
-             id="g3219"
-             transform="translate(0,7.2595117)">
-            <rect
-               ry="0.28063297"
-               y="392.30545"
-               x="-14.967093"
-               height="0.56126595"
-               width="1.5551746"
-               id="rect3213"
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3239);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <rect
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3241);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               id="rect3215"
-               width="1.5551746"
-               height="0.56126595"
-               x="-14.90496"
-               y="391.15564"
-               ry="0.28063297" />
-            <rect
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3243);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               id="rect3217"
-               width="1.5551746"
-               height="0.56126595"
-               x="-14.90496"
-               y="393.45526"
-               ry="0.28063297" />
-          </g>
-          <g
-             transform="translate(0,14.519017)"
-             id="g3227">
-            <rect
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3245);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               id="rect3221"
-               width="1.5551746"
-               height="0.56126595"
-               x="-14.967093"
-               y="392.30545"
-               ry="0.28063297" />
-            <rect
-               ry="0.28063297"
-               y="391.15564"
-               x="-14.90496"
-               height="0.56126595"
-               width="1.5551746"
-               id="rect3223"
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3247);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <rect
-               ry="0.28063297"
-               y="393.45526"
-               x="-14.90496"
-               height="0.56126595"
-               width="1.5551746"
-               id="rect3225"
-               style="opacity:1;vector-effect:none;fill:url(#linearGradient3249);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          </g>
-        </g>
-      </g>
+         sodipodi:nodetypes="cccc" />
       <path
-         id="path2525"
-         d="m -1.5414449,360.1406 v 12.53885 0.0362 l -0.121956,0.17466 -0.624252,1.08159 h -0.129189 -8.4341101 l -0.875399,-1.25625 v -12.5212 l 1.027844,-1.71256 8.1337711,0.0351 z"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#6ec532;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccccccccc" />
-      <path
-         style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2879);fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m -10.56221,358.71919 -0.905237,1.48591 -0.0105,0.82616 h 9.6880991 l -0.02303,-0.84249 -0.892703,-1.46958 z"
-         id="path2527"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccccccc" />
-      <path
-         sodipodi:nodetypes="ccccccc"
-         inkscape:connector-curvature="0"
-         id="path2529"
-         d="m -10.831325,373.73348 -0.636122,-1.05533 -0.0105,-1.25674 h 9.6880991 l -0.02303,1.27307 -0.623588,1.039 z"
-         style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2881);fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         style="display:inline;opacity:0.578;vector-effect:none;fill:url(#linearGradient2883);fill-opacity:1;stroke:none;stroke-width:0.46499997;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221131)"
-         id="rect2531"
-         width="9.0270634"
-         height="4.3596611"
-         x="-11.147429"
-         y="360.6825"
-         ry="0.71806186" />
-      <g
-         style="display:inline"
-         id="g2539"
-         transform="translate(-17.717786,236.79295)">
-        <path
-           sodipodi:nodetypes="cccc"
-           inkscape:connector-curvature="0"
-           id="path2535"
-           d="M 7.3453082,135.16177 6.2891824,123.70614 6.2592861,135.17292 Z"
-           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.34200003;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient2885);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter221177-7);color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-        <path
-           transform="matrix(-1,0,0,1,22.167777,0)"
-           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.34200003;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient2887);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter221177-7);color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-           d="M 7.3453082,135.16177 6.2891824,123.70614 6.2592861,135.17292 Z"
-           id="path2537"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="cccc" />
-      </g>
-      <circle
-         r="3.925142"
-         cy="364.215"
-         cx="-6.6363044"
-         id="circle2541"
-         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.57054567;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <circle
-         style="opacity:1;vector-effect:none;fill:#124500;fill-opacity:1;stroke:none;stroke-width:0.39895293;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="circle2543"
-         cx="-6.6363044"
-         cy="364.21497"
-         r="3.925142" />
-      <circle
-         transform="matrix(0.85796336,0,0,0.85796336,-16.19518,252.95812)"
-         r="3.9829001"
-         cy="129.29875"
-         cx="11.141356"
-         id="circle2545"
-         style="opacity:1;vector-effect:none;fill:url(#linearGradient2889);fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221255)" />
-      <circle
-         style="opacity:1;vector-effect:none;fill:url(#linearGradient2891);fill-opacity:1;stroke:none;stroke-width:0.55500001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221255)"
-         id="circle2547"
-         cx="11.141356"
-         cy="129.29875"
-         r="3.9829001"
-         transform="matrix(0.71883416,0,0,0.71883416,-14.645092,270.94735)" />
-      <g
-         transform="translate(-2.7234902,-32.863094)"
-         id="g3844">
-        <ellipse
-           cy="398.42752"
-           cx="-5.9405365"
-           id="ellipse2553"
-           style="display:inline;opacity:1;vector-effect:none;fill:#124500;fill-opacity:1;stroke:#000000;stroke-width:0.36927238;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           rx="1.2274975"
-           ry="1.2288712" />
-        <ellipse
-           ry="1.2296088"
-           rx="1.228218"
-           style="display:inline;opacity:1;vector-effect:none;fill:#124500;fill-opacity:1;stroke:none;stroke-width:0.39895293;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="ellipse2555"
-           cx="-5.9405365"
-           cy="398.42191" />
-        <circle
-           transform="matrix(0.26846571,0,0,0.26876971,-8.9316087,363.56902)"
-           r="3.9829001"
-           cy="129.29875"
-           cx="11.141356"
-           id="circle2557"
-           style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2895);fill-opacity:1;stroke:none;stroke-width:1.48520756;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221255)" />
-        <circle
-           style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2897);fill-opacity:1;stroke:none;stroke-width:1.77266705;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221255)"
-           id="circle2559"
-           cx="11.141356"
-           cy="129.29875"
-           r="3.9829001"
-           transform="matrix(0.22493072,0,0,0.22518542,-8.4465699,369.20442)" />
-        <ellipse
-           ry="0.24220338"
-           rx="0.39189333"
-           cy="399.82965"
-           cx="-5.8822351"
-           id="ellipse2561"
-           style="display:inline;opacity:1;vector-effect:none;fill:#f9fff7;fill-opacity:1;stroke:none;stroke-width:0.46499997;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221477)"
-           transform="matrix(0.85796336,0,0,0.85796336,-0.95972148,54.580917)" />
-      </g>
-      <path
-         style="display:inline;opacity:1;vector-effect:none;fill:#f9fff7;fill-opacity:1;stroke:none;stroke-width:1.57774746;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221522-2)"
-         d="m 40.380859,30.898438 c -3.251036,0.200643 -4.182008,2.056649 -4.85051,3.714318 1.704449,-1.357224 9.060672,-1.588101 10.361252,-0.464244 -1.295641,-2.480113 -4.148317,-3.334158 -5.510742,-3.250074 z"
-         transform="matrix(0.28166771,0,0,0.2270028,-18.147562,354.38464)"
-         id="path2563"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="sccs" />
-      <rect
-         style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.32118246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect2565"
-         width="2.3712234"
-         height="1.0491394"
-         x="-7.8488293"
-         y="359.7066"
-         ry="0.43714139" />
-      <path
-         style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.28066951;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m -6.9168919,357.47193 c -0.1669578,0 -0.2916364,0.19061 -0.3011388,0.42671 l -0.063,1.56548 c -0.00893,0.22221 0.1494141,0.40126 0.3353279,0.40126 h 0.5648674 c 0.1859134,0 0.3445548,-0.17905 0.3356125,-0.40126 l -0.062999,-1.56548 c -0.0095,-0.2361 -0.1344256,-0.42671 -0.3013945,-0.42671 z"
-         id="path2567"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="sssssssss" />
-      <path
-         sodipodi:nodetypes="sssssssss"
-         inkscape:connector-curvature="0"
-         id="path2569"
-         d="m -6.8910337,357.59387 c -0.1499451,0 -0.26273,0.0234 -0.2704527,0.23542 l -0.056581,1.55378 c -0.00727,0.19958 0.1341891,0.36036 0.3011578,0.36036 h 0.5073081 c 0.1669694,0 0.3086822,-0.16078 0.3014145,-0.36036 l -0.056581,-1.55378 c -0.00772,-0.21207 -0.1207278,-0.23542 -0.270683,-0.23542 z"
-         style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient3954);fill-opacity:1;stroke:none;stroke-width:0.28066951;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         ry="0.40623081"
-         y="359.74374"
-         x="-7.7649937"
-         height="0.97495389"
-         width="2.2035522"
-         id="rect2571"
-         style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2901);fill-opacity:1;stroke:none;stroke-width:0.32118246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         ry="0.32967156"
-         y="356.44699"
-         x="-7.6363955"
-         height="1.008194"
-         width="1.946357"
-         id="rect2573"
-         style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.2705822;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.25223458;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect2575"
-         width="1.0888168"
-         height="0.43185598"
-         x="-7.2076254"
-         y="356.00281"
-         ry="0.14121351" />
-      <rect
-         style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2903);fill-opacity:1;stroke:none;stroke-width:0.2705822;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect2577"
-         width="1.8476235"
-         height="0.95705086"
-         x="-7.587029"
-         y="356.47253"
-         ry="0.31294817" />
-      <rect
-         ry="0.14121351"
-         y="356.00281"
-         x="-7.2076254"
-         height="0.43185598"
-         width="1.0888168"
-         id="rect2579"
-         style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2905);fill-opacity:1;stroke:none;stroke-width:0.25223458;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <ellipse
-         transform="matrix(0.50395105,0,0,0.67189935,-3.2445285,94.733868)"
-         style="display:inline;opacity:0.87300002;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221926)"
-         id="ellipse2581"
-         cx="-6.2142262"
-         cy="389.86914"
-         rx="0.67553997"
-         ry="0.18077831" />
-      <path
-         style="display:inline;opacity:0.37900002;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00157464;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221993-3)"
-         d="m 35.091231,12.100108 c -0.377433,-6.97e-4 -0.683522,0.226912 -0.683594,1.63732 7.2e-5,1.410407 0.357017,5.90995 0.73445,5.909253 0.376671,-0.0033 0.630714,-4.501693 0.630785,-5.909253 -7.1e-5,-1.407561 -0.304971,-1.633992 -0.681641,-1.63732 z"
-         id="path2583"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccccc"
-         transform="matrix(0.14599301,0,0,0.17469382,-11.576906,355.52865)" />
-      <ellipse
-         ry="0.18077831"
-         rx="0.67553997"
-         cy="118.66545"
-         cx="11.334139"
-         id="ellipse2585"
-         style="display:inline;opacity:0.48399999;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.47978163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221926)"
-         transform="matrix(0.31201293,0,0,0.28769684,-10.061994,321.99671)" />
-      <ellipse
-         transform="matrix(0.73426617,0,0,0.6497469,-1.6821234,103.37195)"
-         ry="0.18077831"
-         rx="0.67553997"
-         cy="394.92847"
-         cx="-6.4026065"
-         id="ellipse2587"
-         style="display:inline;opacity:0.87300002;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221926)" />
-      <rect
-         transform="rotate(90)"
-         style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect3034"
-         width="2.0899005"
-         height="0.42471254"
-         x="368.97513"
-         y="9.2054377"
-         ry="0.21235627" />
-      <rect
-         ry="0.21235627"
-         y="8.2774725"
-         x="368.97513"
-         height="0.42471254"
-         width="2.0899005"
-         id="rect3036"
-         style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="rotate(90)" />
-      <rect
-         transform="rotate(90)"
-         style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect3038"
-         width="2.0899005"
-         height="0.42471254"
-         x="368.97513"
-         y="7.3495069"
-         ry="0.21235627" />
-      <rect
-         ry="0.21235627"
-         y="6.4215417"
-         x="368.97513"
-         height="0.42471254"
-         width="2.0899005"
-         id="rect3040"
-         style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="rotate(90)" />
-      <rect
-         transform="rotate(90)"
-         style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect3042"
-         width="2.0899005"
-         height="0.42471254"
-         x="368.97513"
-         y="5.4935765"
-         ry="0.21235627" />
-      <rect
-         ry="0.21235627"
-         y="4.5656109"
-         x="368.97513"
-         height="0.42471254"
-         width="2.0899005"
-         id="rect3044"
-         style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="rotate(90)" />
-      <rect
-         transform="rotate(90)"
-         style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect3046"
-         width="2.0899005"
-         height="0.42471254"
-         x="368.97513"
-         y="3.6376452"
-         ry="0.21235627" />
+         id="path2537"
+         d="M 7.3453082,135.16177 6.2891824,123.70614 6.2592861,135.17292 Z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.34200003;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient2887);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter221177-7);color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         transform="matrix(-1,0,0,1,22.167777,0)" />
     </g>
+    <circle
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.57054567;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle2541"
+       cx="-6.6363044"
+       cy="364.215"
+       r="3.925142"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <circle
+       r="3.925142"
+       cy="364.21497"
+       cx="-6.6363044"
+       id="circle2543"
+       style="opacity:1;vector-effect:none;fill:#124500;fill-opacity:1;stroke:none;stroke-width:0.39895293;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <circle
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient2889);fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221255)"
+       id="circle2545"
+       cx="11.141356"
+       cy="129.29875"
+       r="3.9829001"
+       transform="matrix(0.85796336,0,0,0.85796336,-16.19518,252.95812)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <circle
+       transform="matrix(0.71883416,0,0,0.71883416,-14.645092,270.94735)"
+       r="3.9829001"
+       cy="129.29875"
+       cx="11.141356"
+       id="circle2547"
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient2891);fill-opacity:1;stroke:none;stroke-width:0.55500001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221255)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <g
+       id="g3844"
+       transform="translate(-2.7234902,-32.863094)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329">
+      <ellipse
+         ry="1.2288712"
+         rx="1.2274975"
+         style="display:inline;opacity:1;vector-effect:none;fill:#124500;fill-opacity:1;stroke:#000000;stroke-width:0.36927238;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse2553"
+         cx="-5.9405365"
+         cy="398.42752" />
+      <ellipse
+         cy="398.42191"
+         cx="-5.9405365"
+         id="ellipse2555"
+         style="display:inline;opacity:1;vector-effect:none;fill:#124500;fill-opacity:1;stroke:none;stroke-width:0.39895293;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         rx="1.228218"
+         ry="1.2296088" />
+      <circle
+         style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2895);fill-opacity:1;stroke:none;stroke-width:1.48520756;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221255)"
+         id="circle2557"
+         cx="11.141356"
+         cy="129.29875"
+         r="3.9829001"
+         transform="matrix(0.26846571,0,0,0.26876971,-8.9316087,363.56902)" />
+      <circle
+         transform="matrix(0.22493072,0,0,0.22518542,-8.4465699,369.20442)"
+         r="3.9829001"
+         cy="129.29875"
+         cx="11.141356"
+         id="circle2559"
+         style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2897);fill-opacity:1;stroke:none;stroke-width:1.77266705;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221255)" />
+      <ellipse
+         transform="matrix(0.85796336,0,0,0.85796336,-0.95972148,54.580917)"
+         style="display:inline;opacity:1;vector-effect:none;fill:#f9fff7;fill-opacity:1;stroke:none;stroke-width:0.46499997;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221477)"
+         id="ellipse2561"
+         cx="-5.8822351"
+         cy="399.82965"
+         rx="0.39189333"
+         ry="0.24220338" />
+    </g>
+    <path
+       sodipodi:nodetypes="sccs"
+       inkscape:connector-curvature="0"
+       id="path2563"
+       transform="matrix(0.28166771,0,0,0.2270028,-18.147562,354.38464)"
+       d="m 40.380859,30.898438 c -3.251036,0.200643 -4.182008,2.056649 -4.85051,3.714318 1.704449,-1.357224 9.060672,-1.588101 10.361252,-0.464244 -1.295641,-2.480113 -4.148317,-3.334158 -5.510742,-3.250074 z"
+       style="display:inline;opacity:1;vector-effect:none;fill:#f9fff7;fill-opacity:1;stroke:none;stroke-width:1.57774746;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221522-2)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       ry="0.43714139"
+       y="359.7066"
+       x="-7.8488293"
+       height="1.0491394"
+       width="2.3712234"
+       id="rect2565"
+       style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.32118246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <path
+       sodipodi:nodetypes="sssssssss"
+       inkscape:connector-curvature="0"
+       id="path2567"
+       d="m -6.9168919,357.47193 c -0.1669578,0 -0.2916364,0.19061 -0.3011388,0.42671 l -0.063,1.56548 c -0.00893,0.22221 0.1494141,0.40126 0.3353279,0.40126 h 0.5648674 c 0.1859134,0 0.3445548,-0.17905 0.3356125,-0.40126 l -0.062999,-1.56548 c -0.0095,-0.2361 -0.1344256,-0.42671 -0.3013945,-0.42671 z"
+       style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.28066951;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <path
+       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient3954);fill-opacity:1;stroke:none;stroke-width:0.28066951;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -6.8910337,357.59387 c -0.1499451,0 -0.26273,0.0234 -0.2704527,0.23542 l -0.056581,1.55378 c -0.00727,0.19958 0.1341891,0.36036 0.3011578,0.36036 h 0.5073081 c 0.1669694,0 0.3086822,-0.16078 0.3014145,-0.36036 l -0.056581,-1.55378 c -0.00772,-0.21207 -0.1207278,-0.23542 -0.270683,-0.23542 z"
+       id="path2569"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssssss"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2901);fill-opacity:1;stroke:none;stroke-width:0.32118246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2571"
+       width="2.2035522"
+       height="0.97495389"
+       x="-7.7649937"
+       y="359.74374"
+       ry="0.40623081"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.2705822;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2573"
+       width="1.946357"
+       height="1.008194"
+       x="-7.6363955"
+       y="356.44699"
+       ry="0.32967156"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       ry="0.14121351"
+       y="356.00281"
+       x="-7.2076254"
+       height="0.43185598"
+       width="1.0888168"
+       id="rect2575"
+       style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.25223458;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       ry="0.31294817"
+       y="356.47253"
+       x="-7.587029"
+       height="0.95705086"
+       width="1.8476235"
+       id="rect2577"
+       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2903);fill-opacity:1;stroke:none;stroke-width:0.2705822;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient2905);fill-opacity:1;stroke:none;stroke-width:0.25223458;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2579"
+       width="1.0888168"
+       height="0.43185598"
+       x="-7.2076254"
+       y="356.00281"
+       ry="0.14121351"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <ellipse
+       ry="0.18077831"
+       rx="0.67553997"
+       cy="389.86914"
+       cx="-6.2142262"
+       id="ellipse2581"
+       style="display:inline;opacity:0.87300002;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221926)"
+       transform="matrix(0.50395105,0,0,0.67189935,-3.2445285,94.733868)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <path
+       transform="matrix(0.14599301,0,0,0.17469382,-11.576906,355.52865)"
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path2583"
+       d="m 35.091231,12.100108 c -0.377433,-6.97e-4 -0.683522,0.226912 -0.683594,1.63732 7.2e-5,1.410407 0.357017,5.90995 0.73445,5.909253 0.376671,-0.0033 0.630714,-4.501693 0.630785,-5.909253 -7.1e-5,-1.407561 -0.304971,-1.633992 -0.681641,-1.63732 z"
+       style="display:inline;opacity:0.37900002;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00157464;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221993-3)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <ellipse
+       transform="matrix(0.31201293,0,0,0.28769684,-10.061994,321.99671)"
+       style="display:inline;opacity:0.48399999;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.47978163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221926)"
+       id="ellipse2585"
+       cx="11.334139"
+       cy="118.66545"
+       rx="0.67553997"
+       ry="0.18077831"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <ellipse
+       style="display:inline;opacity:0.87300002;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221926)"
+       id="ellipse2587"
+       cx="-6.4026065"
+       cy="394.92847"
+       rx="0.67553997"
+       ry="0.18077831"
+       transform="matrix(0.73426617,0,0,0.6497469,-1.6821234,103.37195)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       ry="0.21235627"
+       y="9.2054377"
+       x="368.97513"
+       height="0.42471254"
+       width="2.0899005"
+       id="rect3034"
+       style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="rotate(90)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       transform="rotate(90)"
+       style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3036"
+       width="2.0899005"
+       height="0.42471254"
+       x="368.97513"
+       y="8.2774725"
+       ry="0.21235627"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       ry="0.21235627"
+       y="7.3495069"
+       x="368.97513"
+       height="0.42471254"
+       width="2.0899005"
+       id="rect3038"
+       style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="rotate(90)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       transform="rotate(90)"
+       style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3040"
+       width="2.0899005"
+       height="0.42471254"
+       x="368.97513"
+       y="6.4215417"
+       ry="0.21235627"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       ry="0.21235627"
+       y="5.4935765"
+       x="368.97513"
+       height="0.42471254"
+       width="2.0899005"
+       id="rect3042"
+       style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="rotate(90)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       transform="rotate(90)"
+       style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3044"
+       width="2.0899005"
+       height="0.42471254"
+       x="368.97513"
+       y="4.5656109"
+       ry="0.21235627"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
+    <rect
+       ry="0.21235627"
+       y="3.6376452"
+       x="368.97513"
+       height="0.42471254"
+       width="2.0899005"
+       id="rect3046"
+       style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="rotate(90)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        inkscape:connector-curvature="0"
        id="path4391"
        d="m 15.158381,356.00296 c -0.07823,0 -0.141075,0.0628 -0.141075,0.14107 v 0.14933 c 0,0.0782 0.06284,0.14108 0.141075,0.14108 h 0.806154 c 0.07823,0 0.141592,-0.0628 0.141592,-0.14108 v -0.14933 c 0,-0.0782 -0.06336,-0.14107 -0.141592,-0.14107 z m -0.240294,0.44389 c -0.182639,0 -0.329695,0.14706 -0.329695,0.3297 v 0.34882 c 0,0.18265 0.147056,0.3297 0.329695,0.3297 h 1.287259 c 0.182639,0 0.329178,-0.14705 0.329178,-0.3297 v -0.34882 c 3e-6,-0.18264 -0.146539,-0.3297 -0.329178,-0.3297 z m -6.685381,0.48421 c -0.518234,0 -0.935341,0.41712 -0.935341,0.93536 v 2.09804 c 0,0.51824 0.417107,0.93535 0.935341,0.93535 h 1.799892 c 0.170561,0 0.3282,-0.0485 0.465603,-0.12763 v 3.54602 c -0.137403,-0.0791 -0.295042,-0.12763 -0.465603,-0.12763 H 8.232706 c -0.518234,0 -0.935341,0.41711 -0.935341,0.93535 v 2.09804 c 0,0.51824 0.417107,0.93536 0.935341,0.93536 h 1.799892 c 0.170561,0 0.3282,-0.0485 0.465603,-0.12764 v 3.54603 c -0.137403,-0.0791 -0.295042,-0.12764 -0.465603,-0.12764 H 8.232706 c -0.518234,0 -0.935341,0.41712 -0.935341,0.93536 v 2.09804 c 0,0.51824 0.417107,0.93535 0.935341,0.93535 h 1.799892 c 0.518234,0 0.93586,-0.41711 0.93586,-0.93535 v -1.09294 l 0.405144,0.58134 h 8.434109 0.129191 l 0.03566,-0.062 v 0.57359 c 0,0.51824 0.417107,0.93535 0.935342,0.93535 h 1.800407 c 0.518236,0 0.935344,-0.41711 0.935344,-0.93535 v -2.09804 c 0,-0.51824 -0.417108,-0.93536 -0.935344,-0.93536 h -1.800407 c -0.07791,0 -0.152524,0.0122 -0.224793,0.03 v -3.35072 c 0.07227,0.0178 0.146884,0.03 0.224793,0.03 h 1.800407 c 0.518236,0 0.935343,-0.41712 0.935343,-0.93536 v -2.09804 c 0,-0.51824 -0.417107,-0.93535 -0.935343,-0.93535 h -1.800407 c -0.07791,0 -0.152524,0.0122 -0.224793,0.03 v -3.35071 c 0.07227,0.0178 0.146884,0.03 0.224793,0.03 h 1.800407 c 0.518236,0 0.935343,-0.41711 0.935343,-0.93535 v -2.09804 c 0,-0.51824 -0.417107,-0.93536 -0.935343,-0.93536 h -1.800407 c -0.518236,0 -0.935342,0.41712 -0.935342,0.93536 v 1.14668 l -0.312645,-0.4961 -3.519165,-0.0155 -0.02429,-0.60357 c -0.0095,-0.23606 -0.13431,-0.42632 -0.301273,-0.42632 l -0.507463,5e-4 c -0.16696,0 -0.291256,0.19029 -0.300757,0.42632 l -0.02429,0.59844 -3.456635,-0.015 -0.557589,0.92913 v -1.54458 c 0,-0.51824 -0.417626,-0.93536 -0.93586,-0.93536 z"
-       style="opacity:0.76000001;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter3818)" />
+       style="opacity:0.76000001;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter3818)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <use
        style="fill:#000000;stroke:#000000"
        height="100%"
        width="100%"
-       transform="translate(22.34551,-26.411157)"
+       transform="translate(22.224956,7.259505)"
        id="use4393"
        xlink:href="#rect3021"
        y="0"
-       x="0" />
+       x="0"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.93544334"
        y="356.93106"
@@ -11702,25 +11232,34 @@
        height="3.96875"
        width="3.6710937"
        id="rect4395"
-       style="opacity:1;vector-effect:none;fill:url(#linearGradient4536);fill-opacity:1;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient4536);fill-opacity:1;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <use
        style="fill:#000000"
        x="0"
        y="0"
        xlink:href="#rect3021"
        id="use4397"
-       transform="translate(22.34551,-19.151652)"
+       transform="translate(22.224956,14.51901)"
        width="100%"
-       height="100%" />
+       height="100%"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <use
        x="0"
        y="0"
        xlink:href="#rect3021"
        id="use4425"
-       transform="matrix(-1,0,0,1,8.595507,-26.411157)"
+       transform="matrix(-1,0,0,1,8.7160611,7.259505)"
        width="100%"
        height="100%"
-       style="fill:#000000;stroke:#000000" />
+       style="fill:#000000;stroke:#000000"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:1;vector-effect:none;fill:url(#linearGradient4557);fill-opacity:1;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4427"
@@ -11729,256 +11268,49 @@
        x="-23.643684"
        y="356.93106"
        ry="0.93544334"
-       transform="scale(-1,1)" />
+       transform="scale(-1,1)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <use
        height="100%"
        width="100%"
-       transform="matrix(-1,0,0,1,8.595507,-19.151652)"
+       transform="matrix(-1,0,0,1,8.7160611,14.51901)"
        id="use4429"
        xlink:href="#rect3021"
        y="0"
        x="0"
-       style="fill:#000000" />
-    <g
-       id="g4942">
-      <g
-         clip-path="url(#clipPath4877)"
-         id="g4875">
-        <g
-           id="g4833">
-          <rect
-             ry="0.28063297"
-             y="358.2811"
-             x="7.3784165"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4399"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4538);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <rect
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4540);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4401"
-             width="1.5551746"
-             height="0.56126595"
-             x="7.4405503"
-             y="357.13129"
-             ry="0.28063297" />
-          <rect
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4543);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4403"
-             width="1.5551746"
-             height="0.56126595"
-             x="7.3878827"
-             y="359.43091"
-             ry="0.28063297" />
-          <rect
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4545);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4407"
-             width="1.5551746"
-             height="0.56126595"
-             x="7.3784165"
-             y="365.54062"
-             ry="0.28063297" />
-          <rect
-             ry="0.28063297"
-             y="364.39081"
-             x="7.4405503"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4409"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4547);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <rect
-             ry="0.28063297"
-             y="366.69043"
-             x="7.3878827"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4411"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4549);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <rect
-             ry="0.28063297"
-             y="372.80011"
-             x="7.3784165"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4415"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4551);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <rect
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4553);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4417"
-             width="1.5551746"
-             height="0.56126595"
-             x="7.4405503"
-             y="371.6503"
-             ry="0.28063297" />
-          <rect
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4555);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4419"
-             width="1.5551746"
-             height="0.56126595"
-             x="7.3878827"
-             y="373.94992"
-             ry="0.28063297" />
-          <rect
-             ry="0.28063297"
-             y="360.53268"
-             x="7.4405503"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4756"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4768);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <rect
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4770);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4758"
-             width="1.5551746"
-             height="0.56126595"
-             x="7.4405503"
-             y="367.79221"
-             ry="0.28063297" />
-          <rect
-             ry="0.28063297"
-             y="375.0517"
-             x="7.4405503"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4760"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4772);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-        </g>
-        <g
-           id="g4847">
-          <rect
-             transform="scale(-1,1)"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4559);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4431"
-             width="1.5551746"
-             height="0.56126595"
-             x="-23.562601"
-             y="358.2811"
-             ry="0.28063297" />
-          <rect
-             transform="scale(-1,1)"
-             ry="0.28063297"
-             y="357.13129"
-             x="-23.500467"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4433"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4561);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <rect
-             transform="scale(-1,1)"
-             ry="0.28063297"
-             y="359.43091"
-             x="-23.632135"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4435"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4563);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <rect
-             transform="scale(-1,1)"
-             ry="0.28063297"
-             y="365.54062"
-             x="-23.562601"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4440"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4565);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <rect
-             transform="scale(-1,1)"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4567);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4442"
-             width="1.5551746"
-             height="0.56126595"
-             x="-23.500467"
-             y="364.39081"
-             ry="0.28063297" />
-          <rect
-             transform="scale(-1,1)"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4569);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4444"
-             width="1.5551746"
-             height="0.56126595"
-             x="-23.632135"
-             y="366.69043"
-             ry="0.28063297" />
-          <rect
-             transform="scale(-1,1)"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4571);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4448"
-             width="1.5551746"
-             height="0.56126595"
-             x="-23.562601"
-             y="372.80011"
-             ry="0.28063297" />
-          <rect
-             transform="scale(-1,1)"
-             ry="0.28063297"
-             y="371.6503"
-             x="-23.500467"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4450"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4573);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <rect
-             transform="scale(-1,1)"
-             ry="0.28063297"
-             y="373.94992"
-             x="-23.632135"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4452"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4575);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <rect
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4774);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4762"
-             width="1.5551746"
-             height="0.56126595"
-             x="-23.500467"
-             y="360.53268"
-             ry="0.28063297"
-             transform="scale(-1,1)" />
-          <rect
-             ry="0.28063297"
-             y="367.79221"
-             x="-23.500467"
-             height="0.56126595"
-             width="1.5551746"
-             id="rect4764"
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4776);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             transform="scale(-1,1)" />
-          <rect
-             style="opacity:1;vector-effect:none;fill:url(#linearGradient4778);fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="rect4766"
-             width="1.5551746"
-             height="0.56126595"
-             x="-23.500467"
-             y="375.0517"
-             ry="0.28063297"
-             transform="scale(-1,1)" />
-        </g>
-      </g>
-      <path
-         inkscape:connector-curvature="0"
-         id="use4881"
-         d="m 8.2326752,356.8958 c -0.518234,0 -0.935342,0.41711 -0.935342,0.93534 v 2.09807 c 0,0.51823 0.417108,0.93534 0.935342,0.93534 h 1.8004078 c 0.518236,0 0.935344,-0.41711 0.935344,-0.93534 v -2.09807 c 0,-0.51823 -0.417108,-0.93534 -0.935344,-0.93534 z m 12.6751948,0 c -0.518234,0 -0.935341,0.41711 -0.935341,0.93534 v 2.09807 c 0,0.51823 0.417107,0.93534 0.935341,0.93534 h 1.800408 c 0.518237,0 0.935344,-0.41711 0.935344,-0.93534 v -2.09807 c 0,-0.51823 -0.417107,-0.93534 -0.935344,-0.93534 z m -12.6751948,7.2595 c -0.518234,0 -0.935342,0.41711 -0.935342,0.93535 v 2.09806 c 0,0.51824 0.417108,0.93534 0.935342,0.93534 h 1.8004078 c 0.518236,0 0.935344,-0.4171 0.935344,-0.93534 v -2.09806 c 0,-0.51824 -0.417108,-0.93535 -0.935344,-0.93535 z m 12.6751948,0 c -0.518234,0 -0.935341,0.41711 -0.935341,0.93535 v 2.09806 c 0,0.51824 0.417107,0.93534 0.935341,0.93534 h 1.800408 c 0.518237,0 0.935344,-0.4171 0.935344,-0.93534 v -2.09806 c 0,-0.51824 -0.417107,-0.93535 -0.935344,-0.93535 z m -12.6751948,7.25951 c -0.518234,0 -0.935342,0.41711 -0.935342,0.93534 v 2.09807 c 0,0.51823 0.417108,0.93534 0.935342,0.93534 h 1.8004078 c 0.518236,0 0.935344,-0.41711 0.935344,-0.93534 v -2.09807 c 0,-0.51823 -0.417108,-0.93534 -0.935344,-0.93534 z m 12.6751948,0 c -0.518234,0 -0.935341,0.41711 -0.935341,0.93534 v 2.09807 c 0,0.51823 0.417107,0.93534 0.935341,0.93534 h 1.800408 c 0.518237,0 0.935344,-0.41711 0.935344,-0.93534 v -2.09807 c 0,-0.51823 -0.417107,-0.93534 -0.935344,-0.93534 z"
-         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.46199998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    </g>
+       style="fill:#000000"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        id="path4460"
        d="m 20.683511,360.1406 v 12.53885 0.0362 l -0.121956,0.17466 -0.624252,1.08159 h -0.129189 -8.43411 l -0.875399,-1.25625 v -12.5212 l 1.027844,-1.71256 8.133771,0.0351 z"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#6ec532;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccccccc" />
+       sodipodi:nodetypes="cccccccccccc"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient4577);fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 11.662746,358.71919 -0.905237,1.48591 -0.0105,0.82616 h 9.688099 l -0.02303,-0.84249 -0.892703,-1.46958 z"
        id="path4462"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccc" />
+       sodipodi:nodetypes="ccccccc"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        sodipodi:nodetypes="ccccccc"
        inkscape:connector-curvature="0"
        id="path4464"
        d="m 11.393631,373.73348 -0.636122,-1.05533 -0.0105,-1.25674 h 9.688099 l -0.02303,1.27307 -0.623588,1.039 z"
-       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient4579);fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient4579);fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="display:inline;opacity:0.578;vector-effect:none;fill:url(#linearGradient4581);fill-opacity:1;stroke:none;stroke-width:0.46499997;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221131)"
        id="rect4466"
@@ -11986,11 +11318,17 @@
        height="4.3596611"
        x="11.077526"
        y="360.6825"
-       ry="0.71806186" />
+       ry="0.71806186"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <g
        style="display:inline"
        id="g4472"
-       transform="translate(4.50717,236.79295)">
+       transform="translate(4.50717,236.79295)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329">
       <path
          sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
@@ -12010,30 +11348,45 @@
        cy="364.215"
        cx="15.588652"
        id="circle4474"
-       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.57054567;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.57054567;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <circle
        style="opacity:1;vector-effect:none;fill:#124500;fill-opacity:1;stroke:none;stroke-width:0.39895293;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle4476"
        cx="15.588652"
        cy="364.21497"
-       r="3.925142" />
+       r="3.925142"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <circle
        transform="matrix(0.85796336,0,0,0.85796336,6.029776,252.95812)"
        r="3.9829001"
        cy="129.29875"
        cx="11.141356"
        id="circle4478"
-       style="opacity:1;vector-effect:none;fill:url(#linearGradient4587);fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221255)" />
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient4587);fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221255)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <circle
        style="opacity:1;vector-effect:none;fill:url(#linearGradient4589);fill-opacity:1;stroke:none;stroke-width:0.55500001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221255)"
        id="circle4480"
        cx="11.141356"
        cy="129.29875"
        r="3.9829001"
-       transform="matrix(0.71883416,0,0,0.71883416,7.579864,270.94735)" />
+       transform="matrix(0.71883416,0,0,0.71883416,7.579864,270.94735)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <g
        transform="translate(19.501466,-32.863094)"
-       id="g4492">
+       id="g4492"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329">
       <ellipse
          cy="398.42752"
          cx="-5.9405365"
@@ -12077,7 +11430,10 @@
        transform="matrix(0.28166771,0,0,0.2270028,4.077394,354.38464)"
        id="path4494"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sccs" />
+       sodipodi:nodetypes="sccs"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.32118246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4496"
@@ -12085,19 +11441,28 @@
        height="1.0491394"
        x="14.376126"
        y="359.7066"
-       ry="0.43714139" />
+       ry="0.43714139"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.28066951;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 15.308064,357.47193 c -0.166958,0 -0.291636,0.19061 -0.301139,0.42671 l -0.063,1.56548 c -0.0089,0.22221 0.149414,0.40126 0.335328,0.40126 h 0.564868 c 0.185913,0 0.344554,-0.17905 0.335612,-0.40126 l -0.063,-1.56548 c -0.0095,-0.2361 -0.134426,-0.42671 -0.301394,-0.42671 z"
        id="path4498"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sssssssss" />
+       sodipodi:nodetypes="sssssssss"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        sodipodi:nodetypes="sssssssss"
        inkscape:connector-curvature="0"
        id="path4500"
        d="m 15.333922,357.59387 c -0.149945,0 -0.26273,0.0234 -0.270452,0.23542 l -0.05658,1.55378 c -0.0073,0.19958 0.134189,0.36036 0.301157,0.36036 h 0.507308 c 0.16697,0 0.308683,-0.16078 0.301415,-0.36036 l -0.05658,-1.55378 c -0.0077,-0.21207 -0.120728,-0.23542 -0.270683,-0.23542 z"
-       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient4595);fill-opacity:1;stroke:none;stroke-width:0.28066951;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient4595);fill-opacity:1;stroke:none;stroke-width:0.28066951;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.40623081"
        y="359.74374"
@@ -12105,7 +11470,10 @@
        height="0.97495389"
        width="2.2035522"
        id="rect4502"
-       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient4597);fill-opacity:1;stroke:none;stroke-width:0.32118246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient4597);fill-opacity:1;stroke:none;stroke-width:0.32118246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.32967156"
        y="356.44699"
@@ -12113,7 +11481,10 @@
        height="1.008194"
        width="1.946357"
        id="rect4504"
-       style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.2705822;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.2705822;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="display:inline;opacity:1;vector-effect:none;fill:#7ad637;fill-opacity:1;stroke:#000000;stroke-width:0.25223458;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4506"
@@ -12121,7 +11492,10 @@
        height="0.43185598"
        x="15.01733"
        y="356.00281"
-       ry="0.14121351" />
+       ry="0.14121351"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient4599);fill-opacity:1;stroke:none;stroke-width:0.2705822;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4508"
@@ -12129,7 +11503,10 @@
        height="0.95705086"
        x="14.637927"
        y="356.47253"
-       ry="0.31294817" />
+       ry="0.31294817"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.14121351"
        y="356.00281"
@@ -12137,7 +11514,10 @@
        height="0.43185598"
        width="1.0888168"
        id="rect4510"
-       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient4601);fill-opacity:1;stroke:none;stroke-width:0.25223458;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient4601);fill-opacity:1;stroke:none;stroke-width:0.25223458;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <ellipse
        transform="matrix(0.50395105,0,0,0.67189935,18.980427,94.733868)"
        style="display:inline;opacity:0.87300002;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221926)"
@@ -12145,14 +11525,20 @@
        cx="-6.2142262"
        cy="389.86914"
        rx="0.67553997"
-       ry="0.18077831" />
+       ry="0.18077831"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        style="display:inline;opacity:0.37900002;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00157464;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221993-3)"
        d="m 35.091231,12.100108 c -0.377433,-6.97e-4 -0.683522,0.226912 -0.683594,1.63732 7.2e-5,1.410407 0.357017,5.90995 0.73445,5.909253 0.376671,-0.0033 0.630714,-4.501693 0.630785,-5.909253 -7.1e-5,-1.407561 -0.304971,-1.633992 -0.681641,-1.63732 z"
        id="path4514"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc"
-       transform="matrix(0.14599301,0,0,0.17469382,10.64805,355.52865)" />
+       transform="matrix(0.14599301,0,0,0.17469382,10.64805,355.52865)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <ellipse
        ry="0.18077831"
        rx="0.67553997"
@@ -12160,7 +11546,10 @@
        cx="11.334139"
        id="ellipse4516"
        style="display:inline;opacity:0.48399999;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.47978163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221926)"
-       transform="matrix(0.31201293,0,0,0.28769684,12.162962,321.99671)" />
+       transform="matrix(0.31201293,0,0,0.28769684,12.162962,321.99671)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <ellipse
        transform="matrix(0.73426617,0,0,0.6497469,20.542833,103.37195)"
        ry="0.18077831"
@@ -12168,7 +11557,10 @@
        cy="394.92847"
        cx="-6.4026065"
        id="ellipse4518"
-       style="display:inline;opacity:0.87300002;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221926)" />
+       style="display:inline;opacity:0.87300002;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter221926)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        transform="rotate(90)"
        style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -12177,7 +11569,10 @@
        height="0.42471254"
        x="368.97513"
        y="-13.019518"
-       ry="0.21235627" />
+       ry="0.21235627"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.21235627"
        y="-13.947483"
@@ -12186,7 +11581,10 @@
        width="2.0899005"
        id="rect4522"
        style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       transform="rotate(90)" />
+       transform="rotate(90)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        transform="rotate(90)"
        style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -12195,7 +11593,10 @@
        height="0.42471254"
        x="368.97513"
        y="-14.875449"
-       ry="0.21235627" />
+       ry="0.21235627"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.21235627"
        y="-15.803414"
@@ -12204,7 +11605,10 @@
        width="2.0899005"
        id="rect4526"
        style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       transform="rotate(90)" />
+       transform="rotate(90)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        transform="rotate(90)"
        style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -12213,7 +11617,10 @@
        height="0.42471254"
        x="368.97513"
        y="-16.731379"
-       ry="0.21235627" />
+       ry="0.21235627"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.21235627"
        y="-17.659346"
@@ -12222,7 +11629,10 @@
        width="2.0899005"
        id="rect4530"
        style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       transform="rotate(90)" />
+       transform="rotate(90)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        transform="rotate(90)"
        style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0.14817515;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -12231,6 +11641,9 @@
        height="0.42471254"
        x="368.97513"
        y="-18.587311"
-       ry="0.21235627" />
+       ry="0.21235627"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
   </g>
 </svg>
