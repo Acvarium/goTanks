@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/tank.gd" type="Script" id=1]
 [ext_resource path="res://textures/tanks.png" type="Texture" id=2]
@@ -8,6 +8,25 @@
 [ext_resource path="res://sounds/engine02.ogg" type="AudioStream" id=6]
 [ext_resource path="res://sounds/hit02.ogg" type="AudioStream" id=7]
 [ext_resource path="res://sounds/hit03.ogg" type="AudioStream" id=8]
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "bot01"
+length = 0.2
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
 
 [sub_resource type="Animation" id=1]
 
@@ -77,6 +96,7 @@ invincible = false
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 root_node = NodePath("..")
+anims/bot01 = SubResource( 5 )
 anims/tracks0 = SubResource( 1 )
 anims/tracks1 = SubResource( 2 )
 playback/active = true
@@ -189,9 +209,10 @@ autostart = false
 editor/display_folded = true
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
-vframes = 3
+vframes = 4
 hframes = 2
-frame = 3
+frame = 6
+_sections_unfolded = [ "Animation" ]
 __meta__ = {
 "_edit_lock_": true
 }

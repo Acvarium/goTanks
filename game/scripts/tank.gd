@@ -33,9 +33,15 @@ var velocity = Vector2()
 
 const PLD = [
 [150, 350, 1],
-[150, 350, 2],
-[150, 420, 2],
-[180, 430, 2]
+[150, 420, 1],
+[150, 360, 2],
+[180, 400, 2],
+[180, 450, 2],
+[200, 450, 2],
+[200, 450, 3],
+[200, 480, 3],
+[220, 480, 3],
+[220, 500, 3],
 ]
 
 #Bot Levels Data
@@ -55,7 +61,6 @@ const BLD = [
 
 func _ready():
 	randomize()
-
 	main_node = get_node("/root/main")
 	$Sprite.set_frame(type * 2)
 	$rays/rayUp.add_exception(self)
@@ -70,6 +75,9 @@ func _ready():
 		$sounds/engine.play()
 		set_level(global.player_level[0])
 	elif type == 0:
+		if level == 1:
+			$Sprite.set_frame(7)
+			
 		$sounds/fire.volume_db = -40
 		$timers/step.start()
 		$timers/fireTimer.start()
