@@ -1,0 +1,186 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/menu.gd" type="Script" id=1]
+[ext_resource path="res://textures/menu_bg01.png" type="Texture" id=2]
+[ext_resource path="res://levels/logo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://textures/prev/l00.png" type="Texture" id=4]
+[ext_resource path="res://textures/bgColor.png" type="Texture" id=5]
+[ext_resource path="res://textures/back.png" type="Texture" id=6]
+[ext_resource path="res://textures/backSelected.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "f"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("preview:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="main" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="TextureRect2" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 922.0
+margin_bottom = 922.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+_sections_unfolded = [ "Margin", "Visibility" ]
+
+[node name="level01" parent="." index="1" instance=ExtResource( 3 )]
+
+visible = false
+position = Vector2( 16, -88 )
+
+[node name="single_player" type="Button" parent="." index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 391.0
+margin_top = 317.0
+margin_right = 547.0
+margin_bottom = 389.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "SINGLE PLAYER"
+flat = false
+align = 1
+
+[node name="double_player" type="Button" parent="." index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 390.0
+margin_top = 403.0
+margin_right = 546.0
+margin_bottom = 475.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "DOUBLE PLAYER"
+flat = false
+align = 1
+
+[node name="pos" type="Position2D" parent="." index="4"]
+
+position = Vector2( 468, 181.79 )
+
+[node name="sButtons" type="Node2D" parent="." index="5"]
+
+[node name="preview" type="Sprite" parent="." index="6"]
+
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 216, 297 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="anim" type="AnimationPlayer" parent="." index="7"]
+
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
+anims/f = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="8"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -586.0
+margin_top = -195.0
+margin_right = 1761.0
+margin_bottom = 1165.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="back" type="TextureButton" parent="." index="9"]
+
+modulate = Color( 1, 1, 1, 0.270706 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 45.0
+margin_top = 47.0
+margin_right = 125.0
+margin_bottom = 127.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+expand = true
+_sections_unfolded = [ "Size Flags", "Textures", "Visibility" ]
+
+[connection signal="pressed" from="single_player" to="." method="_on_single_player_pressed"]
+
+[connection signal="pressed" from="double_player" to="." method="_on_double_player_pressed"]
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+
+

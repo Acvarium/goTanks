@@ -9,7 +9,7 @@ func _ready():
 		button.position = $pos.position
 		button.position.y += i * 36
 		button.set_level(i)
-		$buttons.add_child(button)
+		$sButtons.add_child(button)
 	
 func _on_single_player_pressed():
 	global.level = 0
@@ -42,4 +42,32 @@ func _on_double_player_pressed():
 	global.level = 0
 	global.player_lifes = [1,1]
 	global.goto_scene("res://scenes/main.tscn")
-	
+
+#OS.shell_open("http://godotengine.org")
+
+func _on_godot_pressed():
+	OS.shell_open("http://godotengine.org")
+
+func _on_inkscape_pressed():
+	OS.shell_open("https://inkscape.org/")
+
+func _on_link_pressed():
+	OS.shell_open("https://github.com/Acvarium/goTanks")
+
+func _on_single_pressed():
+	global.level = 0
+	global.player_lifes = [1,0]
+	global.player_level = [0,0]
+	global.goto_scene("res://scenes/main.tscn")
+
+func _on_double_pressed():
+	global.level = 0
+	global.player_lifes = [1,1]
+	global.player_level = [0,0]
+	global.goto_scene("res://scenes/main.tscn")
+
+func _on_select_pressed():
+	global.goto_scene("res://scenes/levels.tscn")
+
+func _on_back_pressed():
+	global.goto_scene("res://scenes/menu.tscn")

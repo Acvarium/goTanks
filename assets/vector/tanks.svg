@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.6641959"
-     inkscape:cx="139.20547"
-     inkscape:cy="-655.67595"
+     inkscape:zoom="0.94193549"
+     inkscape:cx="460.7717"
+     inkscape:cy="-494.5235"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -12279,7 +12279,10 @@
     </g>
     <g
        id="g6438"
-       transform="translate(8.0189467e-6,-6.1938217)">
+       transform="translate(8.0189467e-6,-6.1938217)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329">
       <path
          style="opacity:1;vector-effect:none;fill:#6ec532;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m -26.37958,1004.3868 c -0.263509,0 -0.464323,0.297 -0.475041,0.6639 l -0.469185,16.0618 c -0.01452,0.4971 0.286371,0.8984 0.643089,0.8984 h 2.304793 c 0.356727,0 0.657613,-0.4013 0.64309,-0.8984 l -0.469185,-16.0618 c -0.01072,-0.3669 -0.21084,-0.6639 -0.475042,-0.6639 z"
@@ -12303,7 +12306,10 @@
        height="18.819847"
        width="13.412653"
        id="rect5767"
-       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.14400005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.14400005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:1;vector-effect:none;fill:#6ec532;fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect5757"
@@ -12311,7 +12317,10 @@
        height="18.819847"
        x="-13.460773"
        y="379.57043"
-       ry="0.52642125" />
+       ry="0.52642125"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:1;vector-effect:none;fill:url(#linearGradient7918);fill-opacity:1;stroke:#000000;stroke-width:0.30599999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect7730"
@@ -12319,7 +12328,10 @@
        height="1.6830322"
        x="-7.4028487"
        y="381.66074"
-       ry="0.17073418" />
+       ry="0.17073418"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:0.47099998;vector-effect:none;fill:url(#linearGradient6484);fill-opacity:1;stroke:none;stroke-width:0.31727055;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect6476"
@@ -12327,7 +12339,10 @@
        height="2.3306994"
        x="-13.338909"
        y="379.69077"
-       ry="0.40421391" />
+       ry="0.40421391"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:1;vector-effect:none;fill:url(#linearGradient6464);fill-opacity:1;stroke:none;stroke-width:0.2564941;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect6456"
@@ -12335,26 +12350,41 @@
        height="2.6716015"
        x="-11.147626"
        y="395.58981"
-       ry="0" />
+       ry="0"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:0.47099998;vector-effect:none;fill:url(#linearGradient6474);fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect6466"
        width="8.8130255"
        height="1.8609179"
        x="-11.183057"
-       y="392.12283" />
+       y="392.12283"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        inkscape:connector-curvature="0"
        id="path6452"
        d="m -0.38895551,398.20098 c 0.04973,-0.0288 0.113967,-0.0943 0.142759,-0.14555 l 0.05235,-0.0932 -3.97e-4,-8.98424 -3.96e-4,-8.98425 -0.05545,-0.0967 c -0.107772,-0.18796 -0.112616,-0.18878 -1.12886499,-0.18878 h -0.900391 v 2.38429 2.38429 l 0.558623,0.96608 0.558624,0.96604 v 2.64528 c 0,2.55146 -0.0017,2.64972 -0.04783,2.77114 -0.131878,0.34706 -0.423398,0.52017 -0.876013,0.52017 h -0.193406 v 2.9545 2.95449 h 0.900004 c 0.87021799,0 0.90299599,-0.003 0.99041299,-0.053 z"
-       style="opacity:0.60700001;vector-effect:none;fill:url(#linearGradient6788);fill-opacity:1;stroke:none;stroke-width:0.02482769;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:0.60700001;vector-effect:none;fill:url(#linearGradient6788);fill-opacity:1;stroke:none;stroke-width:0.02482769;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        style="opacity:0.60700001;vector-effect:none;fill:url(#linearGradient6450);fill-opacity:1;stroke:none;stroke-width:0.02482769;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m -13.129084,398.20098 c -0.04972,-0.0288 -0.113966,-0.0943 -0.142759,-0.14555 l -0.05235,-0.0932 3.97e-4,-8.98424 3.97e-4,-8.98425 0.05545,-0.0967 c 0.107772,-0.18796 0.112616,-0.18878 1.128864,-0.18878 h 0.900391 v 2.38429 2.38429 l -0.558623,0.96608 -0.558623,0.96604 v 2.64528 c 0,2.55146 0.0017,2.64972 0.04783,2.77114 0.131878,0.34706 0.423398,0.52017 0.876013,0.52017 h 0.193405 v 2.9545 2.95449 h -0.900003 c -0.870218,0 -0.902997,-0.003 -0.990414,-0.053 z"
        id="path6442"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <g
-       id="g7728">
+       id="g7728"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329">
       <path
          inkscape:connector-curvature="0"
          id="path5769"
@@ -12370,19 +12400,28 @@
        style="opacity:1;vector-effect:none;fill:#6ec532;fill-opacity:1;stroke:#000000;stroke-width:0.44800001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m -10.265858,383.25914 -1.858804,3.21892 v 5.08185 c 0,0.30107 0.242054,0.54364 0.543121,0.54364 h 9.6536738 c 0.301067,0 0.5436359,-0.24257 0.5436359,-0.54364 v -5.08132 l -1.8588011,-3.21945 z"
        id="rect5759"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        style="opacity:1;vector-effect:none;fill:#41741d;fill-opacity:1;stroke:#000000;stroke-width:0.27399999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m -7.8604939,383.29221 c -0.1945188,0 -0.3095329,0.16081 -0.350883,0.35089 l -0.4965539,2.28253 c -0.041511,0.19082 0.00322,0.35089 0.2949065,0.35089 h 3.3173288 c 0.2916838,0 0.3364172,-0.16007 0.2949065,-0.35089 l -0.4965539,-2.28253 c -0.04135,-0.19008 -0.1563645,-0.35089 -0.350883,-0.35089 z"
        id="rect6271"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sssssssss" />
+       sodipodi:nodetypes="sssssssss"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        style="opacity:1;vector-effect:none;fill:url(#linearGradient6786);fill-opacity:1;stroke:#000000;stroke-width:0.21699999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m -6.9795891,377.8021 c -0.06972,0 -0.1228521,0.0673 -0.125688,0.15053 l -0.1241385,3.6417 c -0.00384,0.11271 0.075769,0.20369 0.1701506,0.20369 h 0.6098099 c 0.094384,0 0.1739934,-0.091 0.1701508,-0.20369 l -0.1241385,-3.6417 c -0.00284,-0.0832 -0.055785,-0.15053 -0.1256882,-0.15053 z"
        id="rect6427"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sssssssss" />
+       sodipodi:nodetypes="sssssssss"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.17073418"
        y="381.66074"
@@ -12390,7 +12429,10 @@
        height="1.6830322"
        width="1.2968041"
        id="rect6425"
-       style="opacity:1;vector-effect:none;fill:url(#linearGradient6694);fill-opacity:1;stroke:#000000;stroke-width:0.206;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient6694);fill-opacity:1;stroke:#000000;stroke-width:0.206;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:1;vector-effect:none;fill:url(#linearGradient6716);fill-opacity:1;stroke:#000000;stroke-width:0.17399999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect6357"
@@ -12398,7 +12440,10 @@
        height="2.4227045"
        x="-7.9657989"
        y="383.36249"
-       ry="0.24576977" />
+       ry="0.24576977"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:1;vector-effect:none;fill:url(#linearGradient6690);fill-opacity:1;stroke:#000000;stroke-width:0.206;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect6430"
@@ -12406,13 +12451,19 @@
        height="1.6830322"
        x="-7.4028487"
        y="377.04181"
-       ry="0.17073418" />
+       ry="0.17073418"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        d="M -12.166181,386.45231 H -1.4922375"
        id="path6440"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.338;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect6486"
@@ -12420,7 +12471,10 @@
        height="3.3969829"
        x="-10.439884"
        y="392.9259"
-       ry="0.45149767" />
+       ry="0.45149767"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.45149767"
        y="392.9259"
@@ -12428,7 +12482,10 @@
        height="3.3969829"
        width="1.580938"
        id="rect6488"
-       style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.338;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.338;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.338;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect6490"
@@ -12436,7 +12493,10 @@
        height="1.6419801"
        x="-4.6701241"
        y="394.70752"
-       ry="0.35867783" />
+       ry="0.35867783"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#1c740f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.09322882;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter6599);color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        d="m -46.721591,1040.1169 -1.149503,18.7893 c -0.136473,2.2307 1.858507,4.1055 4.095703,4.1055 h 36.4902348 c 2.2371972,0 4.1035156,-1.8683 4.1035156,-4.1055 l -1.2607021,-18.5078 -1.7753104,-0.2654 -1.0616438,18.7732 -0.00586,0.01 H -43.775391 l -0.0059,-0.01 -1.196421,-18.8362 z"
@@ -12444,7 +12504,10 @@
        id="path6508"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssscccccccc"
-       clip-path="url(#clipPath6605)" />
+       clip-path="url(#clipPath6605)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:1;vector-effect:none;fill:url(#linearGradient6619);fill-opacity:1;stroke:none;stroke-width:1.08300006;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect6611"
@@ -12452,35 +12515,53 @@
        height="5.5614028"
        x="-12.140733"
        y="386.47803"
-       ry="0.35867712" />
+       ry="0.35867712"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        inkscape:connector-curvature="0"
        id="path6609"
        d="m -10.265858,383.25914 -1.858804,3.21892 v 5.08185 c 0,0.30107 0.242054,0.54364 0.543121,0.54364 h 9.6536738 c 0.301067,0 0.5436359,-0.24257 0.5436359,-0.54364 v -5.08132 l -1.8588011,-3.21945 z"
-       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.44800001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.44800001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <circle
        style="opacity:1;vector-effect:none;fill:#469e1f;fill-opacity:1;stroke:#000000;stroke-width:0.26999235;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path5845"
        cx="-9.585474"
        cy="389.4368"
-       r="1.6899192" />
+       r="1.6899192"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <circle
        r="1.371879"
        cy="389.4368"
        cx="-9.585474"
        id="circle5847"
-       style="opacity:1;vector-effect:none;fill:#6ec532;fill-opacity:1;stroke:#000000;stroke-width:0.13396077;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:#6ec532;fill-opacity:1;stroke:#000000;stroke-width:0.13396077;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <circle
        style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.074;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle5849"
        cx="-9.585474"
        cy="389.4368"
-       r="0.75640863" />
+       r="0.75640863"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        inkscape:connector-curvature="0"
        style="opacity:0.60700001;vector-effect:none;fill:url(#linearGradient6682);fill-opacity:1;stroke:none;stroke-width:1.08300006;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m -5.1945068,383.4984 0.014986,0.0403 c 0.00838,0.022 0.1307786,0.56947 0.2718181,1.21648 0.1719705,0.78893 0.2563151,1.21102 0.2563151,1.28209 0,0.0766 -0.011345,0.12883 -0.041341,0.18809 l -0.041341,0.0822 h 1.4913819 1.4913818 l -0.033073,-0.0574 c -0.018374,-0.0314 -0.3836273,-0.66299 -0.8113199,-1.40406 l -0.7777303,-1.34771 h -0.9105387 z m -4.9428512,0 -0.803568,1.39216 c -0.441748,0.76581 -0.803052,1.39771 -0.803052,1.40406 v 0 c 0,0.006 0.672768,0.0119 1.494999,0.0119 1.4343325,0 1.4938114,-0.003 1.4665776,-0.0315 -0.045515,-0.0503 -0.082166,-0.15489 -0.082166,-0.23358 0,-0.0645 0.5055775,-2.43589 0.5358844,-2.51354 0.011324,-0.0277 -0.038663,-0.03 -0.898653,-0.03 z"
-       id="path6671" />
+       id="path6671"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.75280857"
        y="380.65945"
@@ -13107,7 +13188,10 @@
     </g>
     <g
        transform="translate(22.224964,-6.1938217)"
-       id="g7834">
+       id="g7834"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329">
       <path
          sodipodi:nodetypes="sssssssss"
          inkscape:connector-curvature="0"
@@ -13131,7 +13215,10 @@
        height="18.819847"
        x="8.7641821"
        y="379.57043"
-       ry="0.52642125" />
+       ry="0.52642125"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.52642125"
        y="379.57043"
@@ -13139,7 +13226,10 @@
        height="18.819847"
        width="13.412653"
        id="rect7838"
-       style="opacity:1;vector-effect:none;fill:#6ec532;fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:#6ec532;fill-opacity:1;stroke:#000000;stroke-width:0.244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.17073418"
        y="381.66074"
@@ -13147,7 +13237,10 @@
        height="1.6830322"
        width="1.2968041"
        id="rect7840"
-       style="opacity:1;vector-effect:none;fill:url(#linearGradient7894);fill-opacity:1;stroke:#000000;stroke-width:0.30599999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient7894);fill-opacity:1;stroke:#000000;stroke-width:0.30599999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.40421391"
        y="379.69077"
@@ -13155,7 +13248,10 @@
        height="2.3306994"
        width="13.162974"
        id="rect7842"
-       style="opacity:0.47099998;vector-effect:none;fill:url(#linearGradient7896);fill-opacity:1;stroke:none;stroke-width:0.31727055;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:0.47099998;vector-effect:none;fill:url(#linearGradient7896);fill-opacity:1;stroke:none;stroke-width:0.31727055;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0"
        y="395.58981"
@@ -13163,27 +13259,42 @@
        height="2.6716015"
        width="8.7145195"
        id="rect7844"
-       style="opacity:1;vector-effect:none;fill:url(#linearGradient7898);fill-opacity:1;stroke:none;stroke-width:0.2564941;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient7898);fill-opacity:1;stroke:none;stroke-width:0.2564941;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        y="392.12283"
        x="11.041899"
        height="1.8609179"
        width="8.8130255"
        id="rect7846"
-       style="opacity:0.47099998;vector-effect:none;fill:url(#linearGradient7900);fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:0.47099998;vector-effect:none;fill:url(#linearGradient7900);fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        style="opacity:0.60700001;vector-effect:none;fill:url(#linearGradient7902);fill-opacity:1;stroke:none;stroke-width:0.02482769;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 21.836,398.20098 c 0.04973,-0.0288 0.113967,-0.0943 0.142759,-0.14555 l 0.05235,-0.0932 -3.97e-4,-8.98424 -3.96e-4,-8.98425 -0.05545,-0.0967 c -0.107772,-0.18796 -0.112616,-0.18878 -1.128865,-0.18878 H 19.94561 v 2.38429 2.38429 l 0.558623,0.96608 0.558624,0.96604 v 2.64528 c 0,2.55146 -0.0017,2.64972 -0.04783,2.77114 -0.131878,0.34706 -0.423398,0.52017 -0.876013,0.52017 h -0.193406 v 2.9545 2.95449 h 0.900004 c 0.870218,0 0.902996,-0.003 0.990413,-0.053 z"
        id="path7848"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        inkscape:connector-curvature="0"
        id="path7850"
        d="m 9.095872,398.20098 c -0.04972,-0.0288 -0.113966,-0.0943 -0.142759,-0.14555 l -0.05235,-0.0932 3.97e-4,-8.98424 3.97e-4,-8.98425 0.05545,-0.0967 c 0.107772,-0.18796 0.112616,-0.18878 1.128864,-0.18878 h 0.900391 v 2.38429 2.38429 l -0.558623,0.96608 -0.558623,0.96604 v 2.64528 c 0,2.55146 0.0017,2.64972 0.04783,2.77114 0.131878,0.34706 0.423398,0.52017 0.876013,0.52017 h 0.193405 v 2.9545 2.95449 h -0.900003 c -0.870218,0 -0.902997,-0.003 -0.990414,-0.053 z"
-       style="opacity:0.60700001;vector-effect:none;fill:url(#linearGradient7904);fill-opacity:1;stroke:none;stroke-width:0.02482769;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:0.60700001;vector-effect:none;fill:url(#linearGradient7904);fill-opacity:1;stroke:none;stroke-width:0.02482769;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <g
        id="g7856"
-       transform="translate(22.224956)">
+       transform="translate(22.224956)"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329">
       <path
          style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.46397522;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
          d="m -11.099293,379.42699 v 19.02953"
@@ -13199,19 +13310,28 @@
        inkscape:connector-curvature="0"
        id="path7858"
        d="m 11.959098,383.25914 -1.858804,3.21892 v 5.08185 c 0,0.30107 0.242054,0.54364 0.543121,0.54364 h 9.653674 c 0.301067,0 0.543636,-0.24257 0.543636,-0.54364 v -5.08132 l -1.858801,-3.21945 z"
-       style="opacity:1;vector-effect:none;fill:#6ec532;fill-opacity:1;stroke:#000000;stroke-width:0.44800001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:#6ec532;fill-opacity:1;stroke:#000000;stroke-width:0.44800001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        sodipodi:nodetypes="sssssssss"
        inkscape:connector-curvature="0"
        id="path7860"
        d="m 14.364462,383.29221 c -0.194519,0 -0.309533,0.16081 -0.350883,0.35089 l -0.496554,2.28253 c -0.04151,0.19082 0.0032,0.35089 0.294907,0.35089 h 3.317328 c 0.291684,0 0.336418,-0.16007 0.294907,-0.35089 l -0.496554,-2.28253 c -0.04135,-0.19008 -0.156364,-0.35089 -0.350883,-0.35089 z"
-       style="opacity:1;vector-effect:none;fill:#41741d;fill-opacity:1;stroke:#000000;stroke-width:0.27399999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:#41741d;fill-opacity:1;stroke:#000000;stroke-width:0.27399999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        sodipodi:nodetypes="sssssssss"
        inkscape:connector-curvature="0"
        id="path7862"
        d="m 15.245367,377.8021 c -0.06972,0 -0.122852,0.0673 -0.125688,0.15053 l -0.124139,3.6417 c -0.0038,0.11271 0.07577,0.20369 0.170151,0.20369 h 0.60981 c 0.09438,0 0.173993,-0.091 0.170151,-0.20369 l -0.124139,-3.6417 c -0.0028,-0.0832 -0.05579,-0.15053 -0.125688,-0.15053 z"
-       style="opacity:1;vector-effect:none;fill:url(#linearGradient7906);fill-opacity:1;stroke:#000000;stroke-width:0.21699999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient7906);fill-opacity:1;stroke:#000000;stroke-width:0.21699999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:1;vector-effect:none;fill:url(#linearGradient7908);fill-opacity:1;stroke:#000000;stroke-width:0.206;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect7864"
@@ -13219,7 +13339,10 @@
        height="1.6830322"
        x="14.822107"
        y="381.66074"
-       ry="0.17073418" />
+       ry="0.17073418"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.24576977"
        y="383.36249"
@@ -13227,7 +13350,10 @@
        height="2.4227045"
        width="2.4227045"
        id="rect7866"
-       style="opacity:1;vector-effect:none;fill:url(#linearGradient7910);fill-opacity:1;stroke:#000000;stroke-width:0.17399999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient7910);fill-opacity:1;stroke:#000000;stroke-width:0.17399999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.17073418"
        y="377.04181"
@@ -13235,13 +13361,19 @@
        height="1.6830322"
        width="1.2968041"
        id="rect7868"
-       style="opacity:1;vector-effect:none;fill:url(#linearGradient7912);fill-opacity:1;stroke:#000000;stroke-width:0.206;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient7912);fill-opacity:1;stroke:#000000;stroke-width:0.206;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path7870"
        d="M 10.058775,386.45231 H 20.732718"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.45149767"
        y="392.9259"
@@ -13249,7 +13381,10 @@
        height="3.3969829"
        width="1.580938"
        id="rect7872"
-       style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.338;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.338;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.338;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect7874"
@@ -13257,7 +13392,10 @@
        height="3.3969829"
        x="13.721631"
        y="392.9259"
-       ry="0.45149767" />
+       ry="0.45149767"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.35867783"
        y="394.70752"
@@ -13265,7 +13403,10 @@
        height="1.6419801"
        width="1.6341856"
        id="rect7876"
-       style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.338;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.338;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        clip-path="url(#clipPath6605)"
        sodipodi:nodetypes="csssscccccccc"
@@ -13273,7 +13414,10 @@
        id="path7878"
        transform="matrix(0.26458333,0,0,0.26458333,22.224964,111.39098)"
        d="m -46.721591,1040.1169 -1.149503,18.7893 c -0.136473,2.2307 1.858507,4.1055 4.095703,4.1055 h 36.4902348 c 2.2371972,0 4.1035156,-1.8683 4.1035156,-4.1055 l -1.2607021,-18.5078 -1.7753104,-0.2654 -1.0616438,18.7732 -0.00586,0.01 H -43.775391 l -0.0059,-0.01 -1.196421,-18.8362 z"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#1c740f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.09322882;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter6599);color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#1c740f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.09322882;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter6599);color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <rect
        ry="0.35867712"
        y="386.47803"
@@ -13281,34 +13425,52 @@
        height="5.5614028"
        width="10.675908"
        id="rect7880"
-       style="opacity:1;vector-effect:none;fill:url(#linearGradient7914);fill-opacity:1;stroke:none;stroke-width:1.08300006;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:url(#linearGradient7914);fill-opacity:1;stroke:none;stroke-width:1.08300006;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.44800001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 11.959098,383.25914 -1.858804,3.21892 v 5.08185 c 0,0.30107 0.242054,0.54364 0.543121,0.54364 h 9.653674 c 0.301067,0 0.543636,-0.24257 0.543636,-0.54364 v -5.08132 l -1.858801,-3.21945 z"
        id="path7882"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <circle
        r="1.6899192"
        cy="389.4368"
        cx="12.639482"
        id="circle7884"
-       style="opacity:1;vector-effect:none;fill:#469e1f;fill-opacity:1;stroke:#000000;stroke-width:0.26999235;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:#469e1f;fill-opacity:1;stroke:#000000;stroke-width:0.26999235;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <circle
        style="opacity:1;vector-effect:none;fill:#6ec532;fill-opacity:1;stroke:#000000;stroke-width:0.13396077;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle7886"
        cx="12.639482"
        cy="389.4368"
-       r="1.371879" />
+       r="1.371879"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <circle
        r="0.75640863"
        cy="389.4368"
        cx="12.639482"
        id="circle7888"
-       style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.074;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:#226c0a;fill-opacity:1;stroke:#000000;stroke-width:0.074;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
     <path
        id="path7890"
        d="m 17.030449,383.4984 0.01499,0.0403 c 0.0084,0.022 0.130779,0.56947 0.271818,1.21648 0.171971,0.78893 0.256315,1.21102 0.256315,1.28209 0,0.0766 -0.01135,0.12883 -0.04134,0.18809 l -0.04134,0.0822 h 1.491382 1.491382 l -0.03307,-0.0574 c -0.01837,-0.0314 -0.383627,-0.66299 -0.81132,-1.40406 l -0.77773,-1.34771 h -0.910539 z m -4.942851,0 -0.803568,1.39216 c -0.441748,0.76581 -0.803052,1.39771 -0.803052,1.40406 v 0 c 0,0.006 0.672768,0.0119 1.494999,0.0119 1.434333,0 1.493811,-0.003 1.466578,-0.0315 -0.04551,-0.0503 -0.08217,-0.15489 -0.08217,-0.23358 0,-0.0645 0.505577,-2.43589 0.535884,-2.51354 0.01132,-0.0277 -0.03866,-0.03 -0.898653,-0.03 z"
        style="opacity:0.60700001;vector-effect:none;fill:url(#linearGradient7916);fill-opacity:1;stroke:none;stroke-width:1.08300006;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/vit/ProjectG70/godot/goTanks/game/textures/tanks.png"
+       inkscape:export-xdpi="329"
+       inkscape:export-ydpi="329" />
   </g>
 </svg>

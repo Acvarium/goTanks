@@ -83,7 +83,7 @@ tracks/0/keys = {
 "values": [ Vector2( 252, -108 ), Vector2( 262, 572 ), Vector2( 262, 379 ) ]
 }
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -123,7 +123,6 @@ max_lines_visible = -1
 
 [node name="bg" type="CanvasLayer" parent="." index="5"]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -144,6 +143,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 3 )
 stretch_mode = 0
+_sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -460,6 +460,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="UI" type="CanvasLayer" parent="." index="15"]
 
+editor/display_folded = true
 layer = 6
 offset = Vector2( 0, 0 )
 rotation = 0.0
