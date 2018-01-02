@@ -44,6 +44,8 @@ func _on_Area2D_body_enter( body ):
 					main_node.grenade()
 				elif type == 4:
 					main_node.protect()
+				elif type == 5:
+					main_node.froze()
 
 func disappear():
 	value -= 1

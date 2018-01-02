@@ -21,6 +21,7 @@ var level = 0
 var max_fire_timeout = 1
 var max_step_timeout = 3
 var bullet_speed = 350
+export var frozen = false
 
 var speed = 0
 var max_speed = 150
@@ -113,6 +114,8 @@ func set_type(t):
 	type = t
 
 func fire():
+	if frozen:
+		return
 	if bullets_in_air < max_bullets and loaded:
 		bullets_in_air += 1
 		$sounds/fire.play()
@@ -129,8 +132,8 @@ func fire():
 func hit():
 	if invincible:
 		$sounds/hit2.play()
-		
 		return
+		
 	life -= 1
 	if life <= 0:
 		dead = true
@@ -141,7 +144,7 @@ func hit():
 
 func _physics_process(delta):
 	
-	if dead:
+	if dead or frozen:
 		return
 	direction = Vector2()
 	if Input.is_action_pressed("ui_up") and type == 1 or randDir == 0 and type == 0 or Input.is_action_pressed("p2_up") and type == 2:

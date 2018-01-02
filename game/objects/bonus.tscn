@@ -31,9 +31,9 @@ extents = Vector2( 64, 64 )
 modulate = Color( 0, 1, 0.15625, 0.872808 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
-hframes = 5
+hframes = 6
 script = ExtResource( 2 )
-_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+_sections_unfolded = [ "Animation", "Material", "Transform", "Visibility" ]
 type = 0
 
 [node name="anim" type="AnimationPlayer" parent="." index="0"]

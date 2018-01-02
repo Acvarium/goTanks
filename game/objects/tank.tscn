@@ -165,6 +165,7 @@ type = 0
 lavel = 0
 life = 1
 invincible = false
+frozen = false
 
 [node name="tracksAnim" type="AnimationPlayer" parent="." index="0"]
 

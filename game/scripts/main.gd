@@ -15,6 +15,8 @@ var killed = 0
 var main_bonuses_at = []
 var main_bonus_selected = -1
 var max_bots_on_screen = 6
+var debug_on = false
+var frozen = false
 
 # Bonuses:
 # 1 life
@@ -66,6 +68,8 @@ func _ready():
 func _input(event):
 	if Input.is_action_pressed("menu"):
 		global.goto_scene("res://scenes/menu.tscn")
+	if Input.is_action_pressed("debug_disp"):
+		debug_on = !debug_on
 
 func shuffleList(list):
     var shuffledList = [] 
@@ -75,7 +79,6 @@ func shuffleList(list):
         shuffledList.append(list[indexList[x]])
         indexList.remove(x)
     return shuffledList
-
 
 #????????????????????????????
 func set_level(l):
@@ -122,12 +125,34 @@ func is_cell_vacant(tank):
 			if cell != null:
 				if cell != tank:
 					return false
+	if debug_on:
+		var ta = ""
+		for x in range(world.size()):
+			for y in range(world[0].size()):
+				if world[y][x]:
+					ta += '[' + world[y][x].get_name()[-1] + ']'
+				else:
+					ta += '[ ]'
+			ta += '\n'
+		$debug.text = ta
+	else:
+		$debug.text = ''
+
 	return true
 
 func grenade():
 	for t in get_node("tanks").get_children():
 		if t.type == 0:
 			kill_tank(t)
+
+func froze():
+	for t in get_node("tanks").get_children():
+		if t.type == 0:
+			t.frozen = true
+	$timers/frozen.start()
+	frozen = true
+
+
 
 func kill_tank(tank):
 	var tank_type = tank.type
@@ -215,6 +240,8 @@ func spawn(t):
 	tank.set_type(t)
 	tank.set_name("tank")
 	tank.shild(2)
+	if frozen:
+		tank.frozen = true
 	if t > 0:
 		tank.set_level(global.player_level[t - 1])
 	else:
@@ -341,7 +368,7 @@ func spawn_bonus(type):
 	$sounds/bonus2.play()
 
 func _on_spawn_bonus_timeout():
-	spawn_bonus(randi()%3 + 2)
+	spawn_bonus(randi()%4 + 2)
 	$timers/spawn_bonus.set_wait_time(randf() * 50 + 15)
 
 func _on_end_timeout():
@@ -356,3 +383,11 @@ func _on_main_bonus_timeout():
 	if main_bonus_selected != -1:
 		spawn_bonus(main_bonus_selected)
 		main_bonus_selected = -1
+
+
+func _on_frozen_timeout():
+	for t in get_node("tanks").get_children():
+		if t.type == 0:
+			t.frozen = false
+	frozen = false
+
