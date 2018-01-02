@@ -181,8 +181,9 @@ func _physics_process(delta):
 	elif is_moving:
 #------ Play animation
 		var anim_name = "bot" + "%02d" % level 
-		if type == 1:
+		if type > 0:
 			anim_name = "tracks" +  "%02d" % type 
+			print(anim_name)
 			$sounds/engine.stop()
 			if !$sounds/engine2.playing:
 				$sounds/engine2.play()

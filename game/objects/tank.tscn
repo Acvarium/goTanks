@@ -104,13 +104,6 @@ tracks/0/keys = {
 "values": [ 8, 9 ]
 }
 
-[sub_resource type="Animation" id=2]
-
-resource_name = "tracks00"
-length = 1.0
-loop = false
-step = 0.1
-
 [sub_resource type="Animation" id=3]
 
 resource_name = "tracks01"
@@ -128,6 +121,25 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 2, 3 ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "tracks02"
+length = 0.2
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 5 ]
 }
 
 [sub_resource type="RectangleShape2D" id=4]
@@ -153,7 +165,7 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[node name="tank" type="KinematicBody2D"]
+[node name="tank" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 5
@@ -177,8 +189,8 @@ anims/bot01 = SubResource( 1 )
 anims/bot02 = SubResource( 7 )
 anims/bot03 = SubResource( 8 )
 anims/bot04 = SubResource( 9 )
-anims/tracks00 = SubResource( 2 )
 anims/tracks01 = SubResource( 3 )
+anims/tracks02 = SubResource( 2 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -289,7 +301,7 @@ scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 vframes = 5
 hframes = 2
-frame = 9
+frame = 5
 _sections_unfolded = [ "Animation", "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -301,6 +313,7 @@ position = Vector2( 0, -136 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
 
+visible = false
 shape = SubResource( 4 )
 
 [node name="Label" type="Label" parent="." index="5"]

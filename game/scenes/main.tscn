@@ -101,7 +101,7 @@ tracks/0/keys = {
 "values": [ Vector2( 252, -108 ), Vector2( 262, 572 ), Vector2( 262, 379 ) ]
 }
 
-[node name="main" type="Node2D" index="0"]
+[node name="main" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -210,6 +210,8 @@ shape = SubResource( 1 )
 
 [node name="spawn_points" type="Node2D" parent="." index="7"]
 
+editor/display_folded = true
+
 [node name="point00" type="PinJoint2D" parent="spawn_points" index="0"]
 
 position = Vector2( 324, 900 )
@@ -256,6 +258,8 @@ disable_collision = true
 softness = 0.0
 
 [node name="timers" type="Node2D" parent="." index="8"]
+
+editor/display_folded = true
 
 [node name="protected" type="Timer" parent="timers" index="0"]
 
