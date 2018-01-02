@@ -15,7 +15,7 @@ var killed = 0
 var main_bonuses_at = []
 var main_bonus_selected = -1
 var max_bots_on_screen = 6
-var debug_on = false
+
 var frozen = false
 
 # Bonuses:
@@ -35,7 +35,6 @@ func _ready():
 		for j in range(global.levels_data[level][i]):
 			bots.append(i)
 	bots = shuffleList(bots)
-	print(bots)
 	grid = get_node("grids/grid")
 	set_level(level)
 	for x in range(world_size):
@@ -58,18 +57,17 @@ func _ready():
 		main_bonuses_at.append(randi() % (bots.size() - 2) + 1)
 		while(main_bonuses_at[1] == main_bonuses_at[0]):
 			main_bonuses_at[1]  = randi() % (bots.size() - 2) + 1
-		print(main_bonuses_at[0],' ', main_bonuses_at[1])
 	else:
 		main_bonuses_at.append(-1)
 		main_bonuses_at.append(-1)
 		
 	$sounds/start.play()
-		
+
 func _input(event):
 	if Input.is_action_pressed("menu"):
 		global.goto_scene("res://scenes/menu.tscn")
 	if Input.is_action_pressed("debug_disp"):
-		debug_on = !debug_on
+		global.debug_on = !global.debug_on
 
 func shuffleList(list):
     var shuffledList = [] 
@@ -123,14 +121,18 @@ func is_cell_vacant(tank):
 				return false
 			var cell = world[grid_pos.x + x - 1][grid_pos.y + y - 1]
 			if cell != null:
-				if cell != tank:
+				if cell.get_ref() != tank:
 					return false
-	if debug_on:
+	if global.debug_on:
 		var ta = ""
 		for x in range(world.size()):
 			for y in range(world[0].size()):
 				if world[y][x]:
-					ta += '[' + world[y][x].get_name()[-1] + ']'
+					if world[y][x].get_ref():
+						ta += '[' + world[y][x].get_ref().get_name()[-1] + ']'
+					else:
+						ta += '[ ]'
+						
 				else:
 					ta += '[ ]'
 			ta += '\n'
@@ -255,8 +257,9 @@ func remove_tank(tank):
 	var grid_pos = world_to_map(tank.position)
 	for x in range(world_size):
 		for y in range(world_size):
-			if world[x][y] == tank:
-				world[x][y] = null
+			if world[x][y]:
+				if world[x][y].get_ref() == tank:
+					world[x][y] = null
 
 func update_tank_pos(tank):
 	remove_tank(tank)
@@ -264,7 +267,7 @@ func update_tank_pos(tank):
 	var new_grid_pos = grid_pos + tank.direction
 	for x in range(2):
 		for y in range(2):
-			world[new_grid_pos.x + x - 1][new_grid_pos.y + y - 1] = tank
+			world[new_grid_pos.x + x - 1][new_grid_pos.y + y - 1] = weakref(tank)
 	
 	var target_pos = map_to_world(new_grid_pos) 
 
@@ -279,7 +282,7 @@ func map_to_world(cell):
 	var pos = Vector2(cell.x * cell_size, cell.y * cell_size)
 	return pos
 	
-func bullet_hit(pos, direction, owner, is_grid):
+func bullet_hit(pos, direction, is_grid):
 	var not_water = true
 	var shift = Vector2(0.5,0)
 #	var tail_set = grid.tile_set
@@ -359,7 +362,6 @@ func play_sound(sound):
 		$sounds/bonus.play()
 
 func spawn_bonus(type):
-	print(type)
 	var bonus = bonusObj.instance()
 	bonus.position = Vector2(randf() * 864 + 36, randf() * 864 + 36)
 	bonus.set_type(type)

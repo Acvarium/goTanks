@@ -26,10 +26,9 @@ func set_direction(dir):
 		rotation = PI * 1.5
 		
 func set_owner(own):
-	owner = own
-	owner_type = owner.type
-	owner_name = owner.get_name()
-	wr = weakref(owner)
+	owner = weakref(own)
+	owner_type = owner.get_ref().type
+	owner_name = owner.get_ref().get_name()
 
 	
 func _physics_process(delta):
@@ -73,10 +72,9 @@ func _on_bullet_body_entered( body ):
 		free_bullet()
 
 func free_bullet():
-	if main_node.bullet_hit(position, direction, owner, is_grid) or !is_grid:
-		if owner:
-			if (wr.get_ref()):
-				owner.free_bullet()
+	if main_node.bullet_hit(position, direction, is_grid) or !is_grid:
+		if owner.get_ref():
+			owner.get_ref().free_bullet()
 		queue_free()
 
 func _on_bullet_area_enter( area ):

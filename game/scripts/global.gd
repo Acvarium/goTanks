@@ -2,6 +2,7 @@ extends Node
 var current_scene = null
 var level = 0
 var go = false
+var debug_on = false
 
 var player_level = [0,0]
 var player_lifes = [1,0]

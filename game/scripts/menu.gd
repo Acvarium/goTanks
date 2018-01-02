@@ -2,6 +2,7 @@ extends Node2D
 var global
 var buttonObj = load("res://objects/level_button.tscn") 
 
+
 func _ready():
 	global = get_node("/root/global")
 	for i in range(global.levels_data.size()):
