@@ -1,21 +1,22 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://levels/level00.tscn" type="PackedScene" id=2]
-[ext_resource path="res://textures/bg.jpg" type="Texture" id=3]
-[ext_resource path="res://textures/bird.png" type="Texture" id=4]
-[ext_resource path="res://sounds/explosion02.ogg" type="AudioStream" id=5]
-[ext_resource path="res://sounds/victory.ogg" type="AudioStream" id=6]
-[ext_resource path="res://sounds/hit.ogg" type="AudioStream" id=7]
-[ext_resource path="res://sounds/up01.ogg" type="AudioStream" id=8]
-[ext_resource path="res://sounds/up02.ogg" type="AudioStream" id=9]
-[ext_resource path="res://sounds/failure.ogg" type="AudioStream" id=10]
-[ext_resource path="res://sounds/start.ogg" type="AudioStream" id=11]
-[ext_resource path="res://tilesets/walls.tres" type="TileSet" id=12]
-[ext_resource path="res://textures/water_anim0.png" type="Texture" id=13]
-[ext_resource path="res://textures/water_anim1.png" type="Texture" id=14]
-[ext_resource path="res://textures/water_anim2.png" type="Texture" id=15]
-[ext_resource path="res://fonts/04B_08_0.TTF" type="DynamicFontData" id=16]
+[ext_resource path="res://textures/bg.png" type="Texture" id=3]
+[ext_resource path="res://textures/tanks.png" type="Texture" id=4]
+[ext_resource path="res://fonts/04B_08_0.TTF" type="DynamicFontData" id=5]
+[ext_resource path="res://textures/bird.png" type="Texture" id=6]
+[ext_resource path="res://sounds/explosion02.ogg" type="AudioStream" id=7]
+[ext_resource path="res://sounds/victory.ogg" type="AudioStream" id=8]
+[ext_resource path="res://sounds/hit.ogg" type="AudioStream" id=9]
+[ext_resource path="res://sounds/up01.ogg" type="AudioStream" id=10]
+[ext_resource path="res://sounds/up02.ogg" type="AudioStream" id=11]
+[ext_resource path="res://sounds/failure.ogg" type="AudioStream" id=12]
+[ext_resource path="res://sounds/start.ogg" type="AudioStream" id=13]
+[ext_resource path="res://tilesets/walls.tres" type="TileSet" id=14]
+[ext_resource path="res://textures/water_anim0.png" type="Texture" id=15]
+[ext_resource path="res://textures/water_anim1.png" type="Texture" id=16]
+[ext_resource path="res://textures/water_anim2.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -26,6 +27,14 @@ extents = Vector2( 720, 36 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 36, 576 )
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 38
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Resource" ]
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -53,7 +62,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ]
+"values": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ]
 }
 
 [sub_resource type="DynamicFont" id=6]
@@ -61,7 +70,7 @@ tracks/0/keys = {
 size = 16
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 16 )
+font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font" ]
 
 [sub_resource type="Animation" id=7]
@@ -130,7 +139,6 @@ scale = Vector2( 1, 1 )
 
 [node name="bg" type="TextureRect" parent="bg" index="0"]
 
-modulate = Color( 1, 1, 1, 0.501961 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -147,6 +155,16 @@ _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Sprite" type="Sprite" parent="bg" index="1"]
+
+position = Vector2( 1008, 864 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 4 )
+vframes = 5
+hframes = 2
+frame = 3
+_sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="walls" type="StaticBody2D" parent="." index="6"]
 
@@ -274,18 +292,21 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 108.0
-margin_top = 900.0
-margin_right = 148.0
-margin_bottom = 914.0
+margin_left = 1058.0
+margin_top = 872.0
+margin_right = 1145.0
+margin_bottom = 911.0
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 8 )
 text = "000"
+align = 2
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
 [node name="player2_lifes" type="Label" parent="." index="10"]
 
@@ -311,7 +332,7 @@ max_lines_visible = -1
 editor/display_folded = true
 position = Vector2( 468, 900 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="bird" type="Area2D" parent="bird" index="0"]
@@ -348,7 +369,7 @@ editor/display_folded = true
 
 [node name="explosion" type="AudioStreamPlayer" parent="sounds" index="0"]
 
-stream = ExtResource( 5 )
+stream = ExtResource( 7 )
 volume_db = -10.0
 autoplay = false
 mix_target = 0
@@ -356,7 +377,7 @@ bus = "Master"
 
 [node name="victory" type="AudioStreamPlayer" parent="sounds" index="1"]
 
-stream = ExtResource( 6 )
+stream = ExtResource( 8 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
@@ -364,7 +385,7 @@ bus = "Master"
 
 [node name="hit" type="AudioStreamPlayer" parent="sounds" index="2"]
 
-stream = ExtResource( 7 )
+stream = ExtResource( 9 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
@@ -372,7 +393,7 @@ bus = "Master"
 
 [node name="bonus" type="AudioStreamPlayer" parent="sounds" index="3"]
 
-stream = ExtResource( 8 )
+stream = ExtResource( 10 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
@@ -380,7 +401,7 @@ bus = "Master"
 
 [node name="bonus2" type="AudioStreamPlayer" parent="sounds" index="4"]
 
-stream = ExtResource( 9 )
+stream = ExtResource( 11 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
@@ -388,7 +409,7 @@ bus = "Master"
 
 [node name="failure" type="AudioStreamPlayer" parent="sounds" index="5"]
 
-stream = ExtResource( 10 )
+stream = ExtResource( 12 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
@@ -396,7 +417,7 @@ bus = "Master"
 
 [node name="start" type="AudioStreamPlayer" parent="sounds" index="6"]
 
-stream = ExtResource( 11 )
+stream = ExtResource( 13 )
 volume_db = -10.0
 autoplay = false
 mix_target = 0
@@ -407,7 +428,7 @@ bus = "Master"
 editor/display_folded = true
 visible = false
 mode = 0
-tile_set = ExtResource( 12 )
+tile_set = ExtResource( 14 )
 cell_size = Vector2( 36, 36 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
