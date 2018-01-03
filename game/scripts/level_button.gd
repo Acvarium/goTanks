@@ -4,11 +4,11 @@ var main_node
 
 func _ready():
 	main_node = get_node("/root/main")
-	$Button.text = str(level)
+	$Button.text = str(level + 1)
 	
 func set_level(l):
 	level = l
-	$Button.text = str(level)
+	$Button.text = str(level + 1)
 	
 func _on_Button_pressed():
 	global.level = level

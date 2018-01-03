@@ -15,7 +15,7 @@ func _ready():
 	else:
 		global.level += 1
 		global.level %= global.levels_data.size()
-		get_node("message").set_text("NEXT LEVEL " + str(global.level))
+		get_node("message").set_text("NEXT LEVEL " + str(global.level + 1))
 		
 	get_node("load_level").start()
 

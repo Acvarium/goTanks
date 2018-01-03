@@ -43,7 +43,6 @@ func _on_bullet_body_entered( body ):
 #
 #If owner is a BOT
 	if owner_type == 0:
-		
 		if body.get_parent() == main_node.get_node("tanks"):
 			return
 		elif body.get_parent() == main_node.get_node("players"):

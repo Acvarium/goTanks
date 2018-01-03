@@ -137,6 +137,7 @@ func hit():
 	life -= 1
 	if life <= 0:
 		dead = true
+#		print("hit " + get_name())
 		main_node.kill_tank(self)
 	else:
 		pass
@@ -183,10 +184,10 @@ func _physics_process(delta):
 		var anim_name = "bot" + "%02d" % level 
 		if type > 0:
 			anim_name = "tracks" +  "%02d" % type 
-			print(anim_name)
-			$sounds/engine.stop()
-			if !$sounds/engine2.playing:
-				$sounds/engine2.play()
+			if type == 1:
+				$sounds/engine.stop()
+				if !$sounds/engine2.playing:
+					$sounds/engine2.play()
 		if !$tracksAnim.is_playing():
 			$tracksAnim.play(anim_name)
 			

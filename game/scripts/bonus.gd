@@ -30,22 +30,21 @@ func _on_Timer_timeout():
 
 func _on_Area2D_body_enter( body ):
 	if value > 0:
-		if body.get_parent() == main_node.get_node("tanks"):
-			if body.type > 0:
-				main_node.play_sound("up")
-				disappear()
-				if type == 0:
-					main_node.set_player_lifes(global.player_lifes[body.type - 1] + 1, body.type)
-				elif type == 1:
-					body.set_level(global.player_level[body.type - 1] + 1)
-				elif type == 2:
-					body.shild(10)
-				elif type == 3:
-					main_node.grenade()
-				elif type == 4:
-					main_node.protect()
-				elif type == 5:
-					main_node.froze()
+		if body.get_parent() == main_node.get_node("players"):
+			main_node.play_sound("up")
+			disappear()
+			if type == 0:
+				main_node.set_player_lifes(global.player_lifes[body.type - 1] + 1, body.type)
+			elif type == 1:
+				body.set_level(global.player_level[body.type - 1] + 1)
+			elif type == 2:
+				body.shild(10)
+			elif type == 3:
+				main_node.grenade()
+			elif type == 4:
+				main_node.protect()
+			elif type == 5:
+				main_node.froze()
 
 func disappear():
 	value -= 1

@@ -1,6 +1,6 @@
 extends Node2D
 var grid
-var cell_size = 36
+const cell_size = 36
 var explosionObj = load("res://objects/explosion.tscn")
 var tankObj = load("res://objects/tank.tscn")
 var bonusObj = load("res://objects/bonus.tscn")
@@ -47,11 +47,11 @@ func _ready():
 	if global.player_lifes[1] > 0:
 		spawn(2)
 	else:
-		$player2_lifes.hide()
+		$UI/p2.hide()
 	for t in get_node("tanks").get_children():
 		update_tank_pos(t)
-	get_node("player1_lifes").set_text(str(global.player_lifes[0]))
-	get_node("player2_lifes").set_text(str(global.player_lifes[1]))
+	$UI/p1/player_lifes.set_text(str(global.player_lifes[0]))
+	$UI/p2/player_lifes.set_text(str(global.player_lifes[1]))
 	if bots.size() > 5:
 		main_bonuses_at.append(randi() % (bots.size() - 2) + 1)
 		main_bonuses_at.append(randi() % (bots.size() - 2) + 1)
@@ -105,10 +105,10 @@ func is_spawn_point_vacant(point):
 func set_player_lifes(l, player):
 	if player == 1:
 		global.player_lifes[0] = l
-		get_node("player1_lifes").set_text(str(global.player_lifes[0]))
+		$UI/p1/player_lifes.set_text(str(global.player_lifes[0]))
 	elif player == 2:
 		global.player_lifes[1] = l
-		get_node("player2_lifes").set_text(str(global.player_lifes[1]))
+		$UI/p2/player_lifes.set_text(str(global.player_lifes[1]))
 		
 func is_cell_vacant(tank):
 	var direction = tank.direction
@@ -144,35 +144,33 @@ func is_cell_vacant(tank):
 
 func grenade():
 	for t in get_node("tanks").get_children():
-		if t.type == 0:
-			kill_tank(t)
+		kill_tank(t)
 
 func froze():
 	for t in get_node("tanks").get_children():
-		if t.type == 0:
-			t.frozen = true
+		t.frozen = true
 	$timers/frozen.start()
 	frozen = true
 
-
-
 func kill_tank(tank):
+#	print("kill " + tank.get_name())
 	var tank_type = tank.type
 	if tank.type > 0:
 		global.player_lifes[tank.type - 1] -= 1
 		global.player_level[tank.type - 1] = 0
 		if global.player_lifes[tank_type - 1] <= 0:
 			global.player_lifes[tank_type - 1] = 0
+		else:
+			spawn(tank_type)
 		
 		if global.player_lifes[0] <= 0 and  global.player_lifes[1] <= 0:
-			global.player_lifes[0] = 0
 			global.go = true
-			$timers/end.start()				#Додати звук поразки
+			$timers/end.start()
 			$UI/end_anim.play("game_over")
 			$sounds/failure.play()
 	
-		$player1_lifes.set_text(str(global.player_lifes[0]))
-		$player2_lifes.set_text(str(global.player_lifes[1]))
+		$UI/p1/player_lifes.set_text(str(global.player_lifes[0]))
+		$UI/p2/player_lifes.set_text(str(global.player_lifes[1]))
 	elif tank.type == 0:
 		killed += 1
 			
@@ -212,12 +210,12 @@ func kill_tank(tank):
 	$floor.add_child(dirt)
 	tank.queue_free()
 	
-	if tank_type > 0 and !global.go:
-		spawn(tank_type)
+#	if tank_type > 0 and !global.go:
+#		spawn(tank_type)
 		
 func spawn(t):
-	if t > 0 and global.player_lifes[t - 1] <= 0:
-		return
+#	if t > 0 and global.player_lifes[t - 1] <= 0:
+#		return
 		
 	var spawn_pos = Vector2()
 	var level = 0
@@ -283,6 +281,7 @@ func world_to_map(pos):
 func map_to_world(cell):
 	var pos = Vector2(cell.x * cell_size, cell.y * cell_size)
 	return pos
+	
 	
 func bullet_hit(pos, direction, is_grid):
 	var not_water = true
