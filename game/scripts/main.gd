@@ -14,7 +14,7 @@ var bots_count = 0
 var killed = 0
 var main_bonuses_at = []
 var main_bonus_selected = -1
-var max_bots_on_screen = 6
+var max_bots_on_screen = 5
 
 var frozen = false
 
@@ -246,11 +246,13 @@ func spawn(t):
 		tank.frozen = true
 	if t > 0:
 		tank.set_level(global.player_level[t - 1])
+		$players.add_child(tank)
+		update_tank_pos(tank)
 	else:
 		tank.set_level(level)
+		$tanks.add_child(tank)
+		update_tank_pos(tank)
 		
-	$tanks.add_child(tank)
-	update_tank_pos(tank)
 
 
 func remove_tank(tank):
@@ -388,8 +390,7 @@ func _on_main_bonus_timeout():
 
 
 func _on_frozen_timeout():
-	for t in get_node("tanks").get_children():
-		if t.type == 0:
-			t.frozen = false
+	for t in $tanks.get_children():
+		t.frozen = false
 	frozen = false
 

@@ -122,7 +122,7 @@ func fire():
 		
 		var bullet = bulletObj.instance()
 		bullet.position = get_node("Sprite/muzzle").global_position
-		bullet.set_speed(bullet_speed)
+		bullet.speed = bullet_speed
 		bullet.set_direction(currentDir)
 		bullet.set_owner(self)
 		main_node.get_node("bullets").add_child(bullet)

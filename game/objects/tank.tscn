@@ -165,7 +165,7 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[node name="tank" type="KinematicBody2D" index="0"]
+[node name="tank" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 5
@@ -195,6 +195,7 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
+_sections_unfolded = [ "Playback Options", "playback" ]
 
 [node name="rays" type="Node2D" parent="." index="1"]
 

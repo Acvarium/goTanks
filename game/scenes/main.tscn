@@ -101,7 +101,7 @@ tracks/0/keys = {
 "values": [ Vector2( 252, -108 ), Vector2( 262, 572 ), Vector2( 262, 379 ) ]
 }
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -115,9 +115,11 @@ editor/display_folded = true
 
 [node name="tanks" type="Node2D" parent="." index="2"]
 
-[node name="bullets" type="Node2D" parent="." index="3"]
+[node name="players" type="Node2D" parent="." index="3"]
 
-[node name="Label" type="Label" parent="." index="4"]
+[node name="bullets" type="Node2D" parent="." index="4"]
+
+[node name="Label" type="Label" parent="." index="5"]
 
 visible = false
 anchor_left = 0.0
@@ -139,7 +141,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="bg" type="CanvasLayer" parent="." index="5"]
+[node name="bg" type="CanvasLayer" parent="." index="6"]
 
 editor/display_folded = true
 layer = -1
@@ -176,7 +178,7 @@ hframes = 2
 frame = 3
 _sections_unfolded = [ "Animation", "Transform" ]
 
-[node name="walls" type="StaticBody2D" parent="." index="6"]
+[node name="walls" type="StaticBody2D" parent="." index="7"]
 
 editor/display_folded = true
 input_pickable = false
@@ -208,9 +210,7 @@ shape = SubResource( 2 )
 position = Vector2( 432, 972 )
 shape = SubResource( 1 )
 
-[node name="spawn_points" type="Node2D" parent="." index="7"]
-
-editor/display_folded = true
+[node name="spawn_points" type="Node2D" parent="." index="8"]
 
 [node name="point00" type="PinJoint2D" parent="spawn_points" index="0"]
 
@@ -257,7 +257,7 @@ bias = 0.0
 disable_collision = true
 softness = 0.0
 
-[node name="timers" type="Node2D" parent="." index="8"]
+[node name="timers" type="Node2D" parent="." index="9"]
 
 editor/display_folded = true
 
@@ -303,7 +303,7 @@ wait_time = 10.0
 one_shot = false
 autostart = false
 
-[node name="player1_lifes" type="Label" parent="." index="9"]
+[node name="player1_lifes" type="Label" parent="." index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -325,7 +325,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="player2_lifes" type="Label" parent="." index="10"]
+[node name="player2_lifes" type="Label" parent="." index="11"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -344,7 +344,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="bird" type="Sprite" parent="." index="11"]
+[node name="bird" type="Sprite" parent="." index="12"]
 
 editor/display_folded = true
 position = Vector2( 468, 900 )
@@ -380,7 +380,7 @@ bounce = 0.0
 
 shape = SubResource( 4 )
 
-[node name="sounds" type="Node2D" parent="." index="12"]
+[node name="sounds" type="Node2D" parent="." index="13"]
 
 editor/display_folded = true
 
@@ -440,7 +440,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="anim_tile" type="TileMap" parent="." index="13"]
+[node name="anim_tile" type="TileMap" parent="." index="14"]
 
 editor/display_folded = true
 visible = false
@@ -475,7 +475,7 @@ blend_times = [  ]
 autoplay = "water"
 _sections_unfolded = [ "Playback Options", "playback" ]
 
-[node name="Label2" type="Label" parent="." index="14"]
+[node name="Label2" type="Label" parent="." index="15"]
 
 modulate = Color( 1, 1, 1, 0.66298 )
 anchor_left = 0.0
@@ -496,7 +496,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="debug" type="Label" parent="." index="15"]
+[node name="debug" type="Label" parent="." index="16"]
 
 modulate = Color( 0.03125, 1, 0, 1 )
 anchor_left = 0.0
@@ -519,7 +519,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Size Flags", "Theme", "Visibility", "custom_constants", "custom_fonts", "custom_styles" ]
 
-[node name="UI" type="CanvasLayer" parent="." index="16"]
+[node name="UI" type="CanvasLayer" parent="." index="17"]
 
 editor/display_folded = true
 layer = 6
@@ -561,7 +561,7 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="test" type="Node2D" parent="." index="17"]
+[node name="test" type="Node2D" parent="." index="18"]
 
 [connection signal="timeout" from="timers/protected" to="." method="_on_protected_timeout"]
 

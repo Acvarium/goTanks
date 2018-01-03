@@ -1,15 +1,11 @@
 extends Area2D
-var speed = 350
+var speed = 350  
 var main_node
 var direction = Vector2(0,-1)
 var owner_type = 0
 var owner
 var owner_name
-var wr
-var is_grid = false
-
-func set_speed(s):
-	speed = s
+var is_grid = false  #If bullet was hit the grid block
 
 func _ready():
 	main_node = get_node("/root/main")
@@ -29,19 +25,16 @@ func set_owner(own):
 	owner = weakref(own)
 	owner_type = owner.get_ref().type
 	owner_name = owner.get_ref().get_name()
-
 	
 func _physics_process(delta):
 	position += speed * direction * delta
 
-
 func _on_Timer_timeout():
 	free_bullet()
 
-
 func _on_bullet_body_entered( body ):
 #Do not count owner of a bullet
-	if body == owner:
+	if body == owner.get_ref():
 		return
 	if body.get_parent() == main_node.get_node("grids"):
 		is_grid = true
@@ -52,20 +45,16 @@ func _on_bullet_body_entered( body ):
 	if owner_type == 0:
 		
 		if body.get_parent() == main_node.get_node("tanks"):
-			if body.type == 0:
-				return
-			else:
-				body.hit()
+			return
+		elif body.get_parent() == main_node.get_node("players"):
+			body.hit()
 		free_bullet()
 		
 #If owner is player
 	elif owner_type > 0:
 		if body.get_parent() == main_node.get_node("tanks"):
-			if body.type > 0:
-				return
-			elif body.type == 0:
-				body.hit()
-				free_bullet()
+			body.hit()
+			free_bullet()
 		else:
 			free_bullet()
 	else:
