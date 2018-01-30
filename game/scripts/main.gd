@@ -83,9 +83,9 @@ func set_level(l):
 	level = l
 	if $grids.has_node("grid"):
 		$grids/grid.queue_free()
-		var name = "level" + "%02d" % level + ".tscn"
+		var nname = "level" + "%02d" % level + ".tscn"
 		
-		mapObj = load("res://levels/" + name)
+		mapObj = load("res://levels/" + nname)
 		var map = mapObj.instance()
 		map.set_name("grid")
 		$grids.add_child(map)

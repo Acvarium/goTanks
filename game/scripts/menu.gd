@@ -17,7 +17,6 @@ func _on_single_player_pressed():
 	global.player_lifes = [1,0]
 	global.goto_scene("res://scenes/main.tscn")
 
-
 func mouse_over(level):
 	var directory = Directory.new();
 	var file_name ="res://textures/prev/l" + "%02d" % level + ".png"
@@ -27,7 +26,6 @@ func mouse_over(level):
 		$anim.stop(true)
 		$preview.modulate = Color(1,1,1,1)
 		
-	
 func mouse_exited():
 	$anim.play("f")
 

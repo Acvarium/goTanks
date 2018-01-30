@@ -3,7 +3,7 @@ var speed = 350
 var main_node
 var direction = Vector2(0,-1)
 var owner_type = 0
-var owner
+var oowner
 var owner_name
 var is_grid = false  #If bullet was hit the grid block
 
@@ -22,9 +22,9 @@ func set_direction(dir):
 		rotation = PI * 1.5
 		
 func set_owner(own):
-	owner = weakref(own)
-	owner_type = owner.get_ref().type
-	owner_name = owner.get_ref().get_name()
+	oowner = weakref(own)
+	owner_type = oowner.get_ref().type
+	owner_name = oowner.get_ref().get_name()
 	
 func _physics_process(delta):
 	position += speed * direction * delta
@@ -34,7 +34,7 @@ func _on_Timer_timeout():
 
 func _on_bullet_body_entered( body ):
 #Do not count owner of a bullet
-	if body == owner.get_ref():
+	if body == oowner.get_ref():
 		return
 	if body.get_parent() == main_node.get_node("grids"):
 		is_grid = true
@@ -61,8 +61,8 @@ func _on_bullet_body_entered( body ):
 
 func free_bullet():
 	if main_node.bullet_hit(position, direction, is_grid) or !is_grid:
-		if owner.get_ref():
-			owner.get_ref().free_bullet()
+		if oowner.get_ref():
+			oowner.get_ref().free_bullet()
 		queue_free()
 
 func _on_bullet_area_enter( area ):
